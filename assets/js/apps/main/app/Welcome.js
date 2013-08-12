@@ -11,6 +11,9 @@ define([
 //        this.facebookSDKSetup();
     };
 
+    /**
+     *  Load Facebook setup
+     */
     WelcomePage.prototype.facebookSDKSetup = function() {
         require(['App/FacebookSDK'], function(FacebookSDK) {
             var fb = new FacebookSDK();

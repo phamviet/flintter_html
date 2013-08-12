@@ -12,6 +12,9 @@ define([
 
     };
 
+    /**
+     *  Setup Facebook login
+     */
     FacebookSDK.prototype.setup = function() {
         window.fbAsyncInit = function() {
             FB.init({
