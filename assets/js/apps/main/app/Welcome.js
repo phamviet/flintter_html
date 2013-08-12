@@ -1,6 +1,5 @@
 define([
     'jquery',
-    'facebook',
     'App'
 ], function($, undefinedObject, App) {
 
@@ -9,33 +8,16 @@ define([
     };
 
     WelcomePage.prototype.initialize = function() {
-        window.fbAsyncInit = function() {
-            FB.init({
-                appId      : SITE.FACEBOOK_APP_ID,
-                channelUrl : '/facebook/channel',
-                status     : true,
-                cookie     : true,
-                xfbml      : true
-            });
+//        this.facebookSDKSetup();
+    };
 
-            $('.fblogin').on('click', function(e){
-                FB.login(
-                    function (response) {
-                        if (response.authResponse) {
-                            window.location.href = App.url("security/facebook/check");
-                        }
-                    },
-                    {
-                        scope: SITE.FACEBOOK_SCOPE
-                    }
-                );
-                e.preventDefault();
-            });
-        };
+    WelcomePage.prototype.facebookSDKSetup = function() {
+        require(['App/FacebookSDK'], function(FacebookSDK) {
+            var fb = new FacebookSDK();
 
-        console.log('2');
-
-    }
+            fb.setup();
+        });
+    };
 
     return WelcomePage;
 });

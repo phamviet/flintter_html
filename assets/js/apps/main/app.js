@@ -1,11 +1,15 @@
 define([
     'jquery'
 ], function($){
-    var App, SITE;
-
-    if (window.SITE) {
-        SITE = window.SITE;
-    }
+    var App;
+    var global = window.SITE || {
+        FACEBOOK_APP_ID: '',
+        FACEBOOK_SCOPE: '',
+        BASE_URL: '',
+        BASE_PATH: '',
+        ENV : 'dev',
+        VERSION: '123456'
+    };
 
     App = {
         url: function (path) {
@@ -18,6 +22,8 @@ define([
             return url.replace(/\/\//g,'/');
         }
     };
+
+    $.extend(App, global);
 
     return App;
 });
