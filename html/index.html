@@ -10,9 +10,12 @@
 
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../assets/css/bootstrap-responsive.min.css" rel="stylesheet" />
+	 <link href="../assets/css/jquery.mCustomScrollbar.css" rel="stylesheet" />
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
 	<script src="../assets/js/libs/jquery/jquery-1.9.1.min.js"></script>
 	<script src="../assets/js/libs/bootstrap/bootstrap.min.js"></script>
+	<script src="../assets/js/libs/jquery.mCustomScrollbar.min.js"></script>
+	<script src="../assets/js/libs/jquery.mousewheel.min.js"></script>
 	<script src="../assets/js/libs/common.js"></script>
     <!--page specific plugin styles-->
 
@@ -222,7 +225,16 @@
 					<input type="text" value="Your Title Here"/>
 				</div>
 				<div class="post-text">
-					<textarea rows="5"></textarea>
+					<div class="post-tab post-tags active"><textarea rows="5"></textarea></div>
+					<!-- post tags -->
+					<div class="post-tab post-photo">
+						<div class="buttons">
+							<a href="#" class="big-button big-gray">Choose from Computer</a>
+							<a href="#" class="big-button big-gray">Cancel</a>
+						</div>
+						<p>You can select more than one file at a time. You can also drag and drop files anywhere on this page to start uploading</p>
+					</div>
+					<!-- post photos -->
 				</div>
 				<div class="post-alt">	
 					<div class="tags">
@@ -238,14 +250,14 @@
 				<div class="post-foot">
 					<ul>
 						<li class="current">
-							<a href="#" title="">
+							<a href="#" title="" rel="tags">
 								<i class="imed imed-tag"></i>
 								<span class="left"></span>
 								<span class="right"></span>
 							</a>
 						</li>
 						<li>
-							<a href="#" title="" rel=".">
+							<a href="#" title="" rel="photo">
 								<i class="imed imed-photo"></i>
 								<span class="left"></span>
 								<span class="right"></span>

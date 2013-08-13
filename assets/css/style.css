@@ -56,6 +56,11 @@ a.big-button:hover, a.big-red {
 	background: #ea2b4a;
 	border-bottom: #af2138 solid 3px;
 }
+a.big-gray {
+	color: #000;
+	background: #e5e5e5;
+	border-bottom: #cccccc solid 3px;
+}
 /** Default Text
 ===================================*/
 html {
@@ -624,6 +629,36 @@ input:-moz-placeholder { color:#000;
 	-moz-border-radius: 3px 3px 0 0;
 	border-radius: 3px 3px 0 0;
 }
+.ulti .post .post-text .post-tab {
+	display: none;
+}
+.ulti .post .post-text .active {
+	display: block;
+}
+.ulti .post .post-text .post-photo {
+	text-align: center;
+	padding-top: 14px;
+}
+ulti .post .post-text .post-photo .buttons {
+	letter-spacing: 0;
+	word-spacing: 0;
+	font-size: 0;
+}
+.ulti .post .post-text .post-photo p {
+	font-family:'Open Sans Condensed', Arial, Calibri, Geneva,sans-serif;
+	font-size: 14px;
+	color: #070b0f;
+	margin-top: 20px;
+}
+.ulti .post .post-text .post-photo .big-button {
+	font-family: Arial;
+	text-transform: none;
+	font-weight: normal;
+	font-size: 14px;
+	min-width: 160px;
+	padding: 12px 25px;
+	margin: 0 4px;
+}
 .ulti .post .post-title {
 	margin-bottom: 3px;
 }
@@ -736,7 +771,7 @@ input:-moz-placeholder { color:#000;
 .ulti .tags-list .title {
 	margin-top: 4px;
 	position: relative;
-	margin-bottom: 2px;
+	margin-bottom: 5px;
 }
 .ulti .tags-list .title h2 {
 	font-size: 30px;
@@ -785,6 +820,10 @@ input:-moz-placeholder { color:#000;
 }
 .ulti .post .post-alt .tags {
 	padding: 8px 12px;
+	display: none;
+}
+.ulti .active-tags .post-alt .tags {
+	display: block;
 }
 .ulti .post .post-alt .tags ul {
 	letter-spacing: 0;
