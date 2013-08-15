@@ -34,8 +34,8 @@
             },
             'jquery/jquery.mCustomScrollbar.min': { deps: ["$"] },
             'jquery/jquery.mousewheel.min': { deps: ["$"] }
-        }
-//    urlArgs: "_=" +  (new Date()).getTime()
+        },
+        urlArgs: "_=" +  window.SITE.VERSION || 'nocache'
     });
 
     // IMPORTANT!
