@@ -11,6 +11,9 @@ define([
             this.global();
         },
 
+        /**
+         *  Code apply to all pages
+         */
         global: function() {
             $('.navi a').tooltip({
                 placement: 'right'
