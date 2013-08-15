@@ -1,5 +1,5 @@
 define([
-    'jquery',
+    '$',
     'App'
 ], function($, undefinedObject, App) {
 
@@ -15,7 +15,7 @@ define([
      *  Load Facebook setup
      */
     WelcomePage.prototype.facebookSDKSetup = function() {
-        require(['App/FacebookSDK'], function(FacebookSDK) {
+        require(['Application/FacebookSDK'], function(FacebookSDK) {
             var fb = new FacebookSDK();
 
             fb.setup();

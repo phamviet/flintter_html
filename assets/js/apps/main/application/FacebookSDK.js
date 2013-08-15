@@ -1,5 +1,5 @@
 define([
-    'jquery',
+    '$',
     'facebook',
     'App'
 ], function($, undefinedObject, App) {

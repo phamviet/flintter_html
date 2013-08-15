@@ -12,18 +12,17 @@
     <link href="../assets/css/bootstrap-responsive.min.css" rel="stylesheet" />
 	 <link href="../assets/css/jquery.mCustomScrollbar.css" rel="stylesheet" />
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
-	<script src="../assets/js/libs/jquery/jquery-1.9.1.min.js"></script>
+	<!--<script src="../assets/js/libs/jquery/jquery-1.9.1.min.js"></script>
 	<script src="../assets/js/libs/bootstrap/bootstrap.min.js"></script>
 	<script src="../assets/js/libs/jquery.mCustomScrollbar.min.js"></script>
 	<script src="../assets/js/libs/jquery.mousewheel.min.js"></script>
-	<script src="../assets/js/libs/common.js"></script>
+	<script src="../assets/js/libs/common.js"></script>-->
     <!--page specific plugin styles-->
 
     <!--site styles-->
     <link href="../assets/css/style.css" rel="stylesheet" />
 
     <!--inline styles if any-->
-	<!-- 
      <script type="text/javascript">
         var SITE = {
             FACEBOOK_APP_ID: '677153332301592',
@@ -31,10 +30,17 @@
             BASE_URL: '/app_dev.php',
             BASE_PATH: '',
             ENV : 'dev',
-            VERSION: '123456'
+            VERSION: '123456',
+            deps: [],
+            init: function() {
+
+            }
         };
         var USER = null;
-    </script> -->
+         var app = {
+             deps: ['Application/Welcome']
+         }
+    </script>
 <body>
 
 <!-- begin html template -->
@@ -645,7 +651,7 @@
 <!-- end html template -->
 
 
-<!-- <script data-main="../assets/js/apps/main/main" src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.5/require.min.js"></script> -->
+ <script data-main="../assets/js/apps/main/main" src="../assets/js/vendor/requirejs/require.min.js"></script>
 <!--page specific plugin scripts-->
 
 <!--inline scripts related to this page-->

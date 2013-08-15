@@ -1,6 +1,7 @@
 define([
-    'jquery'
-], function($){
+    '$',
+    'Spirit'
+], function($, Spirit){
     var App;
     var global = window.SITE || {
         FACEBOOK_APP_ID: '',
@@ -12,6 +13,11 @@ define([
     };
 
     App = {
+        initialize: function() {
+
+            Spirit.initialize();
+        },
+
         url: function (path) {
             var url = SITE.BASE_URL + ((path[0] || '') == '/' ? path : '/' + path);
             return url.replace(/\/\//g,'/');
