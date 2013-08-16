@@ -326,6 +326,8 @@ input:-moz-placeholder { color:#000;
 	padding: 3px;
 	background: #fff;
 	border: #d0d1d2;
+	width: 54px;
+	height: 44px;
 }
 .header .navigation .ava a {
 	position: relative;
@@ -974,6 +976,8 @@ ulti .post .post-text .post-photo .buttons {
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
 	border-radius: 2px;
+	width: 309px;
+	height: 205px;
 }
 .topics .cont .topic-bg a {
 	display: block;
@@ -1047,6 +1051,8 @@ ulti .post .post-text .post-photo .buttons {
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
+	width: 110px;
+	height: 110px;
 }
 .col-left .topic-list .topic-single .head .ava .name {
 	position: absolute;
