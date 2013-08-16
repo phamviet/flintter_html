@@ -8,7 +8,7 @@ define([
     };
 
     WelcomePage.prototype.initialize = function() {
-//        this.facebookSDKSetup();
+        this.facebookSDKSetup();
     };
 
     /**
