@@ -1053,6 +1053,7 @@ ulti .post .post-text .post-photo .buttons {
 	border-radius: 3px;
 	width: 110px;
 	height: 110px;
+	background: url('../img/sprites.png') -390px -50px no-repeat;
 }
 .col-left .topic-list .topic-single .head .ava .name {
 	position: absolute;
