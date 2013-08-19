@@ -34,6 +34,13 @@ define([
                 }
             });
             $('.ulti .tags-list .list ul').mCustomScrollbar();
+			$('.sub-menu a').click(function(){
+				$('.sub-menu li').removeClass("current");
+				$(this).closest("li").addClass("current");
+				var activeClass = $(this).attr("rel");
+				$('.filter-block').removeClass("active");
+				$(activeClass).addClass("active");
+			});
         },
 
         /**

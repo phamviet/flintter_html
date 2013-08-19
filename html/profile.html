@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Flintter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="">
+   <!--  <meta property="fb:app_id" content="677153332301592" /> -->
+    <!--basic styles-->
+
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/bootstrap-responsive.min.css" rel="stylesheet" />
+	 <link href="../assets/css/jquery.mCustomScrollbar.css" rel="stylesheet" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+
+    <!--page specific plugin styles-->
+
+    <!--site styles-->
+    <link href="../assets/css/style.css" rel="stylesheet" />
+
+    <!--inline styles if any-->
+     <script type="text/javascript">
+        var SITE = {
+            FACEBOOK_APP_ID: '',
+            FACEBOOK_SCOPE: '',
+            BASE_URL: '/',
+            BASE_PATH: '',
+            ENV : 'dev',
+            VERSION: '123456'
+        };
+        var USER = null;
+         var app = {
+//             deps: ['Application/Welcome']
+         }
+    </script>
+<body>
+
+<!-- begin html template -->
+<div class="wrapper detail">
+	<div class="bg-top"></div>
+	<div class="header-wrap">
+		<div class="line-color"></div>
+		<div class="header">
+			<div class="logo">
+				<a href="#" title="Flintter"></a>
+			</div>
+			<div class="navigation">
+				<ul>
+					<li class="level-f current"><a href="#" title="" class="item">Trang chủ</a></li>
+					<li class="level-f"><span class="sep"></span></li>
+					<li class="level-f"><a href="#" title="" class="item">Explore</a></li>
+					<li class="level-f"><span class="sep"></span></li>
+					<li class="level-f"><a href="#" title="" class="item">Ask for Idea</a></li>
+					<li class="level-f"><span class="sep"></span></li>
+					<li class="level-f">
+						<a href="#" title="" class="item btn-newpost"><i></i><span class="text">New Post</span></a>
+						<div class="sub-wrap newpost-board">
+							<div class="sub">
+								<span class="arrow"></span>
+								<ul>
+									<li>
+										<a href="#">New Topic</a>
+									</li>
+									<li>
+										<a href="#">New Ideas</a>
+									</li>
+								</ul>						
+							</div>
+						</div>
+					</li>
+					<li class="level-f"><span class="sep"></span></li>
+					<li class="level-f">
+						<a href="#" title="">
+							<i class="imed imed-noti"></i>
+							<span class="count">4</span>
+						</a>
+						<div class="sub-wrap noti-board">
+							<div class="sub">
+								<span class="arrow"></span>
+								<ul>
+									<li>
+										<a href="#" class="clearfix">
+											<img src="../assets/demo/img-avatar-002.jpg" alt="" border=""/>
+											<span class="text">Brian Tracy promoted your idea</span>
+											<span class="point">+ 58 GS</span>
+											<span class="date">8 minutes ago</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="clearfix">
+											<img src="../assets/demo/img-avatar-002.jpg" alt="" border=""/>
+											<span class="text">Brian Tracy promoted your idea</span>
+											<span class="point">+ 58 GS</span>
+											<span class="date">8 minutes ago</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="clearfix">
+											<img src="../assets/demo/img-avatar-002.jpg" alt="" border=""/>
+											<span class="text">Brian Tracy promoted your idea</span>
+											<span class="point">+ 58 GS</span>
+											<span class="date">8 minutes ago</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="clearfix">
+											<img src="../assets/demo/img-avatar-002.jpg" alt="" border=""/>
+											<span class="text">Brian Tracy promoted your idea</span>
+											<span class="point">+ 58 GS</span>
+											<span class="date">8 minutes ago</span>
+										</a>
+									</li>
+								</ul>
+								<div class="more">
+									<a href="#" class="btn-more">View all</a>
+								</div>							
+							</div>
+						</div>
+					</li>
+					<li class="level-f"><span class="sep"></span></li>
+					<li class="level-f">
+						<a href="#" title="">
+							<i class="imed imed-warning"></i>
+							<span class="count">4</span>
+						</a>
+						<div class="sub-wrap warning-board">
+							<div class="sub">
+								<span class="arrow"></span>
+								<ul>
+									<li>
+										<a href="#" class="clearfix">
+											<img src="../assets/demo/img-avatar-002.jpg" alt="" border=""/>
+											<span class="text">Impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</span>
+											<span class="date">8 minutes ago</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="clearfix">
+											<img src="../assets/demo/img-avatar-002.jpg" alt="" border=""/>
+											<span class="text">Brian Tracy promoted your idea</span>
+											<span class="date">8 minutes ago</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="clearfix">
+											<img src="../assets/demo/img-avatar-002.jpg" alt="" border=""/>
+											<span class="text">Brian Tracy promoted your idea</span>
+											<span class="date">8 minutes ago</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="clearfix">
+											<img src="../assets/demo/img-avatar-002.jpg" alt="" border=""/>
+											<span class="text">Brian Tracy promoted your idea</span>
+											<span class="date">8 minutes ago</span>
+										</a>
+									</li>
+								</ul>
+								<div class="more">
+									<a href="#" class="btn-more">View all</a>
+								</div>							
+							</div>
+						</div>
+					</li>
+					<li class="level-f"><span class="sep"></span></li>
+					<li class="level-f ava">
+						<a href="#">
+							<img src="../assets/demo/img-avatar-001.jpg" alt="" border="" />
+							<i></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- nav -->
+		</div>
+	</div>
+	<!-- header -->
+	<div class="main-wrapper page-profile-topics">
+		<div class="main-head">
+			<span class="line"></span>
+			<div class="menu">
+				<ul>
+					<li class="current">
+						<a href="#">Friends<span></span></a>
+					</li>
+					<li>
+						<a href="#">Most Approved<span></span></a>
+					</li>
+					<li>
+						<a href="#">Most Debated<span></span></a>
+					</li>
+					<li>
+						<a href="#">New<span></span></a>
+					</li>
+					<li>
+						<a href="#">Celeb<span></span></a>
+					</li>
+				</ul>
+			</div>
+			<!-- menu -->
+			<div class="search">
+				<div class="input-wrap">
+					<input type="text" value="" placeholder="Search..." name="" />
+					<input type="submit" value="" name="" />
+				</div>
+			</div>
+			<!-- search -->
+			<div class="social">
+				<ul>
+					<li><a href="#" title=""><i class="imed imed-fb"></i></a></li>
+					<li><a href="#" title=""><i class="imed imed-tw"></i></a></li>
+					<li><a href="#" title=""><i class="imed imed-gg"></i></a></li>
+					<li><a href="#" title=""><i class="imed imed-pin"></i></a></li>
+					<li><a href="#" title=""><i class="imed imed-rss"></i></a></li>
+				</ul>
+			</div>
+			<!-- social buttons -->
+		</div>
+		<!-- main head -->
+		<div class="profile-info">
+			<div class="avatar">
+				<a href="#">
+					<img src="../assets/demo/img-avatar-004.jpg" alt="" border=""/>
+					<span class="name">Jenny</span>
+				</a>
+			</div>
+			<div class="profile-info-detail">
+				<div class="info-name">
+					<h3>Jenny</h3>
+					<p class="job">Composer</p>
+					<p class="des">“Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut vodit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.“</p>
+				</div>
+				<!-- Name & Title & Description -->
+				<div class="info-point">
+					<span class="point-icon"><i class="imed imed-diamond"></i></span>
+					<span class="point">221.254.896 G$ earned</span>
+				</div>
+				<!-- Points -->
+				<div class="info-nav">
+					<ul>
+						<li><a href="#" class="" title="" ><i class="imed imed-message"></i></a></li>
+						<li><a href="#" class="" title="" ><i class="imed imed-friend"></i></a></li>
+						<li><a href="#" class="" title="" ><i class="imed imed-fighting"></i></a></li>
+						<li><a href="#" class="" title="" ><i class="imed imed-setting"></i></a></li>
+					</ul>
+				</div>
+				<!-- Profile nav -->
+				<div class="info-stat">
+					<ul>
+						<li><a href="#" class="" title="" ><i class="imed imed-friend-red"></i><span class="text">187 Mutual friends</span></a></li>
+						<li><a href="#" class="" title="" ><i class="imed imed-idea"></i><span class="text">1000 Ideas</span></a></li>
+						<li><a href="#" class="" title="" ><i class="imed imed-flag-red"></i><span class="text">1000 Follwer</span></a></li>
+						<li><a href="#" class="" title="" ><i class="imed imed-coffee"></i><span class="text">189 Topics</span></a></li>
+					</ul>
+				</div>
+				<!-- profile stats -->
+			</div>
+			<!-- profile info detail -->
+		</div>
+		<!-- Profile Info -->
+		<div class="filter">
+			<div class="line"></div>
+			<div class="menu">
+				<ul>
+					<li class="current">
+						<a href="#">Topics<span></span></a>
+					</li>
+					<li>
+						<a href="#">Ideas<span></span></a>
+					</li>
+					<li>
+						<a href="#">Ama<span></span></a>
+					</li>
+				</ul>
+			</div>
+			<div class="sub-menu">
+				<ul>
+					<li class="current">
+						<a href="javascript:void(0)" rel=".post"><i class="imed imed-pencil-gray"></i><span class="text">Write TOPICS</span></a>
+					</li>
+					<li><span class="sep"></span></li>
+					<li>
+						<a href="javascript:void(0)" rel=".tags-filter"><i class="imed imed-tags"></i><span class="text">Tags filter</span></a>
+					</li>
+					<li><span class="sep"></span></li>
+					<li>
+						<a href="javascript:void(0)"><span class="text">Most popular</span></a>
+					</li>
+					<li><span class="sep"></span></li>
+					<li>
+						<a href="javascript:void(0)"><span class="text">Most ideas</span></a>
+					</li>
+					<li><span class="sep"></span></li>
+					<li>
+						<a href="javascript:void(0)"><span class="text">View all</span></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- topics filter -->
+		<div class="ulti clearfix">
+			<div class="filter-block tags-filter clearfix">
+			<div class="line"></div>
+				<ul>
+					<li>
+						<a href="#" class="text"><span class="prefix">#</span>Quia consequuntur magni dolore</a>
+						<a href="#" class="btn-del"><i class="ismall ismall-delx"></i></a>
+					</li>
+					<li>
+						<a href="#" class="text"><span class="prefix">#</span>Quia consequuntur dolore</a>
+						<a href="#" class="btn-del"><i class="ismall ismall-delx"></i></a>
+					</li>
+					<li>
+						<a href="#" class="text"><span class="prefix">#</span>magni</a>
+						<a href="#" class="btn-del"><i class="ismall ismall-delx"></i></a>
+					</li>
+					<li>
+						<a href="#" class="text"><span class="prefix">#</span>magni dolore</a>
+						<a href="#" class="btn-del"><i class="ismall ismall-delx"></i></a>
+					</li>
+					<li>
+						<a href="#" class="text"><span class="prefix">#</span>Quia consequuntur magni dolore</a>
+						<a href="#" class="btn-del"><i class="ismall ismall-delx"></i></a>
+					</li>
+					<li>
+						<a href="#" class="text"><span class="prefix">#</span>Quia consequuntur dolore</a>
+						<a href="#" class="btn-del"><i class="ismall ismall-delx"></i></a>
+					</li>
+					<li>
+						<a href="#" class="text"><span class="prefix">#</span>magni</a>
+						<a href="#" class="btn-del"><i class="ismall ismall-delx"></i></a>
+					</li>
+					<li>
+						<a href="#" class="text"><span class="prefix">#</span>magni dolore</a>
+						<a href="#" class="btn-del"><i class="ismall ismall-delx"></i></a>
+					</li>
+				</ul>
+			</div>
+			<!-- Tags filter -->
+			<div class="filter-block post active-tags active">
+				<div class="post-title">
+					<input type="text" value="Your Title Here"/>
+				</div>
+				<div class="post-text">
+					<div class="post-tab post-tags active"><textarea rows="5"></textarea></div>
+					<!-- post tags -->
+					<div class="post-tab post-photo">
+						<div class="buttons">
+							<a href="#" class="big-button big-gray">Choose from Computer</a>
+							<a href="#" class="big-button big-gray">Cancel</a>
+						</div>
+						<p>You can select more than one file at a time. You can also drag and drop files anywhere on this page to start uploading</p>
+					</div>
+					<!-- post photos -->
+				</div>
+				<div class="post-alt">	
+					<div class="tags">
+						<label>Tags</label>
+						<ul>
+							<li>123123</li>
+							<li>321</li>
+							<li>456</li>
+							<li>654</li>
+						</ul>
+					</div>
+				</div>
+				<div class="post-foot">
+					<ul>
+						<li class="current">
+							<a href="#" title="" rel="tags">
+								<i class="imed imed-tag"></i>
+								<span class="left"></span>
+								<span class="right"></span>
+							</a>
+						</li>
+						<li>
+							<a href="#" title="" rel="photo">
+								<i class="imed imed-photo"></i>
+								<span class="left"></span>
+								<span class="right"></span>
+							</a>
+						</li>
+						<li>
+							<a href="#" title="">
+								<i class="imed imed-mic"></i>
+								<span class="left"></span>
+								<span class="right"></span>
+							</a>
+						</li>
+					</ul>
+					<div class="buttons">
+						<a href="#" class="big-button btn-post">Post</a>
+					</div>
+				</div>
+			</div>
+			<!-- post -->
+		</div>
+		<!-- Common Stuffs -->
+		<div class="content clearfix">
+			<div class="col-full">
+				<div class="profile-topic-wrap">
+					<div class="topic-preview">
+						<div class="topics">
+							<div class="cont">
+								<div class="topic-bg">
+									<a href="#" title=""><img src="../assets/demo/img-topic-001.jpg" alt="" border=""></a>
+									<a href="#" title="" class="title">
+										<span>modi temporat ut labore et dolore magn</span>
+									</a>
+									<a href="#" class="btn-del"><i class="ismall ismall-del-white"></i></a>
+								</div>
+							</div>
+							<div class="buttons">
+								<ul>
+									<li><a href="#" class="big-button"><i class="imed imed-flag"></i><span class="text">Follow</span></a></li>
+									<li><a href="#" class="big-button"><i class="imed imed-pencil"></i><span class="text">Write Ideas</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- topic with image background -->
+					<div class="topic-preview">
+						<div class="topics">
+							<div class="cont">
+								<div class="topic-nobg">
+									<h2 href="#" title="" class="title">
+										<span>modi temporat ut labore et dolore magn</span>
+									</h2>
+									<p class="des">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi</p>
+									<a href="#" class="btn-more">Read more ...</a>
+									<a href="#" class="btn-del"><i class="ismall ismall-del-white"></i></a>
+								</div>
+							</div>
+							<div class="buttons">
+								<ul>
+									<li><a href="#" class="big-button"><i class="imed imed-flag"></i><span class="text">Follow</span></a></li>
+									<li><a href="#" class="big-button"><i class="imed imed-pencil"></i><span class="text">Write Ideas</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- topic without image background -->
+					<div class="topic-preview">
+						<div class="topics">
+							<div class="cont">
+								<div class="topic-nobg">
+									<h2 href="#" title="" class="title">
+										<span>modi temporat ut labore et dolore magn</span>
+									</h2>
+									<p class="des">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi</p>
+									<a href="#" class="btn-more">Read more ...</a>
+									<a href="#" class="btn-del"><i class="ismall ismall-del-white"></i></a>
+								</div>
+							</div>
+							<div class="buttons">
+								<ul>
+									<li><a href="#" class="big-button"><i class="imed imed-flag"></i><span class="text">Follow</span></a></li>
+									<li><a href="#" class="big-button"><i class="imed imed-pencil"></i><span class="text">Write Ideas</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- topic without image background -->
+					<div class="topic-preview">
+						<div class="topics">
+							<div class="cont">
+								<div class="topic-bg">
+									<a href="#" title=""><img src="../assets/demo/img-topic-001.jpg" alt="" border=""></a>
+									<a href="#" title="" class="title">
+										<span>modi temporat ut labore et dolore magn</span>
+									</a>
+									<a href="#" class="btn-del"><i class="ismall ismall-del-white"></i></a>
+								</div>
+							</div>
+							<div class="buttons">
+								<ul>
+									<li><a href="#" class="big-button"><i class="imed imed-flag"></i><span class="text">Follow</span></a></li>
+									<li><a href="#" class="big-button"><i class="imed imed-pencil"></i><span class="text">Write Ideas</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- topic with image background -->
+					<div class="topic-preview">
+						<div class="topics">
+							<div class="cont">
+								<div class="topic-nobg">
+									<h2 href="#" title="" class="title">
+										<span>modi temporat ut labore et dolore magn</span>
+									</h2>
+									<p class="des">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi</p>
+									<a href="#" class="btn-more">Read more ...</a>
+									<a href="#" class="btn-del"><i class="ismall ismall-del-white"></i></a>
+								</div>
+							</div>
+							<div class="buttons">
+								<ul>
+									<li><a href="#" class="big-button"><i class="imed imed-flag"></i><span class="text">Follow</span></a></li>
+									<li><a href="#" class="big-button"><i class="imed imed-pencil"></i><span class="text">Write Ideas</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- topic without image background -->
+					<div class="topic-preview">
+						<div class="topics">
+							<div class="cont">
+								<div class="topic-nobg">
+									<h2 href="#" title="" class="title">
+										<span>modi temporat ut labore et dolore magn</span>
+									</h2>
+									<p class="des">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi</p>
+									<a href="#" class="btn-more">Read more ...</a>
+									<a href="#" class="btn-del"><i class="ismall ismall-del-white"></i></a>
+								</div>
+							</div>
+							<div class="buttons">
+								<ul>
+									<li><a href="#" class="big-button"><i class="imed imed-flag"></i><span class="text">Follow</span></a></li>
+									<li><a href="#" class="big-button"><i class="imed imed-pencil"></i><span class="text">Write Ideas</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- topic without image background -->
+					<div class="topic-preview">
+						<div class="topics">
+							<div class="cont">
+								<div class="topic-bg">
+									<a href="#" title=""><img src="../assets/demo/img-topic-001.jpg" alt="" border=""></a>
+									<a href="#" title="" class="title">
+										<span>modi temporat ut labore et dolore magn</span>
+									</a>
+									<a href="#" class="btn-del"><i class="ismall ismall-del-white"></i></a>
+								</div>
+							</div>
+							<div class="buttons">
+								<ul>
+									<li><a href="#" class="big-button"><i class="imed imed-flag"></i><span class="text">Follow</span></a></li>
+									<li><a href="#" class="big-button"><i class="imed imed-pencil"></i><span class="text">Write Ideas</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- topic with image background -->
+					<div class="topic-preview">
+						<div class="topics">
+							<div class="cont">
+								<div class="topic-nobg">
+									<h2 href="#" title="" class="title">
+										<span>modi temporat ut labore et dolore magn</span>
+									</h2>
+									<p class="des">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi</p>
+									<a href="#" class="btn-more">Read more ...</a>
+									<a href="#" class="btn-del"><i class="ismall ismall-del-white"></i></a>
+								</div>
+							</div>
+							<div class="buttons">
+								<ul>
+									<li><a href="#" class="big-button"><i class="imed imed-flag"></i><span class="text">Follow</span></a></li>
+									<li><a href="#" class="big-button"><i class="imed imed-pencil"></i><span class="text">Write Ideas</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- topic without image background -->
+					<div class="topic-preview">
+						<div class="topics">
+							<div class="cont">
+								<div class="topic-nobg">
+									<h2 href="#" title="" class="title">
+										<span>modi temporat ut labore et dolore magn</span>
+									</h2>
+									<p class="des">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi</p>
+									<a href="#" class="btn-more">Read more ...</a>
+									<a href="#" class="btn-del"><i class="ismall ismall-del-white"></i></a>
+								</div>
+							</div>
+							<div class="buttons">
+								<ul>
+									<li><a href="#" class="big-button"><i class="imed imed-flag"></i><span class="text">Follow</span></a></li>
+									<li><a href="#" class="big-button"><i class="imed imed-pencil"></i><span class="text">Write Ideas</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- topic without image background -->
+				</div>
+				<!-- topic preview list  -->
+			</div>
+			<!-- col fullwidth -->
+		</div>
+		<!-- main content -->
+	</div>
+	<!-- main -->
+	<div class="footer-wrapper">
+		<div class="footer clearfix">
+			<span class="line"></span>
+			<div class="left">
+				<div class="logo">
+					<a href="#" title=""></a>
+				</div>
+				<!-- logo -->
+				<div class="copyright">
+					<p>COPYRIGHT © FLINTTER 2013</p>
+				</div>
+			</div>
+			<!-- left footer -->
+			<div class="right">
+				<div class="social">
+					<ul>
+						<li><a href="#" title=""><i class="imed imed-fb"></i></a></li>
+						<li><a href="#" title=""><i class="imed imed-tw"></i></a></li>
+						<li><a href="#" title=""><i class="imed imed-gg"></i></a></li>
+						<li><a href="#" title=""><i class="imed imed-pin"></i></a></li>
+						<li><a href="#" title=""><i class="imed imed-rss"></i></a></li>
+					</ul>
+				</div>
+				<!-- social buttons -->
+				<div class="navi">
+					<ul>
+						<li><a href="#" title="">About</a></li>
+						<li><span class="sep"></span></li>
+						<li><a href="#" title="">Feedback</a></li>
+						<li><span class="sep"></span></li>
+						<li><a href="#" title="">Term & Policy</a></li>
+						<li><span class="sep"></span></li>
+						<li><a href="#" title="">Contact Us</a></li>
+						<li><span class="sep"></span></li>
+						<li><a href="#" title="">Help</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- footer -->
+</div>
+<!-- end html template -->
+
+
+ <script data-main="../assets/js/apps/main/main" src="../assets/js/vendor/requirejs/require.min.js"></script>
+<!--page specific plugin scripts-->
+
+<!--inline scripts related to this page-->
+
+</body>
+</html>
