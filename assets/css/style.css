@@ -218,7 +218,7 @@ input:-moz-placeholder { color:#000;
 	height: 25px;
 	display: block;
 }
-.imed, .ismall {
+.imed, .ismall, .i40 {
 	display: inline-block;
 	*display: inline;
 	zoom: 1;
@@ -233,6 +233,10 @@ input:-moz-placeholder { color:#000;
 .ismall {
 	width: 18px;
 	height: 18px;
+}
+.i40 {
+	width: 40px;
+	height: 40px;
 }
 .imed-noti {
 	background-position: 0 -120px;
@@ -345,6 +349,15 @@ input:-moz-placeholder { color:#000;
 }
 .ismall-del-white {
 	background-position: -272px 0px;
+}
+.i40-fb {
+	background-position: -460px -310px;
+}
+.i40-tw {
+	background-position: -420px -310px;
+}
+.i40-gg {
+	background-position: -380px -310px;
 }
 .header .navigation .level-f .count {
 	border-radius: 14px;
