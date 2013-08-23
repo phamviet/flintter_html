@@ -45,7 +45,8 @@
     // See https://github.com/jrburke/r.js/issues/270
     requirejs.config({
         paths: {
-            Application: '../apps/main/application'
+            Application: '../apps/main/application',
+            binding: '../apps/main/application/binding'
             // Application path prefixes/modules (relative to baseUrl):
             // note: when adding to this hash - also add the same entry to build.js
         }

@@ -1,7 +1,7 @@
 define([
     '$',
     'App'
-], function($, undefinedObject, App) {
+], function($, App) {
 
     var WelcomePage = function() {
 
