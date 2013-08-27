@@ -15,6 +15,7 @@
             async : 'requirejs/plugins/async',
             facebook: '//connect.facebook.net/en_US/all',
             Spirit: '../apps/main/utility/Spirit',
+            'jquery.flintter': '../jquery.flintter',
             App: '../apps/main/app'
         },
         shim: {
@@ -33,7 +34,8 @@
                 deps: ['$']
             },
             'jquery/jquery.mCustomScrollbar.min': { deps: ["$"] },
-            'jquery/jquery.mousewheel.min': { deps: ["$"] }
+            'jquery/jquery.mousewheel.min': { deps: ["$"] },
+            'rangy/rangy-core': {exports: 'rangy'}
         },
         urlArgs: "_=" +  window.SITE.VERSION || 'nocache'
     });

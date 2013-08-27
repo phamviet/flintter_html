@@ -1,17 +1,9 @@
 define([
     '$',
-    'App',
-    'binding/Editor'
-], function($, App, Editor) {
-    var editor = new Editor();
+    'Application/shared/events',
+    'Application/module/content/events',
+    'Application/components/content/editable'
+], function($, shareEvents, contentEvents) {
 
-    var Homepage = function() {
-
-    };
-
-    Homepage.prototype.initialize = function() {
-        editor.initialize();
-    };
-
-    return Homepage;
+    return { events: [shareEvents, contentEvents] };
 });
