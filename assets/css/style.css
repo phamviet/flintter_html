@@ -610,6 +610,7 @@ input:-moz-placeholder { color:#000;
 	border-top: #ccc solid 1px;
 	position: absolute;
 	top: 0;
+	left: 0;
 }
 .footer .left {
 	float: left;

@@ -2,7 +2,6 @@ body {
 	background: #000 url('../img/bg-landing.jpg') top center no-repeat;
 	width: 100%;
 	height: 100%;
-	overflow-y: hidden;
 }
 ::-webkit-input-placeholder { color: #9d9d9c; }
 ::-moz-placeholder { color: #9d9d9c; } /* firefox 19+ */
@@ -153,13 +152,77 @@ input:-moz-placeholder { color: #9d9d9c; }
 	position: absolute;
 	right: 0;
 	top: 32px;
-	background: #e9e9e9;
-	padding: 18px;
-	-moz-border-radius: 4px;
-	-webkit-border-radius: 4px;
-	border-radius: 4px;
+	padding-top: 7px;
 	display: none;
 }
 .landing .header .buttons:hover .board-signin {
 	display: block;
+}
+.landing .header .buttons .board-signin-wrap {
+	display: block;
+	background: #e9e9e9;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	padding: 18px;
+	border: #ccc solid 1px;
+	*width: 286px;
+}
+.landing .header .buttons .board-signin-wrap .arrow {
+	position: absolute;
+	right: 12px;
+	top: 1px;
+	border-bottom: 8px solid #e9e9e9;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+}
+.landing .header .buttons .board-signin ul li {
+	margin-bottom: 6px;
+	display: block;
+}
+.landing .header .buttons .board-signin ul li input[type="text"],
+.landing .header .buttons .board-signin ul li input[type="email"],
+.landing .header .buttons .board-signin ul li input[type="password"] {
+	width: 260px;
+	padding: 5px 12px;
+}
+.landing .header .buttons .board-signin ul .buttons-wrap .big-button {
+	float: right;
+}
+.landing .header .buttons .board-signin ul .buttons-wrap {
+	border-bottom: #ccc solid 1px;
+	padding-bottom: 8px;
+	margin-bottom: 0;
+}
+.landing .header .buttons .board-signin ul .buttons-wrap .pw-forgot {
+	color: #9d9d9c;
+	font-style: italic;
+	padding-top: 6px;
+	float: left;
+}
+.landing .header .buttons .board-signin .sign-in-openid {
+	border-top: #fff solid 1px;
+	padding-top: 8px;
+	font-size: 0;
+	letter-spacing: 0;
+	word-spacing: 0;
+	*margin-top: -3px;
+}
+.landing .header .buttons .board-signin .sign-in-openid label {
+	color: #9d9d9c;
+	float: left;
+}
+.landing .header .buttons .board-signin .sign-in-openid div {
+	float: right;
+}
+.landing .header .buttons .board-signin .sign-in-openid label {
+	font-size: 12px;
+	padding-top: 14px;
+}
+.landing .header .buttons .board-signin .sign-in-openid div a {
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	vertical-align: middle;
+	margin-left: 8px;
 }
