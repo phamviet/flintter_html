@@ -700,7 +700,7 @@ input:-moz-placeholder { color:#000;
 }
 .ulti .post .post-text .post-photo {
 	text-align: center;
-	padding-top: 14px;
+	padding-top: 10px;
 }
 ulti .post .post-text .post-photo .buttons {
 	letter-spacing: 0;
@@ -864,6 +864,7 @@ ulti .post .post-text .post-photo .buttons {
 	float: left;
 	margin-right: 15px;
 	margin-bottom: 10px;
+	white-space: nowrap;
 }
 .ulti .tags-list .list ul li a i, .ulti .tags-list .list ul li a .text {
 	display: inline-block;
@@ -910,7 +911,7 @@ ulti .post .post-text .post-photo .buttons {
 	margin-top: 20px;
 }
 .main-wrapper .col-right {
-	margin-left: 640px;
+	margin-left: 639px;
 }
 .col-right .block {
 	margin-bottom: 22px;
@@ -991,6 +992,7 @@ ulti .post .post-text .post-photo .buttons {
 	margin-left: 54px;
 	margin-right: 60px;
 	min-height: 46px;
+	overflow: auto;
 }
 .suggest .cont ul li .info span {
 	display: block;
@@ -1528,4 +1530,66 @@ ulti .post .post-text .post-photo .buttons {
 }
 .ulti .filter-block.active {
 	display: block;
+}
+.pop-wrap {
+	display: none;
+}
+.pop-content-wrap .pop-newpost {
+	float: none;
+	margin: 0 auto;
+}
+.pop-content-wrap .pop-newpost .post {
+	float: none;
+	margin: 0 auto;
+}
+.pop-newpost .post {
+	margin-bottom: 0;
+}
+.pop-content-wrap {
+	background: #ccc;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	position: relative;
+}
+.pop-newpost-wrap {
+	padding: 62px 0;
+	width: 950px;
+}
+.pop-content-wrap .btn-close {
+	background: url('../img/sprites.png') -200px -18px;
+	width: 18px;
+	height: 18px;
+	position: absolute;
+	display: block;
+	top: 4px;
+	right: 4px;
+}
+.pop-fighting {
+	width: 950px;
+}
+.pop-fighting .search {
+	width: 514px;
+	margin: 0 auto 24px auto;
+}
+.pop-fighting .search .input-wrap {
+	position: relative;
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+}
+.pop-fighting .search input[type="text"] {
+	width: 360px;
+	padding: 6px 32px 6px 12px;
+}
+.pop-fighting .search input[type="submit"] {
+	width: 32px;
+	height: 32px;
+	border: 0;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: url('../img/sprites.png') -468px -468px no-repeat;
+	cursor: pointer;
 }

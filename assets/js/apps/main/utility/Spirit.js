@@ -2,7 +2,8 @@ define([
     '$',
     'bootstrap',
     'jquery/jquery.mCustomScrollbar.min',
-    'jquery/jquery.mousewheel.min'
+    'jquery/jquery.mousewheel.min',
+	'jquery/colorbox-min'
 ], function($) {
     var Spirit;
     Spirit = {
@@ -53,3 +54,13 @@ define([
 
     return Spirit;
 });
+function sprNewpost(cls){
+				var $popCls = $(cls);
+				$.colorbox({
+					inline: true,
+					href: $popCls
+				});
+}
+function sprPopClose(){
+	$.colorbox.close();
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Flintter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="">
+   <!--  <meta property="fb:app_id" content="677153332301592" /> -->
+    <!--basic styles-->
+
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/bootstrap-responsive.min.css" rel="stylesheet" />
+	<link href="../assets/css/jquery.mCustomScrollbar.css" rel="stylesheet" />
+	<link href="../assets/css/jquery.colorbox.css" rel="stylesheet" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+
+    <!--page specific plugin styles-->
+
+    <!--site styles-->
+    <link href="../assets/css/style.css" rel="stylesheet" />
+
+    <!--inline styles if any-->
+     <script type="text/javascript">
+        var SITE = {
+            FACEBOOK_APP_ID: '',
+            FACEBOOK_SCOPE: '',
+            BASE_URL: '/',
+            BASE_PATH: '',
+            ENV : 'dev',
+            VERSION: '123456'
+        };
+        var USER = null;
+         var app = {
+//             deps: ['Application/Welcome']
+         }
+    </script>
+<body>
+
+<!-- begin html template -->
+	<div class="pop-newpost ulti">
+		<div class="post active-tags">
+			<div class="post-title">
+				<input type="text" value="Your Title Here"/>
+			</div>
+			<div class="post-text">
+				<div class="post-tab post-tags active"><textarea rows="5"></textarea></div>
+				<!-- post tags -->
+				<div class="post-tab post-photo">
+					<div class="buttons">
+						<button href="#" class="big-button big-gray">Choose from Computer</button>
+						<button href="#" class="big-button big-gray">Cancel</button>
+					</div>
+					<p>You can select more than one file at a time. You can also drag and drop files anywhere on this page to start uploading</p>
+				</div>
+				<!-- post photos -->
+			</div>
+			<div class="post-alt">	
+				<div class="tags">
+					<label>Tags</label>
+					<ul>
+						<li>123123</li>
+						<li>321</li>
+						<li>456</li>
+						<li>654</li>
+					</ul>
+				</div>
+			</div>
+			<div class="post-foot">
+				<ul>
+					<li class="current">
+						<a href="#" title="" rel="tags">
+							<i class="imed imed-tag"></i>
+							<span class="left"></span>
+							<span class="right"></span>
+						</a>
+					</li>
+					<li>
+						<a href="#" title="" rel="photo">
+							<i class="imed imed-photo"></i>
+							<span class="left"></span>
+							<span class="right"></span>
+						</a>
+					</li>
+					<li>
+						<a href="#" title="">
+							<i class="imed imed-mic"></i>
+							<span class="left"></span>
+							<span class="right"></span>
+						</a>
+					</li>
+				</ul>
+				<div class="buttons">
+					<button class="big-button btn-post">Post</button>
+				</div>
+			</div>
+		</div>
+		<!-- post -->
+	</div>
+<!-- end html template -->
+
+<script data-main="../assets/js/apps/main/main" src="../assets/js/vendor/requirejs/require.min.js"></script>
+<!--page specific plugin scripts-->
+
+<!--inline scripts related to this page-->
+
+</body>
+</html>

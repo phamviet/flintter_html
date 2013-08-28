@@ -28,13 +28,14 @@
                 exports: "Backbone"
             },
             'facebook' : {
-                export: 'FB'
+                exports: 'FB'
             },
             'bootstrap': {
                 deps: ['$']
             },
             'jquery/jquery.mCustomScrollbar.min': { deps: ["$"] },
             'jquery/jquery.mousewheel.min': { deps: ["$"] },
+			'jquery/colorbox-min': { deps: ["$"] },
             'rangy/rangy-core': {exports: 'rangy'}
         },
         urlArgs: "_=" +  window.SITE.VERSION || 'nocache'
