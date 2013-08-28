@@ -13,6 +13,9 @@ input:-moz-placeholder { color: #9d9d9c; }
 .landing .main-wrapper {
 	min-height: 400px;
 }
+.landing .footer {
+	margin-bottom: 6px;
+}
 .landing .footer .line {
 	border-top: 0;
 	background: #727b7f;
