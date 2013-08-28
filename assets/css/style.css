@@ -39,11 +39,12 @@ textarea {
 	overflow: hidden;
 	padding: 0;
 }
-a.big-button {
+.big-button {
 	background: #229fd9;
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
 	border-radius: 2px;
+	border: 0;
 	border-bottom: #1c87b8 solid 3px;
 	display: inline-block;
 	*display: inline;
@@ -54,12 +55,12 @@ a.big-button {
 	color: #fff;
 	padding: 3px 25px 2px 25px;
 }
-a.big-button:hover, a.big-red {
+.big-button:hover, .big-red {
 	color: #fff;
 	background: #ea2b4a;
 	border-bottom: #af2138 solid 3px;
 }
-a.big-gray {
+.big-gray {
 	color: #000;
 	background: #e5e5e5;
 	border-bottom: #cccccc solid 3px;
