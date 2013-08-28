@@ -1571,16 +1571,21 @@ ulti .post .post-text .post-photo .buttons {
 .pop-fighting .search {
 	width: 514px;
 	margin: 0 auto 24px auto;
+	font-size: 0;
+	letter-spacing: 0;
+	word-spacing: 0;
 }
 .pop-fighting .search .input-wrap {
 	position: relative;
 	display: inline-block;
 	*display: inline;
 	zoom: 1;
+	margin-right: 8px;
 }
 .pop-fighting .search input[type="text"] {
 	width: 360px;
 	padding: 6px 32px 6px 12px;
+	font-size: 18px;
 }
 .pop-fighting .search input[type="submit"] {
 	width: 32px;
