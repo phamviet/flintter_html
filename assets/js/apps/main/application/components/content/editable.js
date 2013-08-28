@@ -62,23 +62,23 @@ define(['$', 'rangy/rangy-core', 'App'], function($, rangy, App) {
                         // Make sure that not inside <a>
                         var $focus = $(range.closestFocusElement());
                         if (!$focus.is('a') && !$focus.closest('a').length) {
-                            Suggestions.startRange = range.state();
-                            Suggestions.prepare($editor, range.getCaretClientPosition(), '');
+                            UserSuggestions.startRange = range.state();
+                            UserSuggestions.prepare($editor, range.getCaretClientPosition(), '');
                         }
                     }
                 }
             })
             .on('keyup.user-mentions', function(e) {
                 // Using keyup to get full mention string (can't use "keypress", since it fires BEFORE char is inserted to editor)
-                if (Suggestions.active) {
+                if (UserSuggestions.active) {
                     var range = new Selection(),
-                        text = $.trim(range.getText(Suggestions.startRange)); // e.g. @John Doe
+                        text = $.trim(range.getText(UserSuggestions.startRange)); // e.g. @John Doe
 
                     if (text.charAt(0) === '@') {
-                        Suggestions.lastRange = range.state();
-                        Suggestions.update(text.substr(1), true);
+                        UserSuggestions.lastRange = range.state();
+                        UserSuggestions.update(text.substr(1), true);
                     } else {
-                        Suggestions.reset();
+                        UserSuggestions.reset();
                     }
                 }
             })
@@ -93,11 +93,61 @@ define(['$', 'rangy/rangy-core', 'App'], function($, rangy, App) {
 
                 $(this).focus();
                 var range = new Selection();
-                range.paste($link.get(0), Suggestions.startRange, Suggestions.lastRange);
-                Suggestions.reset();
+                range.paste($link.get(0), UserSuggestions.startRange, UserSuggestions.lastRange);
+                UserSuggestions.reset();
             });
     };
+    
+    Editable.prototype.enableTopicMentions = function() {
+        this.$element
+            .off('.topic-mentions')
+            .on('keypress.topic-mentions', function(e) {
+                // Using keypress vs keyup/keydown since it's the only keyboard event that has reliable charCode in e.which
+                if ('#' === String.fromCharCode(e.which)) {
+                    var $editor = $(this),
+                        range = new Selection();
 
+                    // Test that previous symbol is a whitespace (newline or space) or not a text (e.g. DOM element)
+                    if (range.isNodeBeginning() || /^[\s]?$/gi.test(range.getText(-1))) {
+                        // Make sure that not inside <a>
+                        var $focus = $(range.closestFocusElement());
+                        if (!$focus.is('a') && !$focus.closest('a').length) {
+                            TopicSuggestions.startRange = range.state();
+                            TopicSuggestions.prepare($editor, range.getCaretClientPosition(), '');
+                        }
+                    }
+                }
+            })
+            .on('keyup.topic-mentions', function(e) {
+                // Using keyup to get full mention string (can't use "keypress", since it fires BEFORE char is inserted to editor)
+                if (TopicSuggestions.active) {
+                    var range = new Selection(),
+                        text = $.trim(range.getText(TopicSuggestions.startRange)); // e.g. @John Doe
+
+                    if (text.charAt(0) === '#') {
+                        TopicSuggestions.lastRange = range.state();
+                        TopicSuggestions.update(text.substr(1), true);
+                    } else {
+                        TopicSuggestions.reset();
+                    }
+                }
+            })
+            .on('picked.topic-mentions', function(e) {
+                var $link = $('<a></a>')
+                    .text(e.topic.label)
+                    .attr('rel', 'person')
+                    .attr('data-topic-id', e.topic.value)
+                    .attr('href', e.topic.href)
+                    .addClass('topic-mention')
+                    .addClass('topic-wo-c-a');
+
+                $(this).focus();
+                var range = new Selection();
+                range.paste($link.get(0), TopicSuggestions.startRange, TopicSuggestions.lastRange);
+                TopicSuggestions.reset();
+            });
+    };
+    
     Editable.prototype.enableNewLineOnEnter = function() {
         // Normalize enter key handling (insert BR like textarea does)
         this.$element
@@ -134,7 +184,7 @@ define(['$', 'rangy/rangy-core', 'App'], function($, rangy, App) {
             });
     };
 
-    var Suggestions = {
+    var UserSuggestions = {
         active: false,
         $editor: null,
         $dropdown: null,
@@ -246,7 +296,7 @@ define(['$', 'rangy/rangy-core', 'App'], function($, rangy, App) {
             }
             if (this.lastText !== text) {
                 this.lastText = text;
-                $.get(App.url('/suggest/user'), {q: text})
+                $.get(App.url('/service/suggest/user'), {q: text, user_id: window.USER.id})
                     .done($.proxy(this, 'suggest'));
             }
         },
@@ -280,11 +330,10 @@ define(['$', 'rangy/rangy-core', 'App'], function($, rangy, App) {
         },
         suggest: function(users) {
             var items;
-
             if (!users.length) {
                 items = $('<li class="message">No&nbsp;Matches...</li>');
             } else {
-                items = $.map(users, function(user) {
+                items = $.map($.parseJSON(users), function(user) {
                     return $('<li class="suggestion"><a data-user-id="' + user.value + '">' + user.label + '</a></li>')
                         .data('user', user).get(0);
                 });
@@ -295,10 +344,173 @@ define(['$', 'rangy/rangy-core', 'App'], function($, rangy, App) {
             if (!user) {
                 return;
             }
-            this.$editor.trigger({type: 'picked', user: user});
+            this.$editor.trigger({type: 'picked.user-mentions', user: user});
         }
     };
+    
+    var TopicSuggestions = {
+        active: false,
+        $editor: null,
+        $dropdown: null,
+        interval: null,
+        lastText: null,
+        delayedUpdate: null,
+        prepare: function($editor, position, text) {
+            this.reset();
+            this.active = true;
+            this.$editor = $editor;
 
+            // Show the dropdown with loader, while first set of results is loading
+            this.buildList('<li class="message">Type&nbsp;topic\'s&nbsp;name...</li>');
+            this.position(position);
+            this.$dropdown.addClass('open');
+
+            var self = this;
+
+            // Bind navigation in suggestions with up/down keys
+            this.$editor.on('keydown.suggestions', function(e) {
+                switch (e.which) {
+                    case 40: // down arrow
+                        var $next = self.$dropdown.find('li.active').removeClass('active').nextAll('.suggestion,.cancel').first();
+                        if (!$next.length) {
+                            // Cycle to first element
+                            $next = self.$dropdown.find('.suggestion,.cancel').first();
+                        }
+                        $next.addClass('active');
+                        return false;
+                    case 38: // up arrow
+                        var $prev = self.$dropdown.find('li.active').removeClass('active').prevAll('.suggestion,.cancel').first();
+                        if (!$prev.length) {
+                            // Cycle to last element
+                            $prev = self.$dropdown.find('.suggestion,.cancel').last();
+                        }
+                        $prev.addClass('active');
+                        return false;
+                    case 27: // escape
+                        self.reset();
+                        return false;
+                    case 32: // space
+                        if (!self.$dropdown.find('li.suggestion').length) {
+                            self.reset();
+                        }
+                        break; // do not prevent default
+                }
+            });
+
+
+            // Bind suggestion selection by enter key
+            // (have to bind separately to keypress to supress editor's default enter keypress)
+            this.$editor.keyup(function(e)
+            {
+                // For some reason which is 0 for tab but the keyCode is correct
+                var key = e.which || e.keyCode;
+
+                // Select first on tab or enter
+                if (key === 13 || key === 9) {
+                    var $active = self.$dropdown.find('.active');
+                    if (!$active.length || $active.hasClass('cancel')) {
+                        self.reset();
+                    } else if ($active.hasClass('suggestion')) {
+                        self.pick($active.data('topic'));
+                    }
+                    return false;
+                }
+            });
+
+
+            // Bind suggestion selection by mouse click
+            this.$dropdown.on('click.suggestions', 'li.suggestion a', function(e) {
+                e.preventDefault();
+                self.pick($(this).closest('li').data('topic'));
+            });
+
+            // Bind "cancel" click (using mousedown to keep focus in editor)
+            this.$dropdown.on('mousedown.suggestions', 'li.cancel a', function(e) {
+                e.preventDefault();
+                self.reset();
+            });
+
+            // Sample suggestions updates
+            this.interval = setInterval(function() {
+                if (self.delayedUpdate) {
+                    self.update(self.delayedUpdate);
+                    self.delayedUpdate = null;
+                }
+            }, 100);
+        },
+        reset: function() {
+            if (this.$editor) {
+                this.$editor.off('.suggestions');
+            }
+            if (this.$dropdown) {
+                this.$dropdown.off('.suggestions');
+                this.$dropdown.removeClass('open');
+            }
+            clearInterval(this.interval);
+            this.$editor = null;
+            this.active = false;
+        },
+        position: function(coords) {
+            this.$dropdown.css({position: 'absolute', top: coords.top + 20, left: coords.left});
+        },
+        update: function(text, delay) {
+            if (delay) {
+                this.delayedUpdate = text;
+                return;
+            }
+            if (this.lastText !== text) {
+                this.lastText = text;
+                $.get(App.url('/service/suggest/topic'), {q: text, user_id: window.USER.id})
+                    .done($.proxy(this, 'suggest'));
+            }
+        },
+        buildList: function(items) {
+            if (!this.$dropdown) {
+                this.$dropdown = $('<div class="topic-mentions dropdown"><ul class="dropdown-menu"></ul></div>');
+
+                this.$dropdown.find('.dropdown-menu').append([
+                    '<li class="divider"></li>',
+                    '<li class="cancel"><a>&times;&nbsp;Cancel</a></li>'
+                ]);
+
+                this.$dropdown.appendTo('body');
+            }
+
+            // Remember which item was selected prior to update and attempt to make it active after update
+            var $active, active = this.$dropdown.find('li.active a').data('topic-id');
+
+            this.$dropdown
+                .find('.dropdown-menu').find('li.suggestion,li.message').remove().end()
+                .prepend(items);
+
+            if (active) {
+                $active = this.$dropdown.find('a[data-topic-id="' + active + '"]').parent('li');
+            }
+            if (!$active || !$active.length) {
+                // If there were no active (or old active doesn't present now) - make first one active
+                $active = this.$dropdown.find('li.suggestion').first();
+            }
+            $active.addClass('active');
+        },
+        suggest: function(topics) {
+            var items;
+            if (!topics.length) {
+                items = $('<li class="message">No&nbsp;Matches...</li>');
+            } else {
+                items = $.map($.parseJSON(topics), function(topic) {
+                    return $('<li class="suggestion"><a data-topic-id="' + topic.value + '">' + topic.label + '</a></li>')
+                        .data('topic', topic).get(0);
+                });
+            }
+            this.buildList(items);
+        },
+        pick: function(topic) {
+            if (!topic) {
+                return;
+            }
+            this.$editor.trigger({type: 'picked.topic-mentions', topic: topic});
+        }
+    };
     // Supporting functions:
     function getComputedStyle(element) {
         var style = "getComputedStyle" in window ? window.getComputedStyle(element, null) : element.currentStyle;
@@ -433,7 +645,7 @@ define(['$', 'rangy/rangy-core', 'App'], function($, rangy, App) {
     });
 
     $.fn.contentEditable.defaults = {
-        features: ['UserMentions', 'NewLineOnEnter']
+        features: ['UserMentions', 'TopicMentions', 'NewLineOnEnter']
     };
 
     // Data API for editable
