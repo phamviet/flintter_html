@@ -2,8 +2,7 @@ define([
     '$',
     'bootstrap',
     'jquery/jquery.mCustomScrollbar.min',
-    'jquery/jquery.mousewheel.min',
-	'jquery/colorbox-min'
+    'jquery/jquery.mousewheel.min'
 ], function($) {
     var Spirit;
     Spirit = {
@@ -42,19 +41,9 @@ define([
 				$('.filter-block').removeClass("active");
 				$(activeClass).addClass("active");
 			});
-
-            $('#myModal').on('show', function () {
-                $(this).css({
-                    width:'auto',
-                    height:'auto',
-                    'max-height':'100%',
-                    'left': '50%'
-//                    'margin-left': (($(this).data('width') / 2) * -1) + 'px'
-                });
-            })
-                .on('hidden', function () {
-                    $(this).removeData('modal');
-            });
+			$('.modal').on('hidden', function () {
+			  $(this).removeData('modal');
+			});
         },
 
         /**
@@ -67,15 +56,3 @@ define([
 
     return Spirit;
 });
-function sprNewpost(cls){
-				var $popCls = $(cls);
-				$.colorbox({
-					inline: true,
-					href: $popCls
-				});
-}
-function sprPopClose(){
-	$.colorbox.close();
-}
-
-

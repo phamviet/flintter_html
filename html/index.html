@@ -64,7 +64,7 @@
 					<li class="level-f"><a href="javascript:void(0);" title="" class="item">Ask for Idea</a></li>
 					<li class="level-f"><span class="sep"></span></li>
 					<li class="level-f">
-						<a href="javascript:sprNewpost('.pop-newpost-wrap');" title="" class="item btn-newpost"><i></i><span class="text">New Post</span></a>
+						<a data-toggle="modal" href="pop-newpost.html" data-target="#pop-fighting" title="" class="item btn-newpost"><i></i><span class="text">New Post</span></a>
 						<div class="sub-wrap newpost-board">
 							<div class="sub">
 								<span class="arrow"></span>
@@ -339,7 +339,7 @@
 									<li>
 										<a href="javascript:void(0);" title=""><i class="imed imed-friend"></i></a>
 										<a href="javascript:void(0);" title="Send Jenny a message"><i class="imed imed-message"></i></a>
-										<a href="javascript:void(0);" title="Fighting with Jenny"><i class="imed imed-fighting"></i></a>
+										<a data-toggle="modal" href="pop-fighting.html" data-target="#pop-fighting" title="Fighting with Jenny"><i class="imed imed-fighting"></i></a>
 									</li>
 								</ul>
 							</div>
@@ -658,78 +658,14 @@
 	<!-- footer -->
 </div>
 <!-- end html template -->
-<div class="pop-wrap">
-	<div class="pop-content-wrap pop-newpost-wrap">
-		<a href="javascript:sprPopClose();" class="btn-close"></a>
-		<div class="ulti pop-newpost">
-			<div class="post active-tags">
-				<div class="post-title">
-					<input type="text" value="Your Title Here"/>
-				</div>
-				<div class="post-text">
-					<div class="post-tab post-tags active"><textarea rows="5"></textarea></div>
-					<!-- post tags -->
-					<div class="post-tab post-photo">
-						<div class="buttons">
-							<button href="javascript:void(0);" class="big-button big-gray">Choose from Computer</button>
-							<button href="javascript:void(0);" class="big-button big-gray">Cancel</button>
-						</div>
-						<p>You can select more than one file at a time. You can also drag and drop files anywhere on this page to start uploading</p>
-					</div>
-					<!-- post photos -->
-				</div>
-				<div class="post-alt">	
-					<div class="tags">
-						<label>Tags</label>
-						<ul>
-							<li>123123</li>
-							<li>321</li>
-							<li>456</li>
-							<li>654</li>
-						</ul>
-					</div>
-				</div>
-				<div class="post-foot">
-					<ul>
-						<li class="current">
-							<a href="javascript:void(0);" title="" rel="tags">
-								<i class="imed imed-tag"></i>
-								<span class="left"></span>
-								<span class="right"></span>
-							</a>
-						</li>
-						<li>
-							<a href="javascript:void(0);" title="" rel="photo">
-								<i class="imed imed-photo"></i>
-								<span class="left"></span>
-								<span class="right"></span>
-							</a>
-						</li>
-						<li>
-							<a href="javascript:void(0);" title="">
-								<i class="imed imed-mic"></i>
-								<span class="left"></span>
-								<span class="right"></span>
-							</a>
-						</li>
-					</ul>
-					<div class="buttons">
-						<button class="big-button btn-post">Post</button>
-					</div>
-				</div>
-			</div>
-			<!-- post -->
-		</div>
-	</div>
-	<!-- pop up new post -->
-	<div class="pop-content-wrap pop-fighting-wrap">
-		<a href="javascript:sprPopClose();" class="btn-close"></a>
-		<div class="pop-fighting">
-		</div>
-	</div>
-	<!-- Pop up fighting -->
+<div class="modal fade hide" id="pop-fighting" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+	<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+      <!-- <div class="modal-header">
+      </div> -->
+      <div class="modal-body">
+        <p>Loading…</p>
+      </div>
 </div>
-<!-- pop up -->
 <script data-main="../assets/js/apps/main/main" src="../assets/js/vendor/requirejs/require.min.js"></script>
 <!--page specific plugin scripts-->
 

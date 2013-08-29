@@ -1567,6 +1567,7 @@ ulti .post .post-text .post-photo .buttons {
 }
 .pop-fighting {
 	width: 950px;
+	padding: 27px 0 0 0;
 }
 .pop-fighting .search {
 	width: 514px;
@@ -1597,4 +1598,265 @@ ulti .post .post-text .post-photo .buttons {
 	right: 0;
 	background: url('../img/sprites.png') -468px -468px no-repeat;
 	cursor: pointer;
+}
+.pop-fighting .user-fighting {
+	font-size: 0;
+	word-spacing: 0;
+	letter-spacing: 0;
+	text-align: center;
+	padding-bottom: 54px;
+	padding-top: 36px;
+	background: #fff;
+	-moz-border-radius: 0 0 6px 6px;
+	-webkit-border-radius: 0 0 6px 6px;
+	border-radius: 0 0 6px 6px;
+}
+.pop-fighting .user-fighting .uf-div {
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	width: 360px;
+	vertical-align: top;
+}
+.pop-fighting .user-fighting .uf-div .uf-info {
+	margin-bottom: 140px;
+}
+.pop-fighting .user-fighting .uf-div .uf-info .ava,
+.uf-winner .uf-info .ava {
+	float: left;
+	position: relative;
+}
+.pop-fighting .user-fighting .uf-div .uf-info .ava img,
+.uf-winner .uf-info .ava img {
+	border: #fff solid 2px;
+	padding: 1px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	width: 110px;
+	height: 110px;
+	background: url('../img/sprites.png') -390px -50px no-repeat;
+}
+.pop-fighting .user-fighting .uf-div .uf-info .ava .name,
+.uf-winner .uf-info .ava .name {
+	position: absolute;
+	padding: 4px;
+	-webkit-border-top-right-radius: 2px;
+	-webkit-border-bottom-right-radius: 2px;
+	-moz-border-radius-topright: 2px;
+	-moz-border-radius-bottomright: 2px;
+	border-top-right-radius: 2px;
+	border-bottom-right-radius: 2px;
+	color: #fff;
+	font-weight: bold;
+	background: #000;
+	background: rgba(0,0,0,0.5);
+	bottom: 12px;
+	left: 3px;
+	font-size: 12px;
+}
+.pop-fighting .user-fighting .uf-div .uf-info .info,
+.uf-winner .uf-info .info {
+	margin-left: 125px;
+	text-align: left;
+}
+.pop-fighting .user-fighting .uf-div .uf-info .info h2,
+.pop-fighting .user-fighting .uf-div .uf-info .info .job,
+.pop-fighting .user-fighting .uf-div .uf-info .info .des,
+.pop-fighting .user-fighting .uf-div .uf-block .number,
+.uf-winner .uf-info .info h2,
+.uf-winner .uf-info .info .job,
+.uf-winner .uf-info .info .des,
+.uf-winner .uf-block .number{
+	font-family:'Open Sans Condensed', Arial, Calibri, Geneva,sans-serif;
+}
+.pop-fighting .user-fighting .uf-div .uf-info .info h2,
+.uf-winner .uf-info .info h2 {
+	text-transform: uppercase;
+	font-size: 36px;
+	font-size: 3.6rem;
+	font-weight: normal;
+	line-height: 1em;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.pop-fighting .user-fighting .uf-div .uf-info .info .job,
+.uf-winner .uf-info .info .job {
+	font-size: 24px;
+	font-size: 2.4rem;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.pop-fighting .user-fighting .uf-div .uf-info .info .des,
+.uf-winner .uf-info .info .des {
+	font-size: 16px;
+	font-size: 1.6rem;
+}
+.pop-fighting .uf-comp-arrow {
+	width: 80px;
+	height: 50px;
+	background: url('../img/sprites.png') -310px -50px no-repeat;
+	margin: 0 auto;
+	position: relative;
+	z-index: 20;
+}
+.pop-fighting .user-fighting .uf-div .uf-info, 
+.pop-fighting .user-fighting .uf-div .uf-block {
+	font-size: 12px;
+	font-size: 1.2rem;
+}
+.pop-fighting .user-fighting .uf-div .uf-block {
+	margin-bottom: 140px;
+}
+.pop-fighting .user-fighting .uf-div .uf-block .number {
+	font-size: 48px;
+	font-size: 4.8rem;
+	text-transform: uppercase;
+	color: #ea2b4a;
+	background: #e3e3e3;
+	padding: 20px 0;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	margin-bottom: 8px;
+}
+.pop-fighting .user-fighting .uf-winner {
+	display: inline-block;
+}
+.pop-fighting .user-fighting .uf-winner .text {
+	font-family:'Open Sans Condensed', Arial, Calibri, Geneva,sans-serif;
+	color: #ea2b4a;
+	font-size: 48px;
+	font-size: 4.8rem;
+	text-transform: uppercase;
+}
+.pop-fighting .user-fighting .uf-winner .uf-info {
+	width: 420px;
+	height: 120px;
+	padding: 20px 16px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	background: #e3e3e3;
+}
+.pop-fighting .user-fighting .uf-comp {
+	width: 154px;
+	margin: 0 12px;
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	vertical-align: top;
+	position: relative;
+	font-size: 12px;
+	text-align: center;
+}
+.pop-fighting .user-fighting .uf-comp .line {
+	background: #e3e3e3;
+	width: 4px;
+	position: absolute;
+	left: 50%;
+	top: 6px;
+	height: 99%;
+	margin-left: -2px;
+	z-index: 10;
+}
+.pop-fighting .user-fighting .uf-comp-block {
+	margin-bottom: 193px;
+	position: relative;
+	z-index: 20;
+}
+.pop-fighting .user-fighting .uf-comp-block.uf-comp-first {
+	padding: 6px 0 8px 0;
+	margin-bottom: 140px;
+}
+.pop-fighting .user-fighting .uf-comp-block.uf-comp-idea {
+	margin-bottom: 178px;
+}
+.pop-fighting .user-fighting .uf-comp-block.uf-comp-first .comp-icon {
+	width: 100px;
+	height: 54px;
+	border-radius: 50px;
+	background: #e3e3e3;
+	text-align: center;
+	margin: 0 auto;
+	padding: 23px 0;
+}
+.pop-fighting .user-fighting .uf-comp-block .comp-icon {
+	background: #e3e3e3;
+	width: 40px;
+	height: 24px;
+	border-radius: 20px;
+	text-align: center;
+	margin: 0 auto;
+	padding: 8px 0;
+}
+.pop-fighting .user-fighting .uf-comp-block .comp-top {
+	background: #e3e3e3;
+	border-radius: 4px;
+	padding: 8px 0;
+	margin-top: -8px;
+}
+.pop-fighting .user-fighting .uf-comp-block {
+	padding: 22px 0;
+}
+.uf-comp-block .comp-icon-bigger,
+.uf-comp-block .comp-icon-smaller,
+.uf-comp-block .comp-icon-equal {
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	width: 24px;
+	height: 24px;
+	background-image: url('../img/sprites.png');
+	background-repeat: no-repeat;
+}
+.uf-comp-block.uf-comp-first .comp-icon-bigger,
+.uf-comp-block.uf-comp-first .comp-icon-smaller,
+.uf-comp-block.uf-comp-first .comp-icon-equal {
+	width: 54px;
+	height: 54px;
+}
+.uf-comp-block .comp-icon-bigger {
+	background-position: -476px -404px;
+}
+.uf-comp-block .comp-icon-smaller {
+	background-position: -452px -404px;
+}
+.uf-comp-block .comp-icon-equal {
+	background-position: -428px -404px;
+}
+.uf-comp-block.uf-comp-first .comp-icon-bigger {
+	background-position: -446px -350px;
+}
+.uf-comp-block.uf-comp-first .comp-icon-smaller {
+	background-position: -392px -350px;
+}
+.uf-comp-block.uf-comp-first .comp-icon-equal {
+	background-position: -338px -350px;
+}
+/* modify modal */
+.modal {
+	width: 950px;
+	margin-left: -425px;
+	padding: 0;
+	position: absolute;
+	background: #e3e3e3;
+	border: 0;
+}
+.modal-body {
+	max-height: none;
+	padding: 0;
+	overflow: visible;
+}
+.modal .close {
+	background: url('../img/sprites.png') -200px -18px;
+	width: 18px;
+	height: 18px;
+	position: absolute;
+	display: block;
+	top: 4px;
+	right: 4px;
+	z-index: 10;
 }

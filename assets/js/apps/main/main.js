@@ -35,7 +35,6 @@
             },
             'jquery/jquery.mCustomScrollbar.min': { deps: ["$"] },
             'jquery/jquery.mousewheel.min': { deps: ["$"] },
-			'jquery/colorbox-min': { deps: ["$"] },
             'rangy/rangy-core': {exports: 'rangy'}
         },
         urlArgs: "_=" +  window.SITE.VERSION || 'nocache'
