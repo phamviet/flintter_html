@@ -1,6 +1,7 @@
 define([
     '$',
-    'Spirit'
+    'Spirit',
+    'Application/components/overlay'
 ], function($, Spirit){
     var App;
     var global = window.SITE || {

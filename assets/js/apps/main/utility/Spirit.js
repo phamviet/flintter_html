@@ -42,6 +42,19 @@ define([
 				$('.filter-block').removeClass("active");
 				$(activeClass).addClass("active");
 			});
+
+            $('#myModal').on('show', function () {
+                $(this).css({
+                    width:'auto',
+                    height:'auto',
+                    'max-height':'100%',
+                    'left': '50%'
+//                    'margin-left': (($(this).data('width') / 2) * -1) + 'px'
+                });
+            })
+                .on('hidden', function () {
+                    $(this).removeData('modal');
+            });
         },
 
         /**
@@ -64,3 +77,5 @@ function sprNewpost(cls){
 function sprPopClose(){
 	$.colorbox.close();
 }
+
+
