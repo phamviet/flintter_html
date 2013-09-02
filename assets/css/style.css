@@ -1850,6 +1850,9 @@ ulti .post .post-text .post-photo .buttons {
 	position: absolute;
 	border: 0;
 	background: transparent;
+	moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
 }
 .modal-body {
 	max-height: none;
@@ -1868,5 +1871,7 @@ ulti .post .post-text .post-photo .buttons {
 }
 .pop-fighting {
 	background: #e3e3e3;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
 	border-radius: 6px;
 }
