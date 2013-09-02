@@ -330,13 +330,13 @@ input:-moz-placeholder { color:#000;
 .imed-pencil-gray {
 	background-position: -33px -333px;
 }
-.imed-pencil-gray:hover, .current .imed-pencil-gray, li:hover .imed-pencil-gray {
+.imed-pencil-gray:hover, .active .imed-pencil-gray, li:hover .imed-pencil-gray {
 	background-position: -63px -333px;
 }
 .imed-tags {
 	background-position: -93px -333px;
 }
-.imed-tags:hover, .current .imed-tags, li:hover .imed-tags {
+.imed-tags:hover, .active .imed-tags, li:hover .imed-tags {
 	background-position: -123px -333px;
 }
 .imed-setting {
@@ -677,7 +677,6 @@ input:-moz-placeholder { color:#000;
 }
 .ulti .post .post-title, .ulti .post .post-text {
 	background: #fff;
-	padding: 12px 15px 13px 15px;
 	border: #ccc solid 1px;
 	-webkit-border-radius: 3px 3px 0 0;
 	-moz-border-radius: 3px 3px 0 0;
@@ -688,12 +687,16 @@ input:-moz-placeholder { color:#000;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
+	padding: 12px 15px 13px 15px;
 }
 .ulti .post .post-text {
 	border-bottom: 0;
 }
 .ulti .post .post-text .post-tab {
 	display: none;
+}
+.ulti .post .post-text .post-tab .post-tab-wrap {
+	padding: 12px 15px 13px 15px;
 }
 .ulti .post .post-text .active {
 	display: block;
@@ -741,8 +744,6 @@ ulti .post .post-text .post-photo .buttons {
 .ulti .post .post-alt {
 	min-height: 30px;
 	background: #fff;
-	border-left: #ccc solid 1px;
-	border-right: #ccc solid 1px;
 }
 .ulti .post .post-foot {
 	background: #e5e5e5;
@@ -781,7 +782,7 @@ ulti .post .post-text .post-photo .buttons {
 	top: 0;
 	display: none;
 }
-.ulti .post .post-foot ul .current a span {
+.ulti .post .post-foot ul .active a span {
 	display: block;
 }
 .ulti .post .post-foot ul li a .left {
@@ -792,7 +793,7 @@ ulti .post .post-text .post-photo .buttons {
 	right: -2px;
 	background-position: -2px 0;
 }
-.ulti .post .post-foot ul .current a {
+.ulti .post .post-foot ul .active a {
 	background: #fff;
 	border-left: #ccc solid 1px;
 	border-right: #ccc solid 1px;
@@ -812,17 +813,23 @@ ulti .post .post-text .post-photo .buttons {
 .ulti .post .post-foot ul li a:hover .imed-mic {
 	background-position: -60px -240px;
 }
-.ulti .post .post-foot ul .current a .imed-tag {
+.ulti .post .post-foot ul .active a .imed-tag {
 	background-position: 0 -210px;
 }
 .ulti .post .post-foot .buttons {
 	float: right;
 	margin-right: 5px;
 	margin-top: 5px;
+	font-size: 0;
+	word-spacing: 0;
+	letter-spacing: 0;
+}
+.ulti .post .post-foot .buttons .big-button {
+	margin-left: 3px;
 }
 .ulti .post .post-foot .buttons .btn-post {
 }
-.ulti .active-tags .post-alt {
+.ulti .post-tags .post-alt {
 	border-top: #ccc dashed 1px;
 }
 .ulti .tags-list {
@@ -883,7 +890,7 @@ ulti .post .post-text .post-photo .buttons {
 	padding: 8px 12px;
 	display: none;
 }
-.ulti .active-tags .post-alt .tags {
+.ulti .post-tags .post-alt .tags {
 	display: block;
 }
 .ulti .post .post-alt .tags ul {

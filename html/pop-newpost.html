@@ -1,50 +1,63 @@
 <div class="pop-content-wrap pop-newpost-wrap">
 		<div class="ulti pop-newpost">
-			<div class="post active-tags">
+			<div class="post">
 				<div class="post-title">
 					<input type="text" value="Your Title Here"/>
 				</div>
 				<div class="post-text">
-					<div class="post-tab post-tags active"><textarea rows="5"></textarea></div>
-					<!-- post tags -->
-					<div class="post-tab post-photo">
-						<div class="buttons">
-							<button href="javascript:void(0);" class="big-button big-gray">Choose from Computer</button>
-							<button href="javascript:void(0);" class="big-button big-gray">Cancel</button>
+					<div id="poptabs-1" class="post-tab post-tags active" data-toggle="pill">
+						<div class="post-tab-wrap">
+							<textarea rows="5"></textarea>
 						</div>
-						<p>You can select more than one file at a time. You can also drag and drop files anywhere on this page to start uploading</p>
+						<div class="post-alt">	
+							<div class="tags">
+								<label>Tags</label>
+								<ul>
+									<li>123123</li>
+									<li>321</li>
+									<li>456</li>
+									<li>654</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- post tags -->
+					<div id="poptabs-2" class="post-tab post-photo" data-toggle="pill">
+						<div class="post-tab-wrap">
+							<div class="buttons">
+								<button href="javascript:void(0);" class="big-button big-gray">Choose from Computer</button>
+								<button href="javascript:void(0);" class="big-button big-gray">Cancel</button>
+							</div>
+							<p>You can select more than one file at a time. You can also drag and drop files anywhere on this page to start uploading</p>
+						</div>
+						<div class="post-alt">	
+						</div>
 					</div>
 					<!-- post photos -->
-				</div>
-				<div class="post-alt">	
-					<div class="tags">
-						<label>Tags</label>
-						<ul>
-							<li>123123</li>
-							<li>321</li>
-							<li>456</li>
-							<li>654</li>
-						</ul>
+					<div id="poptabs-3" class="post-tab" data-toggle="pill">
+						<div class="post-tab-wrap">
+						</div>
 					</div>
+					<!-- -->
 				</div>
 				<div class="post-foot">
-					<ul>
-						<li class="current">
-							<a href="javascript:void(0);" title="" rel="tags">
+					<ul id="tabs">
+						<li class="active">
+							<a href="#poptabs-1" title="" rel="tags" data-toggle="tab">
 								<i class="imed imed-tag"></i>
 								<span class="left"></span>
 								<span class="right"></span>
 							</a>
 						</li>
 						<li>
-							<a href="javascript:void(0);" title="" rel="photo">
+							<a href="#poptabs-2" title="" rel="photo" data-toggle="tab">
 								<i class="imed imed-photo"></i>
 								<span class="left"></span>
 								<span class="right"></span>
 							</a>
 						</li>
 						<li>
-							<a href="javascript:void(0);" title="">
+							<a href="#poptabs-3" title="" data-toggle="tab">
 								<i class="imed imed-mic"></i>
 								<span class="left"></span>
 								<span class="right"></span>
@@ -52,6 +65,7 @@
 						</li>
 					</ul>
 					<div class="buttons">
+						<button class="big-button btn-cancel">Cancel</button>
 						<button class="big-button btn-post">Post</button>
 					</div>
 				</div>
