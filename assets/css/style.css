@@ -611,7 +611,7 @@ input:-moz-placeholder { color:#000;
 	margin: 0 auto;
 	position: relative;
 	z-index: 50;
-	min-height: 800px;
+	min-height: 460px;
 }
 .main-head {
 	border-bottom: #fff solid 1px;
@@ -1993,7 +1993,7 @@ ulti .post .post-text .post-photo .buttons {
 .intro {
 	position: relative;
 	margin-top: 260px;
-	min-height: 420px;
+	min-height: 320px;
 }
 .intro .intro-tabs {
 	position: absolute;
