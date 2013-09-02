@@ -1553,15 +1553,14 @@ ulti .post .post-text .post-photo .buttons {
 	margin-bottom: 0;
 }
 .pop-content-wrap {
-	background: #ccc;
+	background: transparent;
 	-moz-border-radius: 6px;
 	-webkit-border-radius: 6px;
 	border-radius: 6px;
 	position: relative;
 }
 .pop-newpost-wrap {
-	padding: 62px 0;
-	width: 950px;
+	
 }
 .pop-content-wrap .btn-close {
 	background: url('../img/sprites.png') -200px -18px;
@@ -1849,8 +1848,8 @@ ulti .post .post-text .post-photo .buttons {
 	margin-left: -475px;
 	padding: 0;
 	position: absolute;
-	background: #e3e3e3;
 	border: 0;
+	background: transparent;
 }
 .modal-body {
 	max-height: none;
@@ -1866,4 +1865,8 @@ ulti .post .post-text .post-photo .buttons {
 	top: 4px;
 	right: 4px;
 	z-index: 10;
+}
+.pop-fighting {
+	background: #e3e3e3;
+	border-radius: 6px;
 }
