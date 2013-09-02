@@ -44,10 +44,6 @@ define([
 			$('.modal').on('hidden', function () {
 			  $(this).removeData('modal');
 			});
-			$('#tabs li a').click(function(e){
-				e.preventDefault();
-				$(this).tab('show');
-			});
         },
 
         /**
