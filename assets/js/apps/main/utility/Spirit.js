@@ -2,7 +2,8 @@ define([
     '$',
     'bootstrap',
     'jquery/jquery.mCustomScrollbar.min',
-    'jquery/jquery.mousewheel.min'
+    'jquery/jquery.mousewheel.min',
+	'jquery/select2.min'
 ], function($) {
     var Spirit;
     Spirit = {
@@ -43,6 +44,10 @@ define([
 			});
 			$('.modal').on('hidden', function () {
 			  $(this).removeData('modal');
+			});
+			$('select').select2({
+				allowClear: true,
+				placeholder: true
 			});
         },
 

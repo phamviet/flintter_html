@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Flintter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="">
+   <!--  <meta property="fb:app_id" content="677153332301592" /> -->
+    <!--basic styles-->
+	<link href="../assets/css/select2.css" rel="stylesheet" />
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/bootstrap-responsive.min.css" rel="stylesheet" />
+	<link href="../assets/css/jquery.mCustomScrollbar.css" rel="stylesheet" />
+	<link href="../assets/css/jquery.colorbox.css" rel="stylesheet" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+
+    <!--page specific plugin styles-->
+
+    <!--site styles-->
+    <link href="../assets/css/style.css" rel="stylesheet" />
+
+    <!--inline styles if any-->
+     <script type="text/javascript">
+        var SITE = {
+            FACEBOOK_APP_ID: '',
+            FACEBOOK_SCOPE: '',
+            BASE_URL: '/',
+            BASE_PATH: '',
+            ENV : 'dev',
+            VERSION: '123456'
+        };
+        var USER = null;
+         var app = {
+//             deps: ['Application/Welcome']
+         }
+    </script>
+<body>
+<!-- Modal -->
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Modal header</h3>
+    </div>
+    <div class="modal-body">
+        <p>One fine body…</p>
+    </div>
+
+</div>
+<!-- begin html template -->
+<div class="wrapper page-intro">
+	<div class="bg-top"></div>
+	<div class="header-wrap">
+		<div class="line-color"></div>
+		<div class="header">
+			<div class="logo">
+				<a href="javascript:void(0);" title="Flintter"></a>
+			</div>
+			<div class="navigation">
+				<ul>
+					<li class="level-f current"><a href="javascript:void(0);" title="" class="item">Trang chủ</a></li>
+					<li class="level-f"><span class="sep"></span></li>
+					<li class="level-f"><a href="javascript:void(0);" title="" class="item">Explore</a></li>
+					<li class="level-f"><span class="sep"></span></li>
+					<li class="level-f"><a href="javascript:void(0);" title="" class="item">Ask for Idea</a></li>
+					<li class="level-f"><span class="sep"></span></li>
+					<!-- if not logged in yet -->
+					<li class="level-f sign-in">
+						<a href="javascript:void(0);" title="" class="item">Đăng nhập</a>
+						<div class="board-signin">
+							<form method="">
+								<div class="board-signin-wrap">
+									<span class="arrow"><i></i></span>
+									<div class="shadow"></div>
+									<div class="signin-wrap">
+										<div class="sign-in-openid clearfix">
+											<label>Login or Sign up with OpenID<br/>Select one of these third-party accounts:</label>
+											<div class="openid">
+												<div class="line"></div>
+												<a href="javascript:void(0);"><i class="i40 i40-fb"></i></a>
+												<a href="javascript:void(0);"><i class="i40 i40-tw"></i></a>
+												<a href="javascript:void(0);"><i class="i40 i40-gg"></i></a>
+											</div>
+										</div>
+										<div class="sign-in-info clearfix">
+											<div class="line"></div>
+											<ul>
+												<li>
+													<div class="input-wrap">
+														<input type="email" placeholder="Email" />
+													</div>
+												</li>
+												<li>
+													<div class="input-wrap">
+														<input type="password" placeholder="Password" />
+													</div>
+												</li>
+												<li class="buttons-wrap clearfix">
+													<a href="javascript:void(0);" class="pw-forgot">Forgot your password ?</a>
+													<a href="javascript:void(0);" class="pw-register">Register ?</a>
+													<button class="big-button">Sign in</button>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<!-- sign in wrap -->
+							</form>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- nav -->
+		</div>
+	</div>
+	<!-- header -->
+	<div class="main-wrapper">
+		<div class="intro">
+			<div class="intro-tabs">
+				<ul>
+					<li class="active">
+						<a href="#intro-tab-1" data-toggle="tab">
+							<span class="round"></span>
+							<span class="text">1</span>
+						</a>
+					</li>
+					<li>
+						<a href="#intro-tab-2" data-toggle="tab">
+							<span class="round"></span>
+							<span class="text">2</span>
+						</a>
+					</li>
+					<li>
+						<a href="#intro-tab-3" data-toggle="tab">
+							<span class="round"></span>
+							<span class="text">3</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- intro tabs -->
+			<form method="">
+				<div class="intro-wrap">
+					<div id="intro-tab-1" class="intro-tab-cont intro-tab-1 active" data-toggle="pill">
+						<div class="intro-national">
+							<h2>1. Choose your Nationality</h2>
+							<div class="input-wrap">
+								<select data-placeholder="Choose your country">
+									<option></option>
+									<option value="Vietnam">Vietnam</option>
+									<option value="123">123</option>
+									<option value="456">456</option>
+								</select>
+							</div>
+							<div class="buttons">
+								<div class="line"></div>
+								<button class="big-button">Skip</button>
+								<button class="big-button">Next</button>
+							</div>
+						</div>
+					</div>
+					<!-- intro #1 -->
+					<div id="intro-tab-2" class="intro-tab-cont intro-tab-2" data-toggle="pill">
+						<div class="intro-avatar">
+							<h2>2. Choose image to set avatar</h2>
+							<div class="input-wrap">
+								<a href="#" title=""><img src="../assets/demo/img-ava-160.jpg" alt="" border=""/></a>
+								<div class="spr-nav">
+									<button class="big-button btn-browse">Browse</button>
+									<button class="big-button btn-clear">Clear</button>
+								</div>
+								<div class="name clearfix">
+									<label for="">Username</label>
+									<input type="text" value=""/>
+								</div>
+							</div>
+							<div class="buttons">
+								<div class="line"></div>
+								<button class="big-button">Skip</button>
+								<button class="big-button">Next</button>
+							</div>
+						</div>
+					</div>
+					<!-- intro #2 -->
+					<div id="intro-tab-3" class="intro-tab-cont intro-tab-3" data-toggle="pill">
+						<div class="intro-topics">
+							<h2>3. Tell us your topic of interest</h2>
+							<div class="input-wrap">
+								<div class="list">
+									<select data-placeholder="Type to choose the interest topics...">
+										<option></option>
+										<option value="topic1">Topic1</option>
+										<option value="topic2">Topic2</option>
+										<option value="topic3">Topic3</option>
+									</select>
+								</div>
+								<div class="chosen-list">
+									<label for="">Followed:</label>
+									<ul>
+										<li>
+											<a href="#" title="">
+												<span class="prefix">#</span>
+												<span class="text">Incidunt</span>
+											</a>
+										</li>
+										<li>
+											<a href="#" title="">
+												<span class="prefix">#</span>
+												<span class="text">Incidunt</span>
+											</a>
+										</li>
+										<li>
+											<a href="#" title="">
+												<span class="prefix">#</span>
+												<span class="text">Incidunt</span>
+											</a>
+										</li>
+										<li>
+											<a href="#" title="">
+												<span class="prefix">#</span>
+												<span class="text">Incidunt</span>
+											</a>
+										</li>
+										<li>
+											<a href="#" title="">
+												<span class="prefix">#</span>
+												<span class="text">Incidunt</span>
+											</a>
+										</li>
+										<li>
+											<a href="#" title="">
+												<span class="prefix">#</span>
+												<span class="text">Incidunt</span>
+											</a>
+										</li>
+										<li>
+											<a href="#" title="">
+												<span class="prefix">#</span>
+												<span class="text">Incidunt</span>
+											</a>
+										</li>
+										<li>
+											<a href="#" title="">
+												<span class="prefix">#</span>
+												<span class="text">Incidunt</span>
+											</a>
+										</li>
+										<li>
+											<a href="#" title="">
+												<span class="prefix">#</span>
+												<span class="text">Incidunt</span>
+											</a>
+										</li>
+										<li>
+											<a href="#" title="">
+												<span class="prefix">#</span>
+												<span class="text">Incidunt</span>
+											</a>
+										</li>
+										<li>
+											<a href="#" title="">
+												<span class="prefix">#</span>
+												<span class="text">Incidunt</span>
+											</a>
+										</li>
+										<li>
+											<a href="#" title="">
+												<span class="prefix">#</span>
+												<span class="text">Incidunt</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="buttons">
+								<div class="line"></div>
+								<button class="big-button">Skip</button>
+								<button class="big-button">Done</button>
+							</div>
+						</div>
+					</div>
+					<!-- intro #3 -->
+				</div>
+			</form>
+		</div>
+		<!-- intro -->
+	</div>
+	<!-- main -->
+	<div class="footer-wrapper">
+		<div class="footer clearfix">
+			<span class="line"></span>
+			<div class="left">
+				<div class="logo">
+					<a href="javascript:void(0);" title=""></a>
+				</div>
+				<!-- logo -->
+				<div class="copyright">
+					<p>COPYRIGHT © FLINTTER 2013</p>
+				</div>
+			</div>
+			<!-- left footer -->
+			<div class="right">
+				<div class="social">
+					<ul>
+						<li><a href="javascript:void(0);" title=""><i class="imed imed-fb"></i></a></li>
+						<li><a href="javascript:void(0);" title=""><i class="imed imed-tw"></i></a></li>
+						<li><a href="javascript:void(0);" title=""><i class="imed imed-gg"></i></a></li>
+						<li><a href="javascript:void(0);" title=""><i class="imed imed-pin"></i></a></li>
+						<li><a href="javascript:void(0);" title=""><i class="imed imed-rss"></i></a></li>
+					</ul>
+				</div>
+				<!-- social buttons -->
+				<div class="navi">
+					<ul>
+						<li><a href="javascript:void(0);" title="">About</a></li>
+						<li><span class="sep"></span></li>
+						<li><a href="javascript:void(0);" title="">Feedback</a></li>
+						<li><span class="sep"></span></li>
+						<li><a href="javascript:void(0);" title="">Term & Policy</a></li>
+						<li><span class="sep"></span></li>
+						<li><a href="javascript:void(0);" title="">Contact Us</a></li>
+						<li><span class="sep"></span></li>
+						<li><a href="javascript:void(0);" title="">Help</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- footer -->
+</div>
+<!-- end html template -->
+<div class="modal fade hide" id="pop-fighting" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+	
+      <!-- <div class="modal-header">
+      </div> -->
+      <div class="modal-body">
+        <p>Loading…</p>
+      </div>
+</div>
+<script data-main="../assets/js/apps/main/main" src="../assets/js/vendor/requirejs/require.min.js"></script>
+<!--page specific plugin scripts-->
+
+<!--inline scripts related to this page-->
+
+</body>
+</html>
