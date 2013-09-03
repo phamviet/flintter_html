@@ -3,7 +3,8 @@ define([ '$', 'App' ], function($, App) {
     return function (){
         var events = [
             'newIdea.content',
-            'selectTopic.content'
+            'selectTopic.content',
+            'loadMostTopic.content'
         ];
 
         var handlers = {
@@ -17,6 +18,11 @@ define([ '$', 'App' ], function($, App) {
 
 
 
+            },
+            loadMostTopic: function(el, type, id) {
+//                $('.ulti .tags-list .list ul').html('');
+                console.log('loadMostTopic event');
+                //call: $(document).trigger('loadMostTopic.content');
             }
         };
 
