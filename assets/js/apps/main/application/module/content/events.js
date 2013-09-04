@@ -20,9 +20,10 @@ define([ '$', 'App' ], function($, App) {
 
             },
             loadMostTopic: function(el, type, id) {
-//                $('.ulti .tags-list .list ul').html('');
-                console.log('loadMostTopic event');
-                //call: $(document).trigger('loadMostTopic.content');
+                $(".mCSB_container").load(SITE.BASE_URL+'/category/getmosttopic', function (data)
+                {
+                    $('.ulti .tags-list .list ul').html(jQuery.parseJSON(data).html);
+                })
             }
         };
 
