@@ -22,7 +22,7 @@ define([ '$', 'App' ], function($, App) {
             loadMostTopic: function(el, type, id) {
                 $(".mCSB_container").load(SITE.BASE_URL+'/category/getmosttopic', function (data)
                 {
-                    $('.ulti .tags-list .list ul').html(jQuery.parseJSON(data).html);
+                    $('.ulti .tags-list .list ul').html(jQuery.parseJSON(data).html) ;
                 })
             }
         };
