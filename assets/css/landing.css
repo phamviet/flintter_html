@@ -12,6 +12,7 @@ input:-moz-placeholder { color: #9d9d9c; }
 }
 .landing .main-wrapper {
 	min-height: 400px;
+	padding-top: 0;
 }
 .landing .footer {
 	margin-bottom: 6px;
