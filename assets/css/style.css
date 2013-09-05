@@ -30,6 +30,16 @@ button::-moz-focus-inner {
 .font-family {
 	font-family:'Open Sans Condensed', Arial, Calibri, Geneva,sans-serif;
 }
+@font-face {
+	font-family: 'BritannicBold';
+	src: url('fonts/britanic.eot');
+	src: url('fonts/britanic.eot?#iefix') format('embedded-opentype'),
+			 url('fonts/britanic.woff') format('woff'),
+			 url('fonts/britanic.ttf') format('truetype'),
+			 url('fonts/britanic.svg#britanic') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
 ::-webkit-input-placeholder { color:#000; }
 ::-moz-placeholder { color:#000; } /* firefox 19+ */
 :-ms-input-placeholder { color:#000; } /* ie */
@@ -470,6 +480,12 @@ input:-moz-placeholder { color:#000;
 .imed-coffee {
 	background-position: -30px -450px;
 }
+.imed-wallet-red {
+	background-position: -60px -360px;
+}
+.imed-time-red {
+	background-position: -60px -390px;
+}
 .ismall-del {
 	background-position: -236px 0px;
 }
@@ -665,7 +681,7 @@ input:-moz-placeholder { color:#000;
 .main-head {
 	border-bottom: #fff solid 1px;
 	position: relative;
-	margin-bottom: 30px;
+	margin-bottom: 26px;
 }
 .main-head .line, .filter .line, .ulti .tags-filter .line {
 	display: block;
@@ -2308,6 +2324,10 @@ ulti .post .post-text .post-photo .buttons {
 .challenge .ulti .tags-list .list .tags-tags {
 	height: 140px;
 }
+.challenge .ulti .sprnav .input-wrap {
+	text-align: left;
+	overflow: hidden;
+}
 .challenge .sprnav .input-wrap .select2-container .select2-choice {
 	padding: 4px 6px;
 	height: 20px;
@@ -2454,6 +2474,8 @@ ulti .post .post-text .post-photo .buttons {
 .challenge .topic-preview .sprnav .input-wrap {
 	display: block;
 	text-align: right;
+	margin-left: 72px;
+	*float: right;
 }
 .challenge .topic-preview .sprnav .input-wrap .text {
 	color: #229fd9;
@@ -2476,4 +2498,93 @@ ulti .post .post-text .post-photo .buttons {
 }
 .select2-container.select2-allowclear .select2-choice .select2-chosen {
 	margin-right: 26px;
+}
+.col-right .topic-preview {
+	margin-bottom: 16px;
+}
+.topic-preview .order {
+	width: 40px;
+	height: 92px;
+	background: url('../img/sprites.png') -260px -190px no-repeat;
+	position: absolute;
+	top: 0;
+	right: 12px;
+	text-align: center;
+}
+.topic-preview .order .text {
+	line-height: 92px;
+	color: #fff;
+	font-family:'BritannicBold', Arial, Calibri, Geneva,sans-serif;
+	font-size: 35px;
+}
+/* Featured */
+.featured .img-tmb img {
+	display: block;
+	border: #fff solid 1px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	width: 470px;
+	height: 250px;
+}
+.featured .img-tmb {
+	float: left;
+}
+.featured .info {
+	margin-left: 484px;
+}
+.featured .info h2 {
+	font-family:'Open Sans Condensed', Arial, Calibri, Geneva,sans-serif;
+	font-size: 24px;
+	font-size: 2.4rem;
+	text-transform: uppercase;
+	margin-bottom: 8px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.featured .info .des {
+	margin-bottom: 10px;
+	height: 76px;
+	overflow: hidden;
+}
+.featured .alt, .featured .buttons {
+	position: relative;
+	padding: 10px 0;
+}
+.featured .alt .line, .featured .buttons .line {
+	background: #fff;
+	border-top: #ccc solid 1px;
+	position: absolute;
+	top: -1px;
+	left: 0;
+	right: 0;
+	height: 1px;
+}
+.featured .alt ul, .featured .buttons {
+	font-size: 0;
+	word-spacing: 0;
+	letter-spacing: 0;
+}
+.featured .alt ul li {
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	width: 180px;
+}
+.featured .alt ul li  .text {
+	font-size: 12px;
+	vertical-align: middle;
+}
+.featured .buttons .big-button {
+	padding: 3px 10px 2px 6px;
+	margin-right: 6px;
+}
+.featured .buttons .imed {
+	width: 24px;
+	height: 24px;
+	margin-right: 6px;
+}
+.featured .buttons .text {
+	vertical-align: middle;
 }
