@@ -124,6 +124,10 @@ input:-moz-placeholder { color:#000;
 	width: 100%;
 	top: 0;
 }
+.landing .header-wrap {
+	position: static;
+	background: transparent;
+}
 .header-wrap .line-color {
 	width: 100%;
 	height: 3px;
@@ -136,7 +140,10 @@ input:-moz-placeholder { color:#000;
 	position: absolute;
 	background: #e3e3e3 url('../img/bg-header.jpg') top center no-repeat;
 	top: 3px;
-	z-index: -1;
+	z-index: 1;
+}
+.page-intro {
+	background: #e3e3e3
 }
 .header {
 	width: 950px;
@@ -614,7 +621,7 @@ input:-moz-placeholder { color:#000;
 	margin: 0 auto;
 	position: relative;
 	z-index: 50;
-	min-height: 460px;
+	min-height: 430px;
 	padding-top: 86px;
 }
 .main-head {
@@ -715,8 +722,8 @@ input:-moz-placeholder { color:#000;
 }
 .footer {
 	width: 950px;
-	margin: 18px auto;
-	padding-top: 20px;
+	margin: 0 auto;
+	padding: 18px 0;
 	position: relative;
 	font-family:'Open Sans Condensed', Arial, Calibri, Geneva,sans-serif;
 	text-transform: uppercase;
@@ -1394,7 +1401,7 @@ ulti .post .post-text .post-photo .buttons {
 .navi .tooltip.in {
 	opacity: 1;
 }
-.detail .header {
+.detail .header, .page-intro .header {
 	height: 70px;
 }
 .detail .header .logo a {
@@ -1996,7 +2003,7 @@ ulti .post .post-text .post-photo .buttons {
 /* intro page */
 .intro {
 	position: relative;
-	margin-top: 260px;
+	margin-top: 40px;
 	min-height: 320px;
 }
 .intro .intro-tabs {
