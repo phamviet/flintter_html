@@ -407,6 +407,9 @@ input:-moz-placeholder { color:#000;
 	width: 40px;
 	height: 40px;
 }
+.imed-add {
+	background-position: -60px -420px;
+}
 .imed-noti {
 	background-position: 0 -120px;
 }
@@ -1650,6 +1653,7 @@ ulti .post .post-text .post-photo .buttons {
 	right: 0;
 	top: 10px;
 	z-index: 100;
+	padding-right: 10px;
 }
 .filter .sub-menu ul li {
 	float: left;
@@ -2273,6 +2277,7 @@ ulti .post .post-text .post-photo .buttons {
 /* challenge */
 .challenge .filter {
 	margin-top: 10px;
+	margin-bottom: 0;
 }
 .topics .big-button .imed {
 	width: 26px;
@@ -2587,4 +2592,25 @@ ulti .post .post-text .post-photo .buttons {
 }
 .featured .buttons .text {
 	vertical-align: middle;
+}
+.explore .ulti .post {
+	width: 100%;
+}
+.challenge .bg-top {
+	height: 430px;
+}
+.challenge .filter {
+	margin-top: 20px;
+}
+.challenge .filter {
+	margin-top: 10px;
+	margin-bottom: 0;
+}
+.challenge .col-right .block.topics,
+.explore .col-right .block.topics {
+	padding-top: 16px;
+}
+.challenge .col-right .block.topics .title,
+.explore .col-right .block.topics .title {
+	margin-bottom: 5px;
 }
