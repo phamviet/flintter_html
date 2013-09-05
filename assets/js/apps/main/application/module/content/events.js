@@ -14,6 +14,9 @@ define([ '$', 'App' ], function($, App) {
                 alert('Post idea is triggered');
             },
 
+            promote: function(el, type, id) {
+
+            },
             selectTopic: function(el, type, id) {
 
 
@@ -25,6 +28,7 @@ define([ '$', 'App' ], function($, App) {
                     $('.ulti .tags-list .list ul').html(jQuery.parseJSON(data).html) ;
                 })
             }
+
         };
 
         $(document).on(events.join(' '), function(e) {
