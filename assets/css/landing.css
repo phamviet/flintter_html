@@ -67,6 +67,7 @@ input:-moz-placeholder { color: #9d9d9c; }
 }
 .landing .header {
 	position: relative;
+	height: auto;
 }
 .landing .header .buttons {
 	float: right;
@@ -158,6 +159,7 @@ input:-moz-placeholder { color: #9d9d9c; }
 	top: 32px;
 	padding-top: 7px;
 	display: none;
+	z-index: 100;
 }
 .landing .header .buttons:hover .board-signin {
 	display: block;

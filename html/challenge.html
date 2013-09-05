@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Flintter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="">
+   <!--  <meta property="fb:app_id" content="677153332301592" /> -->
+    <!--basic styles-->
+	<link href="../assets/css/select2.css" rel="stylesheet" />
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/bootstrap-responsive.min.css" rel="stylesheet" />
+	 <link href="../assets/css/jquery.mCustomScrollbar.css" rel="stylesheet" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+
+    <!--page specific plugin styles-->
+
+    <!--site styles-->
+    <link href="../assets/css/style.css" rel="stylesheet" />
+
+    <!--inline styles if any-->
+     <script type="text/javascript">
+        var SITE = {
+            FACEBOOK_APP_ID: '',
+            FACEBOOK_SCOPE: '',
+            BASE_URL: '/',
+            BASE_PATH: '',
+            ENV : 'dev',
+            VERSION: '123456'
+        };
+        var USER = null;
+         var app = {
+//             deps: ['Application/Welcome']
+         }
+    </script>
+<body>
+
+<!-- begin html template -->
+<div class="wrapper challenge">
+	<div class="bg-top"></div>
+	<div class="header-wrap">
+		<div class="line-color"></div>
+		<div class="header">
+			<div class="logo">
+				<a href="#" title="Flintter"></a>
+			</div>
+			<div class="navigation">
+				<ul>
+					<li class="level-f current"><a href="#" title="" class="item">Homepage</a></li>
+					<li class="level-f"><span class="sep"></span></li>
+					<li class="level-f"><a href="#" title="" class="item">Explore</a></li>
+					<li class="level-f"><span class="sep"></span></li>
+					<li class="level-f"><a href="#" title="" class="item">Ask for Idea</a></li>
+					<li class="level-f"><span class="sep"></span></li>
+					<li class="level-f">
+						<a href="#" title="" class="item btn-newpost"><i></i><span class="text">New Post</span></a>
+						<div class="sub-wrap newpost-board">
+							<div class="sub">
+								<span class="arrow"></span>
+								<ul>
+									<li>
+										<a href="#">New Topic</a>
+									</li>
+									<li>
+										<a href="#">New Ideas</a>
+									</li>
+								</ul>						
+							</div>
+						</div>
+					</li>
+					<li class="level-f"><span class="sep"></span></li>
+					<li class="level-f">
+						<a href="#" title="">
+							<i class="imed imed-noti"></i>
+							<span class="count">4</span>
+						</a>
+						<div class="sub-wrap noti-board">
+							<div class="sub">
+								<span class="arrow"></span>
+								<ul>
+									<li>
+										<a href="#" class="clearfix">
+											<img src="../assets/demo/img-avatar-002.jpg" alt="" border=""/>
+											<span class="text">Brian Tracy promoted your idea</span>
+											<span class="point">+ 58 GS</span>
+											<span class="date">8 minutes ago</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="clearfix">
+											<img src="../assets/demo/img-avatar-002.jpg" alt="" border=""/>
+											<span class="text">Brian Tracy promoted your idea</span>
+											<span class="point">+ 58 GS</span>
+											<span class="date">8 minutes ago</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="clearfix">
+											<img src="../assets/demo/img-avatar-002.jpg" alt="" border=""/>
+											<span class="text">Brian Tracy promoted your idea</span>
+											<span class="point">+ 58 GS</span>
+											<span class="date">8 minutes ago</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="clearfix">
+											<img src="../assets/demo/img-avatar-002.jpg" alt="" border=""/>
+											<span class="text">Brian Tracy promoted your idea</span>
+											<span class="point">+ 58 GS</span>
+											<span class="date">8 minutes ago</span>
+										</a>
+									</li>
+								</ul>
+								<div class="more">
+									<a href="#" class="btn-more">View all</a>
+								</div>							
+							</div>
+						</div>
+					</li>
+					<li class="level-f"><span class="sep"></span></li>
+					<li class="level-f">
+						<a href="#" title="">
+							<i class="imed imed-warning"></i>
+							<span class="count">4</span>
+						</a>
+						<div class="sub-wrap warning-board">
+							<div class="sub">
+								<span class="arrow"></span>
+								<ul>
+									<li>
+										<a href="#" class="clearfix">
+											<img src="../assets/demo/img-avatar-002.jpg" alt="" border=""/>
+											<span class="text">Impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</span>
+											<span class="date">8 minutes ago</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="clearfix">
+											<img src="../assets/demo/img-avatar-002.jpg" alt="" border=""/>
+											<span class="text">Brian Tracy promoted your idea</span>
+											<span class="date">8 minutes ago</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="clearfix">
+											<img src="../assets/demo/img-avatar-002.jpg" alt="" border=""/>
+											<span class="text">Brian Tracy promoted your idea</span>
+											<span class="date">8 minutes ago</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="clearfix">
+											<img src="../assets/demo/img-avatar-002.jpg" alt="" border=""/>
+											<span class="text">Brian Tracy promoted your idea</span>
+											<span class="date">8 minutes ago</span>
+										</a>
+									</li>
+								</ul>
+								<div class="more">
+									<a href="#" class="btn-more">View all</a>
+								</div>							
+							</div>
+						</div>
+					</li>
+					<li class="level-f"><span class="sep"></span></li>
+					<li class="level-f ava">
+						<a href="#">
+							<img src="../assets/demo/img-avatar-001.jpg" alt="" border="" />
+							<i></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- nav -->
+		</div>
+	</div>
+	<!-- header -->
+	<div class="main-wrapper page-challenge">
+		<div class="main-head">
+			<span class="line"></span>
+			<div class="menu">
+				<ul>
+					<li class="current">
+						<a href="#">Friends<span></span></a>
+					</li>
+					<li>
+						<a href="#">Most Approved<span></span></a>
+					</li>
+					<li>
+						<a href="#">Most Debated<span></span></a>
+					</li>
+					<li>
+						<a href="#">New<span></span></a>
+					</li>
+					<li>
+						<a href="#">Celeb<span></span></a>
+					</li>
+				</ul>
+			</div>
+			<!-- menu -->
+			<div class="search">
+				<div class="input-wrap">
+					<input type="text" value="" placeholder="Search..." name="" />
+					<input type="submit" value="" name="" />
+				</div>
+			</div>
+			<!-- search -->
+			<div class="social">
+				<ul>
+					<li><a href="#" title=""><i class="imed imed-fb"></i></a></li>
+					<li><a href="#" title=""><i class="imed imed-tw"></i></a></li>
+					<li><a href="#" title=""><i class="imed imed-gg"></i></a></li>
+					<li><a href="#" title=""><i class="imed imed-pin"></i></a></li>
+					<li><a href="#" title=""><i class="imed imed-rss"></i></a></li>
+				</ul>
+			</div>
+			<!-- social buttons -->
+		</div>
+		<!-- main head -->
+		<div class="ulti clearfix">
+			<form method="">
+			<div class="post">
+				<div class="post-title">
+					<input type="text" value="Your Title Here"/>
+				</div>
+				<div class="post-text">
+					<div id="tabs-1" class="post-tab post-tags active" data-toggle="pill">
+						<div class="post-tab-wrap">
+							<textarea rows="5"></textarea>
+						</div>
+						<div class="post-alt">	
+							<div class="tags">
+								<label>Tags</label>
+								<ul>
+									<li>123123</li>
+									<li>321</li>
+									<li>456</li>
+									<li>654</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- post tags -->
+					<div id="tabs-2" class="post-tab post-photo" data-toggle="pill">
+						<div class="post-tab-wrap">
+							<div class="buttons">
+								<button href="javascript:void(0);" class="big-button big-gray">Choose from Computer</button>
+								<button href="javascript:void(0);" class="big-button big-gray">Cancel</button>
+							</div>
+							<p>You can select more than one file at a time. You can also drag and drop files anywhere on this page to start uploading</p>
+						</div>
+						<div class="post-alt">	
+						</div>
+					</div>
+					<!-- post photos -->
+					<div id="tabs-3" class="post-tab" data-toggle="pill">
+						<div class="post-tab-wrap">
+						</div>
+					</div>
+					<!-- -->
+				</div>
+				<div class="post-foot">
+					<ul id="tabs">
+						<li class="active">
+							<a href="#tabs-1" title="" data-toggle="tab">
+								<i class="imed imed-tag"></i>
+								<span class="left"></span>
+								<span class="right"></span>
+							</a>
+						</li>
+						<li>
+							<a href="#tabs-2" title="" data-toggle="tab">
+								<i class="imed imed-photo"></i>
+								<span class="left"></span>
+								<span class="right"></span>
+							</a>
+						</li>
+						<li>
+							<a href="#tabs-3" title="" data-toggle="tab">
+								<i class="imed imed-mic"></i>
+								<span class="left"></span>
+								<span class="right"></span>
+							</a>
+						</li>
+					</ul>
+					<div class="buttons">
+						<button class="big-button btn-cancel">Cancel</button>
+						<button class="big-button btn-post">Challenge</button>
+					</div>
+				</div>
+			</div>
+			<!-- post -->
+			<div class="tags-list">
+				<div class="list">
+					<ul class="tags-tags">
+						<li class="title">Topic Related:</li>
+						<li><a href="javascript:void(0);" title=""><i></i><span class="text">Incidunt</span></a></li>
+						<li><a href="javascript:void(0);" title=""><i></i><span class="text">Commodi</span></a></li>
+						<li><a href="javascript:void(0);" title=""><i></i><span class="text">Quaerat</span></a></li>
+						<li><a href="javascript:void(0);" title=""><i></i><span class="text">Labore</span></a></li>
+						<li><a href="javascript:void(0);" title=""><i></i><span class="text">Aperiam</span></a></li>
+						<li><a href="javascript:void(0);" title=""><i></i><span class="text">Incidunt</span></a></li>
+						<li><a href="javascript:void(0);" title=""><i></i><span class="text">Commodi  quaerat  aperiam</span></a></li>
+						<li><a href="javascript:void(0);" title=""><i></i><span class="text">Labore</span></a></li>
+						<li><a href="javascript:void(0);" title=""><i></i><span class="text">Aperiam minus id quod maxi</span></a></li>
+						<li><a href="javascript:void(0);" title=""><i></i><span class="text">Placeat facere possimus</span></a></li>
+						<li><a href="javascript:void(0);" title=""><i></i><span class="text">Incidunt</span></a></li>
+						<li><a href="javascript:void(0);" title=""><i></i><span class="text">Commodi</span></a></li>
+						<li><a href="javascript:void(0);" title=""><i></i><span class="text">Quaerat</span></a></li>
+						<li><a href="javascript:void(0);" title=""><i></i><span class="text">Labore</span></a></li>
+						<li><a href="javascript:void(0);" title=""><i></i><span class="text">Aperiam</span></a></li>
+						<li><a href="javascript:void(0);" title=""><i></i><span class="text">Incidunt</span></a></li>
+					</ul>
+					<div class="sprnav">
+						<div class="line"></div>
+						<label for="">Budget:</label>
+						<div class="input-wrap">
+							<input type="text" value="" id="" name=""/>
+						</div>
+					</div>
+					<div class="sprnav">
+						<div class="line"></div>
+						<label for="">Time:</label>
+						<div class="input-wrap">
+							<select data-placeholder=" " class="select-time">
+								<option></option>
+								<option value="1">2 ngày</option>
+								<option value="2">3 ngày</option>
+								<option value="3">4 ngày</option>
+								<option value="4">5 ngày</option>
+								<option value="5">10 ngày</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- tags list -->
+		</div>
+		</form>
+		<!-- Common Stuffs -->
+		<div class="filter">
+			<div class="line"></div>
+			<div class="menu">
+				<ul>
+					<li class="current">
+						<a href="#">Challenge Topics<span></span></a>
+					</li>
+				</ul>
+			</div>
+			<div class="sub-menu">
+				<ul>
+					<li class="current">
+						<a href="javascript:void(0)"><span class="text">Favorite</span></a>
+					</li>
+					<li><span class="sep"></span></li>
+					<li>
+						<a href="javascript:void(0)"><span class="text">Suggest</span></a>
+					</li>
+					<li><span class="sep"></span></li>
+					<li>
+						<a href="javascript:void(0)"><span class="text">Top</span></a>
+					</li>
+					<li><span class="sep"></span></li>
+					<li>
+						<a href="javascript:void(0)"><span class="text">Trend</span></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- topics filter -->
+		<div class="content clearfix">
+			<div class="col-full">
+				<div class="profile-topic-wrap">
+					<div class="topic-preview">
+						<div class="topics">
+							<div class="cont">
+								<div class="topic-bg">
+									<a href="#" title=""><img src="../assets/demo/img-topic-001.jpg" alt="" border=""></a>
+									<a href="#" title="" class="title">
+										<span>modi temporat ut labore et dolore magn</span>
+									</a>
+									<div class="dropdown">
+									  <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)"><i></i></a>
+									  <div class="spr-dropdown-menu" role="menu" aria-labelledby="dLabel">
+										<span class="arrow"><i></i></span>
+										<ul>
+											<li class="item"><a href="#">Hide this post</a></li>
+											<li class="item">
+												<div class="dropdown-report">
+													<a href="javascript:void(0)" data-toggle="dropdown" id="drop4">Report</a>
+													<div class="spr-dropdown-sub-menu-wrap">
+														<div class="spr-dropdown-sub-menu">
+															<ul>
+																<li><a href="javascript:void(0)">123123</a></li>
+																<li><a href="javascript:void(0)">123123 123 123 12</a></li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</li>
+										</ul>
+									  </div>
+									</div>
+								</div>
+								<div class="topic-related">
+									<div class="tags-list">
+										<div class="list">
+											<ul class="tags-tags">
+												<li class="title">Topic Related:</li>
+												<li><a href="javascript:void(0);" title=""><i></i><span class="text">Incidunt</span></a></li>
+												<li><a href="javascript:void(0);" title=""><i></i><span class="text">Commodi</span></a></li>
+												<li><a href="javascript:void(0);" title=""><i></i><span class="text">Quaerat</span></a></li>
+												<li><a href="javascript:void(0);" title=""><i></i><span class="text">Incidunt</span></a></li>
+												<li><a href="javascript:void(0);" title=""><i></i><span class="text">Commodi</span></a></li>
+												<li><a href="javascript:void(0);" title=""><i></i><span class="text">Quaerat</span></a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="sprnav sprnav-budget">
+									<div class="line"></div>
+									<label for="">Budget</label>
+									<div class="input-wrap">
+										<span class="text">150.000.000</span>
+									</div>
+								</div>
+								<div class="sprnav">
+									<div class="line"></div>
+									<label for="">Time</label>
+									<div class="input-wrap">
+										<span class="text">5 ngày</span>
+									</div>
+								</div>
+							</div>
+							<div class="buttons">
+								<ul>
+									<li><a href="#" class="big-button"><i class="imed imed-pencil"></i><span class="text">Write Ideas</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- topic with image background -->
+					<div class="topic-preview">
+						<div class="topics">
+							<div class="cont">
+								<div class="topic-bg">
+									<a href="#" title=""><img src="../assets/demo/img-topic-001.jpg" alt="" border=""></a>
+									<a href="#" title="" class="title">
+										<span>modi temporat ut labore et dolore magn</span>
+									</a>
+									<div class="dropdown">
+									  <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)"><i></i></a>
+									  <div class="spr-dropdown-menu" role="menu" aria-labelledby="dLabel">
+										<span class="arrow"><i></i></span>
+										<ul>
+											<li class="item"><a href="#">Hide this post</a></li>
+											<li class="item">
+												<div class="dropdown-report">
+													<a href="javascript:void(0)" data-toggle="dropdown" id="drop4">Report</a>
+													<div class="spr-dropdown-sub-menu-wrap">
+														<div class="spr-dropdown-sub-menu">
+															<ul>
+																<li><a href="javascript:void(0)">123123</a></li>
+																<li><a href="javascript:void(0)">123123 123 123 12</a></li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</li>
+										</ul>
+									  </div>
+									</div>
+								</div>
+								<div class="topic-related">
+									<div class="tags-list">
+										<div class="list">
+											<ul class="tags-tags">
+												<li class="title">Topic Related:</li>
+												<li><a href="javascript:void(0);" title=""><i></i><span class="text">Incidunt</span></a></li>
+												<li><a href="javascript:void(0);" title=""><i></i><span class="text">Commodi</span></a></li>
+												<li><a href="javascript:void(0);" title=""><i></i><span class="text">Quaerat</span></a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="sprnav sprnav-budget">
+									<div class="line"></div>
+									<label for="">Budget</label>
+									<div class="input-wrap">
+										<span class="text">150.000.000</span>
+									</div>
+								</div>
+								<div class="sprnav">
+									<div class="line"></div>
+									<label for="">Time</label>
+									<div class="input-wrap">
+										<span class="text">5 ngày</span>
+									</div>
+								</div>
+							</div>
+							<div class="buttons">
+								<ul>
+									<li><a href="#" class="big-button"><i class="imed imed-pencil"></i><span class="text">Write Ideas</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- topic with image background -->
+					<div class="topic-preview">
+						<div class="topics">
+							<div class="cont">
+								<div class="topic-bg">
+									<a href="#" title=""><img src="../assets/demo/img-topic-001.jpg" alt="" border=""></a>
+									<a href="#" title="" class="title">
+										<span>modi temporat ut labore et dolore magn</span>
+									</a>
+									<div class="dropdown">
+									  <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)"><i></i></a>
+									  <div class="spr-dropdown-menu" role="menu" aria-labelledby="dLabel">
+										<span class="arrow"><i></i></span>
+										<ul>
+											<li class="item"><a href="#">Hide this post</a></li>
+											<li class="item">
+												<div class="dropdown-report">
+													<a href="javascript:void(0)" data-toggle="dropdown" id="drop4">Report</a>
+													<div class="spr-dropdown-sub-menu-wrap">
+														<div class="spr-dropdown-sub-menu">
+															<ul>
+																<li><a href="javascript:void(0)">123123</a></li>
+																<li><a href="javascript:void(0)">123123 123 123 12</a></li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</li>
+										</ul>
+									  </div>
+									</div>
+								</div>
+								<div class="topic-related">
+									<div class="tags-list">
+										<div class="list">
+											<ul class="tags-tags">
+												<li class="title">Topic Related:</li>
+												<li><a href="javascript:void(0);" title=""><i></i><span class="text">Incidunt</span></a></li>
+												<li><a href="javascript:void(0);" title=""><i></i><span class="text">Commodi</span></a></li>
+												<li><a href="javascript:void(0);" title=""><i></i><span class="text">Quaerat</span></a></li>
+												<li><a href="javascript:void(0);" title=""><i></i><span class="text">Incidunt</span></a></li>
+												<li><a href="javascript:void(0);" title=""><i></i><span class="text">Commodi</span></a></li>
+												<li><a href="javascript:void(0);" title=""><i></i><span class="text">Quaerat</span></a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="sprnav sprnav-budget">
+									<div class="line"></div>
+									<label for="">Budget</label>
+									<div class="input-wrap">
+										<span class="text">150.000.000</span>
+									</div>
+								</div>
+								<div class="sprnav">
+									<div class="line"></div>
+									<label for="">Time</label>
+									<div class="input-wrap">
+										<span class="text">5 ngày</span>
+									</div>
+								</div>
+							</div>
+							<div class="buttons">
+								<ul>
+									<li><a href="#" class="big-button"><i class="imed imed-pencil"></i><span class="text">Write Ideas</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- topic with image background -->
+					<div class="topic-preview">
+						<div class="topics">
+							<div class="cont">
+								<div class="topic-bg">
+									<a href="#" title=""><img src="../assets/demo/img-topic-001.jpg" alt="" border=""></a>
+									<a href="#" title="" class="title">
+										<span>modi temporat ut labore et dolore magn</span>
+									</a>
+									<div class="dropdown">
+									  <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)"><i></i></a>
+									  <div class="spr-dropdown-menu" role="menu" aria-labelledby="dLabel">
+										<span class="arrow"><i></i></span>
+										<ul>
+											<li class="item"><a href="#">Hide this post</a></li>
+											<li class="item">
+												<div class="dropdown-report">
+													<a href="javascript:void(0)" data-toggle="dropdown" id="drop4">Report</a>
+													<div class="spr-dropdown-sub-menu-wrap">
+														<div class="spr-dropdown-sub-menu">
+															<ul>
+																<li><a href="javascript:void(0)">123123</a></li>
+																<li><a href="javascript:void(0)">123123 123 123 12</a></li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</li>
+										</ul>
+									  </div>
+									</div>
+								</div>
+								<div class="topic-related">
+									<div class="tags-list">
+										<div class="list">
+											<ul class="tags-tags">
+												<li class="title">Topic Related:</li>
+												<li><a href="javascript:void(0);" title=""><i></i><span class="text">Incidunt</span></a></li>
+												<li><a href="javascript:void(0);" title=""><i></i><span class="text">Commodi</span></a></li>
+												<li><a href="javascript:void(0);" title=""><i></i><span class="text">Quaerat</span></a></li>
+												<li><a href="javascript:void(0);" title=""><i></i><span class="text">Incidunt</span></a></li>
+												<li><a href="javascript:void(0);" title=""><i></i><span class="text">Commodi</span></a></li>
+												<li><a href="javascript:void(0);" title=""><i></i><span class="text">Quaerat</span></a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="sprnav sprnav-budget">
+									<div class="line"></div>
+									<label for="">Budget</label>
+									<div class="input-wrap">
+										<span class="text">150.000.000</span>
+									</div>
+								</div>
+								<div class="sprnav">
+									<div class="line"></div>
+									<label for="">Time</label>
+									<div class="input-wrap">
+										<span class="text">5 ngày</span>
+									</div>
+								</div>
+							</div>
+							<div class="buttons">
+								<ul>
+									<li><a href="#" class="big-button"><i class="imed imed-pencil"></i><span class="text">Write Ideas</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- topic with image background -->
+					<div class="topic-preview">
+						<div class="topics">
+							<div class="cont">
+								<div class="topic-bg">
+									<a href="#" title=""><img src="../assets/demo/img-topic-001.jpg" alt="" border=""></a>
+									<a href="#" title="" class="title">
+										<span>modi temporat ut labore et dolore magn</span>
+									</a>
+									<div class="dropdown">
+									  <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)"><i></i></a>
+									  <div class="spr-dropdown-menu" role="menu" aria-labelledby="dLabel">
+										<span class="arrow"><i></i></span>
+										<ul>
+											<li class="item"><a href="#">Hide this post</a></li>
+											<li class="item">
+												<div class="dropdown-report">
+													<a href="javascript:void(0)" data-toggle="dropdown" id="drop4">Report</a>
+													<div class="spr-dropdown-sub-menu-wrap">
+														<div class="spr-dropdown-sub-menu">
+															<ul>
+																<li><a href="javascript:void(0)">123123</a></li>
+																<li><a href="javascript:void(0)">123123 123 123 12</a></li>
+																<li><a href="javascript:void(0)">123123 123 123 12 456</a></li>
+																<li><a href="javascript:void(0)">123123 </a></li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</li>
+										</ul>
+									  </div>
+									</div>
+								</div>
+								<div class="topic-related">
+									<div class="tags-list">
+										<div class="list">
+											<ul class="tags-tags">
+												<li class="title">Topic Related:</li>
+												<li><a href="javascript:void(0);" title=""><i></i><span class="text">Incidunt</span></a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="sprnav sprnav-budget">
+									<div class="line"></div>
+									<label for="">Budget</label>
+									<div class="input-wrap">
+										<span class="text">150.000.000</span>
+									</div>
+								</div>
+								<div class="sprnav">
+									<div class="line"></div>
+									<label for="">Time</label>
+									<div class="input-wrap">
+										<span class="text">5 ngày</span>
+									</div>
+								</div>
+							</div>
+							<div class="buttons">
+								<ul>
+									<li><a href="#" class="big-button"><i class="imed imed-pencil"></i><span class="text">Write Ideas</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- topic with image background -->
+					<div class="topic-preview">
+						<div class="topics">
+							<div class="cont">
+								<div class="topic-bg">
+									<a href="#" title=""><img src="../assets/demo/img-topic-001.jpg" alt="" border=""></a>
+									<a href="#" title="" class="title">
+										<span>modi temporat ut labore et dolore magn</span>
+									</a>
+									<div class="dropdown">
+									  <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)"><i></i></a>
+									  <div class="spr-dropdown-menu" role="menu" aria-labelledby="dLabel">
+										<span class="arrow"><i></i></span>
+										<ul>
+											<li class="item"><a href="#">Hide this post</a></li>
+											<li class="item">
+												<div class="dropdown-report">
+													<a href="javascript:void(0)" data-toggle="dropdown" id="drop4">Report</a>
+													<div class="spr-dropdown-sub-menu-wrap">
+														<div class="spr-dropdown-sub-menu">
+															<ul>
+																<li><a href="javascript:void(0)">123123</a></li>
+																<li><a href="javascript:void(0)">123123 123 123 12</a></li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</li>
+										</ul>
+									  </div>
+									</div>
+								</div>
+								<div class="topic-related">
+									<div class="tags-list">
+										<div class="list">
+											<ul class="tags-tags">
+												<li class="title">Topic Related:</li>
+												<li><a href="javascript:void(0);" title=""><i></i><span class="text">Incidunt</span></a></li>
+												<li><a href="javascript:void(0);" title=""><i></i><span class="text">Commodi</span></a></li>
+												<li><a href="javascript:void(0);" title=""><i></i><span class="text">Quaerat</span></a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="sprnav sprnav-budget">
+									<div class="line"></div>
+									<label for="">Budget</label>
+									<div class="input-wrap">
+										<span class="text">150.000.000</span>
+									</div>
+								</div>
+								<div class="sprnav">
+									<div class="line"></div>
+									<label for="">Time</label>
+									<div class="input-wrap">
+										<span class="text">5 ngày</span>
+									</div>
+								</div>
+							</div>
+							<div class="buttons">
+								<ul>
+									<li><a href="#" class="big-button"><i class="imed imed-pencil"></i><span class="text">Write Ideas</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- topic with image background -->
+				</div>
+				<!-- topic preview list  -->
+			</div>
+			<!-- col fullwidth -->
+		</div>
+		<!-- main content -->
+	</div>
+	<!-- main -->
+	<div class="footer-wrapper">
+		<div class="footer clearfix">
+			<span class="line"></span>
+			<div class="left">
+				<div class="logo">
+					<a href="#" title=""></a>
+				</div>
+				<!-- logo -->
+				<div class="copyright">
+					<p>COPYRIGHT © FLINTTER 2013</p>
+				</div>
+			</div>
+			<!-- left footer -->
+			<div class="right">
+				<div class="social">
+					<ul>
+						<li><a href="#" title=""><i class="imed imed-fb"></i></a></li>
+						<li><a href="#" title=""><i class="imed imed-tw"></i></a></li>
+						<li><a href="#" title=""><i class="imed imed-gg"></i></a></li>
+						<li><a href="#" title=""><i class="imed imed-pin"></i></a></li>
+						<li><a href="#" title=""><i class="imed imed-rss"></i></a></li>
+					</ul>
+				</div>
+				<!-- social buttons -->
+				<div class="navi">
+					<ul>
+						<li><a href="#" title="">About</a></li>
+						<li><span class="sep"></span></li>
+						<li><a href="#" title="">Feedback</a></li>
+						<li><span class="sep"></span></li>
+						<li><a href="#" title="">Term & Policy</a></li>
+						<li><span class="sep"></span></li>
+						<li><a href="#" title="">Contact Us</a></li>
+						<li><span class="sep"></span></li>
+						<li><a href="#" title="">Help</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- footer -->
+</div>
+<!-- end html template -->
+
+
+ <script data-main="../assets/js/apps/main/main" src="../assets/js/vendor/requirejs/require.min.js"></script>
+<!--page specific plugin scripts-->
+
+<!--inline scripts related to this page-->
+
+</body>
+</html>

@@ -34,7 +34,7 @@ define([
 //                    $('.post').addClass("active-tags");
 //                }
 //            });
-            $('.ulti .tags-list .list ul').mCustomScrollbar();
+            $('.tags-list .list ul').mCustomScrollbar();
 			$('.sub-menu a').click(function(){
 				$('.sub-menu li').removeClass("current");
 				$(this).closest("li").addClass("current");
