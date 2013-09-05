@@ -156,11 +156,11 @@ input:-moz-placeholder { color:#000;
 	top: 22px;
 }
 .header .logo a {
-	width: 180px;
+	width: 181px;
 	height: 30px;
 	display: block;
 	cursor: pointer;
-	background: url('../img/sprites.png') -320px -160px no-repeat;
+	background: url('../img/sprites.png') -319px -160px no-repeat;
 }
 .header .navigation {
 	position: absolute;
