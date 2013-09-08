@@ -41,6 +41,24 @@ button::-moz-focus-inner {
 	font-weight: normal;
 	font-style: normal;
 }
+@font-face {
+  font-family: 'Open Sans Condensed';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Cond Light'), local('OpenSans-CondensedLight'), url(http://themes.googleusercontent.com/static/fonts/opensanscondensed/v6/gk5FxslNkTTHtojXrkp-xKzhfLGYMo1TX3XnL4EHuCg.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans Condensed';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Condensed Bold'), local('OpenSans-CondensedBold'), url(http://themes.googleusercontent.com/static/fonts/opensanscondensed/v6/gk5FxslNkTTHtojXrkp-xCCpk0U-A1e26dz4Hiu3OHc.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans Condensed';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Open Sans Cond Light Italic'), local('OpenSans-CondensedLightItalic'), url(http://themes.googleusercontent.com/static/fonts/opensanscondensed/v6/jIXlqT1WKafUSwj6s9AzVxu9o002PBlYJqGsEB-P04P3rGVtsTkPsbDajuO5ueQw.woff) format('woff');
+}
 ::-webkit-input-placeholder { color:#000; }
 ::-moz-placeholder { color:#000; } /* firefox 19+ */
 :-ms-input-placeholder { color:#000; } /* ie */
