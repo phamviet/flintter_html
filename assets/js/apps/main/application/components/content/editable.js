@@ -330,10 +330,11 @@ define(['$', 'rangy/rangy-core', 'App'], function($, rangy, App) {
         },
         suggest: function(users) {
             var items;
-            if (!users.length) {
+            var t = $.parseJSON(users);
+            if (!t.length) {
                 items = $('<li class="message">No&nbsp;Matches...</li>');
             } else {
-                items = $.map($.parseJSON(users), function(user) {
+                items = $.map(t, function(user) {
                     return $('<li class="suggestion"><a data-user-id="' + user.value + '">' + user.label + '</a></li>')
                         .data('user', user).get(0);
                 });
@@ -430,6 +431,12 @@ define(['$', 'rangy/rangy-core', 'App'], function($, rangy, App) {
                 self.reset();
             });
 
+            // Bind "newtopic" click using mousedown to keep focus in editor)
+            this.$dropdown.on('mousedown.suggestions', 'li.newtopic a', function(e) {
+                e.preventDefault();
+                $(document).trigger('newTopic');
+            });
+
             // Sample suggestions updates
             this.interval = setInterval(function() {
                 if (self.delayedUpdate) {
@@ -470,6 +477,7 @@ define(['$', 'rangy/rangy-core', 'App'], function($, rangy, App) {
 
                 this.$dropdown.find('.dropdown-menu').append([
                     '<li class="divider"></li>',
+                    '<li class="newtopic"><a>&#43;&nbsp;New topic</a></li>',
                     '<li class="cancel"><a>&times;&nbsp;Cancel</a></li>'
                 ]);
 
@@ -494,10 +502,11 @@ define(['$', 'rangy/rangy-core', 'App'], function($, rangy, App) {
         },
         suggest: function(topics) {
             var items;
-            if (!topics.length) {
+            var t = $.parseJSON(topics);
+            if (!t.length) {
                 items = $('<li class="message">No&nbsp;Matches...</li>');
             } else {
-                items = $.map($.parseJSON(topics), function(topic) {
+                items = $.map(t, function(topic) {
                     return $('<li class="suggestion"><a data-topic-id="' + topic.value + '">' + topic.label + '</a></li>')
                         .data('topic', topic).get(0);
                 });
