@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Flintter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="">
+   <!--  <meta property="fb:app_id" content="677153332301592" /> -->
+    <!--basic styles-->
+
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/bootstrap-responsive.min.css" rel="stylesheet" />
+	<link href="../assets/css/jquery.mCustomScrollbar.css" rel="stylesheet" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+
+    <!--page specific plugin styles-->
+
+    <!--site styles-->
+    <link href="../assets/css/style.css" rel="stylesheet" />
+
+    <!--inline styles if any-->
+     <script type="text/javascript">
+        var SITE = {
+            FACEBOOK_APP_ID: '',
+            FACEBOOK_SCOPE: '',
+            BASE_URL: '/',
+            BASE_PATH: '',
+            ENV : 'dev',
+            VERSION: '123456'
+        };
+        var USER = null;
+         var app = {
+//             deps: ['Application/Welcome']
+         }
+    </script>
+<body>
+
+<!-- begin html template -->
+<div class="wrapper detail">
+	<div class="bg-top"></div>
+	<div class="header-wrap">
+		<div class="line-color"></div>
+		<div class="header">
+			<div class="logo">
+				<a href="#" title="Flintter"></a>
+			</div>
+			<div class="navigation">
+				<ul>
+					<li class="level-f current"><a href="#" title="" class="item">Home</a></li>
+					<li class="level-f"><span class="sep"></span></li>
+					<li class="level-f"><a href="#" title="" class="item">Explore</a></li>
+					<li class="level-f"><span class="sep"></span></li>
+					<li class="level-f"><a href="#" title="" class="item">Ask for Idea</a></li>
+					<li class="level-f"><span class="sep"></span></li>
+					<li class="level-f">
+						<a href="#" title="" class="item btn-newpost"><i></i><span class="text">New Post</span></a>
+						<div class="sub-wrap newpost-board">
+							<div class="sub">
+								<span class="arrow"></span>
+								<ul>
+									<li>
+										<a href="#">New Topic</a>
+									</li>
+									<li>
+										<a href="#">New Ideas</a>
+									</li>
+								</ul>						
+							</div>
+						</div>
+					</li>
+					<li class="level-f"><span class="sep"></span></li>
+					<li class="level-f">
+						<a href="#" title="">
+							<i class="imed imed-noti"></i>
+							<span class="count">4</span>
+						</a>
+						<div class="sub-wrap noti-board">
+							<div class="sub">
+								<span class="arrow"></span>
+								<ul>
+									<li>
+										<a href="#" class="clearfix">
+											<img src="../assets/demo/img-avatar-002.jpg" alt="" border=""/>
+											<span class="text">Brian Tracy promoted your idea</span>
+											<span class="point">+ 58 GS</span>
+											<span class="date">8 minutes ago</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="clearfix">
+											<img src="../assets/demo/img-avatar-002.jpg" alt="" border=""/>
+											<span class="text">Brian Tracy promoted your idea</span>
+											<span class="point">+ 58 GS</span>
+											<span class="date">8 minutes ago</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="clearfix">
+											<img src="../assets/demo/img-avatar-002.jpg" alt="" border=""/>
+											<span class="text">Brian Tracy promoted your idea</span>
+											<span class="point">+ 58 GS</span>
+											<span class="date">8 minutes ago</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="clearfix">
+											<img src="../assets/demo/img-avatar-002.jpg" alt="" border=""/>
+											<span class="text">Brian Tracy promoted your idea</span>
+											<span class="point">+ 58 GS</span>
+											<span class="date">8 minutes ago</span>
+										</a>
+									</li>
+								</ul>
+								<div class="more">
+									<a href="#" class="btn-more">View all</a>
+								</div>							
+							</div>
+						</div>
+					</li>
+					<li class="level-f"><span class="sep"></span></li>
+					<li class="level-f">
+						<a href="#" title="">
+							<i class="imed imed-warning"></i>
+							<span class="count">4</span>
+						</a>
+						<div class="sub-wrap warning-board">
+							<div class="sub">
+								<span class="arrow"></span>
+								<ul>
+									<li>
+										<a href="#" class="clearfix">
+											<img src="../assets/demo/img-avatar-002.jpg" alt="" border=""/>
+											<span class="text">Impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</span>
+											<span class="date">8 minutes ago</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="clearfix">
+											<img src="../assets/demo/img-avatar-002.jpg" alt="" border=""/>
+											<span class="text">Brian Tracy promoted your idea</span>
+											<span class="date">8 minutes ago</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="clearfix">
+											<img src="../assets/demo/img-avatar-002.jpg" alt="" border=""/>
+											<span class="text">Brian Tracy promoted your idea</span>
+											<span class="date">8 minutes ago</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="clearfix">
+											<img src="../assets/demo/img-avatar-002.jpg" alt="" border=""/>
+											<span class="text">Brian Tracy promoted your idea</span>
+											<span class="date">8 minutes ago</span>
+										</a>
+									</li>
+								</ul>
+								<div class="more">
+									<a href="#" class="btn-more">View all</a>
+								</div>							
+							</div>
+						</div>
+					</li>
+					<li class="level-f"><span class="sep"></span></li>
+					<li class="level-f ava">
+						<a href="#">
+							<img src="../assets/demo/img-avatar-001.jpg" alt="" border="" />
+							<i></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- nav -->
+		</div>
+	</div>
+	<!-- header -->
+	<div class="main-wrapper">
+		<div class="main-head">
+			<span class="line"></span>
+			<div class="menu">
+				<ul>
+					<li class="current">
+						<a href="#">Friends<span></span></a>
+					</li>
+					<li>
+						<a href="#">Most Approved<span></span></a>
+					</li>
+					<li>
+						<a href="#">Most Debated<span></span></a>
+					</li>
+					<li>
+						<a href="#">New<span></span></a>
+					</li>
+					<li>
+						<a href="#">Celeb<span></span></a>
+					</li>
+				</ul>
+			</div>
+			<!-- menu -->
+			<div class="search">
+				<div class="input-wrap">
+					<input type="text" value="" placeholder="Search..." name="" />
+					<input type="submit" value="" name="" />
+				</div>
+			</div>
+			<!-- search -->
+			<div class="social">
+				<ul>
+					<li><a href="#" title=""><i class="imed imed-fb"></i></a></li>
+					<li><a href="#" title=""><i class="imed imed-tw"></i></a></li>
+					<li><a href="#" title=""><i class="imed imed-gg"></i></a></li>
+					<li><a href="#" title=""><i class="imed imed-pin"></i></a></li>
+					<li><a href="#" title=""><i class="imed imed-rss"></i></a></li>
+				</ul>
+			</div>
+			<!-- social buttons -->
+		</div>
+		<!-- main head -->
+		<div class="profile-info">
+			<div class="avatar">
+				<a href="#">
+					<img src="../assets/demo/img-avatar-004.jpg" alt="" border=""/>
+					<span class="name">Jenny</span>
+				</a>
+			</div>
+			<div class="profile-info-detail">
+				<div class="info-name">
+					<h3>Jenny</h3>
+					<p class="job">Composer</p>
+					<p class="des">“Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut vodit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.“</p>
+				</div>
+				<!-- Name & Title & Description -->
+				<div class="info-point">
+					<span class="point-icon"><i class="imed imed-diamond"></i></span>
+					<span class="point">221.254.896 G$ earned</span>
+				</div>
+				<!-- Points -->
+				<div class="info-nav">
+					<ul>
+						<li><a href="#" class="" title="" ><i class="imed imed-message"></i></a></li>
+						<li><a href="#" class="" title="" ><i class="imed imed-friend"></i></a></li>
+						<li><a href="#" class="" title="" ><i class="imed imed-fighting"></i></a></li>
+						<li><a href="#" class="" title="" ><i class="imed imed-setting"></i></a></li>
+					</ul>
+				</div>
+				<!-- Profile nav -->
+				<div class="info-stat">
+					<ul>
+						<li><a href="#" class="" title="" ><i class="imed imed-friend-red"></i><span class="text">187 Mutual friends</span></a></li>
+						<li><a href="#" class="" title="" ><i class="imed imed-idea"></i><span class="text">1000 Ideas</span></a></li>
+						<li><a href="#" class="" title="" ><i class="imed imed-flag-red"></i><span class="text">1000 Follwer</span></a></li>
+						<li><a href="#" class="" title="" ><i class="imed imed-coffee"></i><span class="text">189 Topics</span></a></li>
+					</ul>
+				</div>
+				<!-- profile stats -->
+			</div>
+			<!-- profile info detail -->
+		</div>
+		<!-- Profile Info -->
+		<div class="filter">
+			<div class="line"></div>
+			<div class="menu">
+				<ul>
+					<li>
+						<a href="#">Topics<span></span></a>
+					</li>
+					<li>
+						<a href="#">Ideas<span></span></a>
+					</li>
+					<li class="current">
+						<a href="#">Ama<span></span></a>
+					</li>
+				</ul>
+			</div>
+			<div class="sub-menu">
+				<ul>
+					<li class="current">
+						<a href="javascript:void(0)"><span class="text">Today</span></a>
+					</li>
+					<li><span class="sep"></span></li>
+					<li>
+						<a href="javascript:void(0)"><span class="text">Week</span></a>
+					</li>
+					<li><span class="sep"></span></li>
+					<li>
+						<a href="javascript:void(0)"><span class="text">Month</span></a>
+					</li>
+					<li><span class="sep"></span></li>
+					<li>
+						<a href="javascript:void(0)"><span class="text">View all</span></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- topics filter -->
+		<div class="content clearfix">
+			<div class="col-full">
+				<div class="profile-ama-wrap">
+					<div class="ulti clearfix">
+						<div class="ava">
+							<a href="#">
+								<img src="../assets/demo/img-avatar-004.jpg" alt="" border="">
+								<span class="name">Jenny</span>
+							</a>
+						</div>
+						<div class="filter-block post">
+								<span class="arrow"><i></i></span>
+								<div class="post-text">
+									<div id="tabs-1" class="post-tab post-tags active" data-toggle="pill">
+										<div class="post-tab-wrap">
+											<textarea rows="5" placeholder="Ask anythings..."></textarea>
+										</div>
+										<div class="post-alt">	
+											<div class="tags">
+												<label>Tags</label>
+												<ul>
+													<li>123123</li>
+													<li>321</li>
+													<li>456</li>
+													<li>654</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<!-- post tags -->
+									<div id="tabs-2" class="post-tab post-photo" data-toggle="pill">
+										<div class="post-tab-wrap">
+											<div class="buttons">
+												<button href="javascript:void(0);" class="big-button big-gray">Choose from Computer</button>
+												<button href="javascript:void(0);" class="big-button big-gray">Cancel</button>
+											</div>
+											<p>You can select more than one file at a time. You can also drag and drop files anywhere on this page to start uploading</p>
+										</div>
+										<div class="post-alt">	
+										</div>
+									</div>
+									<!-- post photos -->
+									<div id="tabs-3" class="post-tab" data-toggle="pill">
+										<div class="post-tab-wrap">
+										</div>
+									</div>
+									<!-- -->
+								</div>
+								<div class="post-foot">
+									<ul id="tabs">
+										<li class="active">
+											<a href="#tabs-1" title="" data-toggle="tab">
+												<i class="imed imed-tag"></i>
+												<span class="left"></span>
+												<span class="right"></span>
+											</a>
+										</li>
+										<li class="">
+											<a href="#tabs-2" title="" data-toggle="tab">
+												<i class="imed imed-photo"></i>
+												<span class="left"></span>
+												<span class="right"></span>
+											</a>
+										</li>
+										<li>
+											<a href="#tabs-3" title="" data-toggle="tab">
+												<i class="imed imed-mic"></i>
+												<span class="left"></span>
+												<span class="right"></span>
+											</a>
+										</li>
+									</ul>
+									<div class="buttons">
+										<button class="big-button btn-cancel">Cancel</button>
+										<button class="big-button btn-post">Post</button>
+									</div>
+								</div>
+						</div>
+						<!-- post -->
+					</div>
+					<!-- Common Stuffs -->
+					<div class="profile-ama-item">
+						<div class="profile-ama-cont">
+							<a class="ava">
+								<img src="../assets/demo/img-avatar-003.jpg" alt="" border="">
+								<span class="name">
+									Jenny
+								</span>
+							</a>
+							<div class="ama-info">
+								<div class="ama-info-cont">
+									<span class="arrow"><i></i></span>
+									<div class="ama-art">
+										<p>123 123 123 123</p>
+									</div>
+								</div>
+								<!-- ama detail content -->
+								<div class="ama-info-comment">
+									<div class="topic-comment">
+										<div class="comment-list">
+											<div class="comment-item clearfix">
+												<a class="ava">
+													<img src="../assets/demo/img-avatar-003.jpg" alt="" border="">
+													<span class="name">
+														Jenny
+													</span>
+												</a>
+												<div class="comment-wrap">
+													<span class="arrow"><i></i></span>
+													<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.
+
+													Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+													<div class="comment-likes">
+														<a href="#">
+															<i class="imed imed-heart"></i>
+															<span class="text">100</span>
+														</a>
+													</div>
+												</div>
+											</div>
+											<!-- comment item -->
+											<div class="comment-item clearfix">
+												<a class="ava">
+													<img src="../assets/demo/img-avatar-003.jpg" alt="" border="">
+													<span class="name">
+														Jenny
+													</span>
+												</a>
+												<div class="comment-wrap">
+													<span class="arrow"><i></i></span>
+													<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.
+
+													Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+													<div class="comment-likes">
+														<a href="#">
+															<i class="imed imed-heart"></i>
+															<span class="text">1</span>
+														</a>
+													</div>
+												</div>
+											</div>
+											<!-- comment item -->
+											<div class="comment-item clearfix">
+												<a class="ava">
+													<img src="../assets/demo/img-avatar-003.jpg" alt="" border="">
+													<span class="name">
+														Jenny
+													</span>
+												</a>
+												<div class="comment-wrap">
+													<span class="arrow"><i></i></span>
+													<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.
+
+													Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+													<div class="comment-likes">
+														<a href="#">
+															<i class="imed imed-heart"></i>
+															<span class="text">10</span>
+														</a>
+													</div>
+												</div>
+											</div>
+											<!-- comment item -->
+										</div>
+										<!-- comment list -->
+										<div class="comment-input">
+											<div class="input-wrap">
+												<textarea placeholder="Comment..." rows="2" cols="92"></textarea>
+												<button class="big-button">Comment</button>
+											</div>
+										</div>
+										<!-- comment input -->
+									</div>
+									<!-- topic comment -->
+								</div>
+								<!-- ama comment -->
+							</div>
+							<!-- ama info -->
+						</div>
+						<!-- ama content -->
+					</div>
+					<!-- AMA item -->
+					<div class="ama-others">
+						<h3>Others AMA</h3>
+						<div class="ama-others-item">
+							<div class="item clearfix">
+								<div class="ava">
+									<a href="#">
+										<img src="../assets/demo/img-avatar-004.jpg" alt="" border="">
+										<span class="name">Jenny</span>
+									</a>
+								</div>
+								<div class="info">
+									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+								</div>
+							</div>
+							<!-- single item -->
+							<div class="item clearfix">
+								<div class="ava">
+									<a href="#">
+										<img src="../assets/demo/img-avatar-004.jpg" alt="" border="">
+										<span class="name">Jenny</span>
+									</a>
+								</div>
+								<div class="info">
+									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+								</div>
+							</div>
+							<!-- single item -->
+							<div class="item clearfix">
+								<div class="ava">
+									<a href="#">
+										<img src="../assets/demo/img-avatar-004.jpg" alt="" border="">
+										<span class="name">Jenny</span>
+									</a>
+								</div>
+								<div class="info">
+									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+								</div>
+							</div>
+							<!-- single item -->
+							<div class="item clearfix">
+								<div class="ava">
+									<a href="#">
+										<img src="../assets/demo/img-avatar-004.jpg" alt="" border="">
+										<span class="name">Jenny</span>
+									</a>
+								</div>
+								<div class="info">
+									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+								</div>
+							</div>
+							<!-- single item -->
+							<div class="item clearfix">
+								<div class="ava">
+									<a href="#">
+										<img src="../assets/demo/img-avatar-004.jpg" alt="" border="">
+										<span class="name">Jenny</span>
+									</a>
+								</div>
+								<div class="info">
+									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+								</div>
+							</div>
+							<!-- single item -->
+							<div class="item clearfix">
+								<div class="ava">
+									<a href="#">
+										<img src="../assets/demo/img-avatar-004.jpg" alt="" border="">
+										<span class="name">Jenny</span>
+									</a>
+								</div>
+								<div class="info">
+									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+								</div>
+							</div>
+							<!-- single item -->
+							<div class="item clearfix">
+								<div class="ava">
+									<a href="#">
+										<img src="../assets/demo/img-avatar-004.jpg" alt="" border="">
+										<span class="name">Jenny</span>
+									</a>
+								</div>
+								<div class="info">
+									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+								</div>
+							</div>
+							<!-- single item -->
+							<div class="item clearfix">
+								<div class="ava">
+									<a href="#">
+										<img src="../assets/demo/img-avatar-004.jpg" alt="" border="">
+										<span class="name">Jenny</span>
+									</a>
+								</div>
+								<div class="info">
+									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+								</div>
+							</div>
+							<!-- single item -->
+							<div class="item clearfix">
+								<div class="ava">
+									<a href="#">
+										<img src="../assets/demo/img-avatar-004.jpg" alt="" border="">
+										<span class="name">Jenny</span>
+									</a>
+								</div>
+								<div class="info">
+									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+								</div>
+							</div>
+							<!-- single item -->
+						</div>
+					</div>
+					<!-- Other AMA -->
+				</div>
+				<!-- Profile AMA  -->
+			</div>
+			<!-- col fullwidth -->
+		</div>
+		<!-- main content -->
+	</div>
+	<!-- main -->
+	<div class="footer-wrapper">
+		<div class="footer clearfix">
+			<span class="line"></span>
+			<div class="left">
+				<div class="logo">
+					<a href="#" title=""></a>
+				</div>
+				<!-- logo -->
+				<div class="copyright">
+					<p>COPYRIGHT © FLINTTER 2013</p>
+				</div>
+			</div>
+			<!-- left footer -->
+			<div class="right">
+				<div class="social">
+					<ul>
+						<li><a href="#" title=""><i class="imed imed-fb"></i></a></li>
+						<li><a href="#" title=""><i class="imed imed-tw"></i></a></li>
+						<li><a href="#" title=""><i class="imed imed-gg"></i></a></li>
+						<li><a href="#" title=""><i class="imed imed-pin"></i></a></li>
+						<li><a href="#" title=""><i class="imed imed-rss"></i></a></li>
+					</ul>
+				</div>
+				<!-- social buttons -->
+				<div class="navi">
+					<ul>
+						<li><a href="#" title="">About</a></li>
+						<li><span class="sep"></span></li>
+						<li><a href="#" title="">Feedback</a></li>
+						<li><span class="sep"></span></li>
+						<li><a href="#" title="">Term & Policy</a></li>
+						<li><span class="sep"></span></li>
+						<li><a href="#" title="">Contact Us</a></li>
+						<li><span class="sep"></span></li>
+						<li><a href="#" title="">Help</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- footer -->
+</div>
+<!-- end html template -->
+
+
+ <script data-main="../assets/js/apps/main/main" src="../assets/js/vendor/requirejs/require.min.js"></script>
+<!--page specific plugin scripts-->
+
+<!--inline scripts related to this page-->
+
+</body>
+</html>
