@@ -183,7 +183,7 @@ input:-moz-placeholder { color:#000;
 }
 .header-wrap {
 	position: fixed;
-	z-index: 100;
+	z-index: 200;
 	background: #e3e3e3 url('../img/bg-header.jpg') top center no-repeat;
 	width: 100%;
 	top: 0;
@@ -233,7 +233,7 @@ input:-moz-placeholder { color:#000;
 	letter-spacing: 0;
 	word-spacing: 0;
 	font-size: 0;
-	z-index: 100;
+	z-index: 200;
 }
 .header .navigation .level-f {
 	display: inline-block;
@@ -545,6 +545,12 @@ input:-moz-placeholder { color:#000;
 .imed-setting {
 	background-position: 0 -450px;
 }
+.imed-photo-gray {
+	background-position: -90px -390px;
+}
+.imed-smiley-gray {
+	background-position: -90px -420px;
+}
 .ismall-view {
 	background-position: -90px -274px;
 }
@@ -556,6 +562,15 @@ input:-moz-placeholder { color:#000;
 }
 .ismall-usr {
 	background-position: -200px -36px;
+}
+.ismall-setting-white {
+	background-position: -218px -18px;
+}
+.ismall-close-white {
+	background-position: -218px -36px;
+}
+.ismall-online {
+	background-position: -218px -54px;
 }
 .i40-fb {
 	background-position: -460px -310px;
@@ -610,7 +625,7 @@ input:-moz-placeholder { color:#000;
 	right: -20px;
 	top: 26px;
 	display: none;
-	z-index: 100;
+	z-index: 200;
 	animation: fadein 0.3s;
     -moz-animation: fadein 0.3s; /* Firefox */
     -webkit-animation: fadein 0.3s; /* Safari and Chrome */
@@ -2984,4 +2999,244 @@ ulti .post .post-text .post-photo .buttons {
 	font-size: 1.3rem;
 	margin-right: 10px;
 	margin-bottom: 10px;
+}
+/* Go To Top button */
+#back-top {
+	position: fixed;
+	bottom: 20%;
+	left: 50%;
+	margin-left: 480px;
+	z-index: 100;
+	display: none;
+}
+#back-top a.default {
+	width: 40px;
+	height: 50px;
+	text-align: center;
+	font: 11px/100% Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #BBB;
+	background: url('../img/sprites.png') -279px -140px no-repeat;
+	display: block;
+}
+/* Chat Box */
+.chat-list {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	width: 250px;
+	z-index: 100;
+}
+.chat-box {
+	background: #fff;
+}
+.chat-box .title {
+	background: #229fd9;
+	border-top: #76c1e4 solid 1px;
+	border-bottom: #1c87b8 solid 4px;
+	position: relative;
+	padding: 6px 10px;
+}
+.chat-box .title h4 {
+	font-family:'Open Sans Condensed', Arial, Calibri, Geneva,sans-serif;
+	color: #fff;
+	font-weight: normal;
+	font-size: 18px;
+	font-size: 1.8rem;
+	text-transform: uppercase;
+	max-width: 60%;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+	cursor: pointer;
+}
+.chat-box .title .buttons {
+	position: absolute;
+	top: 50%;
+	right: 8px;
+	margin-top: -9px;
+	position: 10;
+}
+.chat-box .chat-friends {
+	background: #e5e5e5;
+	border-left: #ccc solid 1px;
+	padding-bottom: 5px;
+}
+.chat-box .chat-friends ul li {
+	position: relative;
+}
+.chat-box .chat-friends ul li a, .chat-box .chat-friends .chat-item {
+	display: block;
+	padding: 10px;
+}
+.chat-box .chat-friends .ava {
+	float: left;
+}
+.chat-box .chat-friends .ava img {
+	width: 33px;
+	height: 33px;
+	padding: 1px;
+	background: #fff;
+	border: #dbdbdb solid 1px;
+	-moz-border-radius: 1px;
+	-webkit-border-radius: 1px;
+	border-radius: 1px;
+	display: block;
+}
+.chat-box .chat-friends ul li .line {
+	display: block;
+	position: absolute;
+	background: #fff;
+	border-top: #ccc solid 1px;
+	bottom: 0;
+	left: 1px;
+	right: 1px;
+}
+.chat-box .chat-friends .info {
+	margin-left: 45px;
+	position: relative;
+}
+.chat-box .chat-friends .info .name {
+	line-height: 33px;
+}
+.chat-box .chat-friends .info .status {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	margin-top: -9px;
+}
+.chat-list .chat-friends {
+	max-height: 390px;
+	overflow: auto;
+}
+.chat-box .chat-search {
+}
+.chat-box .chat-search .input-wrap,
+.chat-box .chat-input .input-wrap {
+	background: #fff;
+	padding: 6px 40px 6px 12px;
+	position: relative;
+	border: #ccc solid 1px;
+}
+.chat-box .chat-search .input-wrap input[type="text"], 
+.chat-box .chat-input .input-wrap textarea {
+	border: 0;
+	box-shadow: none;
+	background: transparent;
+	color: #000;
+	font-size: 12px;
+	line-height: 16px;
+	width: 180px;
+}
+.chat-box .chat-search .btn-search {
+	padding: 0;
+	position: absolute;
+	right: 4px;
+	top: 2px;
+	border: 0;
+	margin: 0;
+	width: 30px;
+	height: 30px;
+	background: url('../img/sprites.png') -60px -270px no-repeat;
+}
+.chat-boxed {
+	position: fixed;
+	right: 256px;
+	bottom: 0;
+	z-index: 100;
+	width: 296px;
+}
+.chat-boxed .chat-friends-wrap .date {
+	background: #ccc;
+	padding: 10px 12px 4px 12px;
+	border: #ccc solid 1px;
+	position: relative;
+}
+.chat-boxed .chat-friends-wrap .date .line {
+	position: absolute;
+	top: 0;
+	left: 0px;
+	right: 0px;
+	background: #e5e5e5;
+	height: 6px;
+}
+
+.chat-boxed .chat-chatted {
+	min-height: 130px;
+	max-height: 320px;
+	overflow: auto;
+}
+.chat-boxed .input-wrap .buttons {
+	position: absolute;
+	right: 0;
+	top: 0;
+	font-size: 0;
+	word-spacing: 0;
+	letter-spacing: 0;
+}
+.chat-boxed .input-wrap .buttons .btn-photo,
+.chat-boxed .input-wrap .buttons .smiley-board {
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	position: relative;
+} 
+.chat-boxed .input-wrap .buttons .btn-photo {
+	overflow: hidden;
+}
+.chat-boxed .input-wrap .buttons .btn-photo input[type="file"] {
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 100;
+}
+.chat-boxed .chat-input .input-wrap textarea {
+	margin-bottom: 0;
+	width: 216px;
+	line-height: 20px;
+}
+.smiley-board {
+}
+.smiley-board .smiley-board-wrap {
+	background: #fff;
+	border: #aaa solid 1px;
+	position: absolute;
+	bottom: 36px;
+	right: -12px;
+	z-index: 300;
+	width: 300px;
+	height: auto;
+	min-height: 100px;
+	display: none;
+	animation: fadein 0.3s;
+    -moz-animation: fadein 0.3s; /* Firefox */
+    -webkit-animation: fadein 0.3s; /* Safari and Chrome */
+    -o-animation: fadein 0.3s; /* Opera */
+	font-size: 12px;
+}
+.smiley-board.open .smiley-board-wrap {
+	display: block;
+}
+.smiley-board .smiley-board-wrap .arrow {
+	position: absolute;
+	right: 16px;
+	bottom: -9px;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 9px solid #ccc;
+	display: block;
+	width: 0;
+	height: 0;
+}
+.smiley-board .smiley-board-wrap .arrow i {
+	position: absolute;
+	right: -9px;
+	bottom: 1px;
+	border-left: 9px solid transparent;
+	border-right: 9px solid transparent;
+	border-top: 8px solid #fff;
+	display: block;
+	width: 0;
+	height: 0;
 }

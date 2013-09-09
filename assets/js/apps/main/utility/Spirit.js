@@ -49,11 +49,38 @@ define([
 				allowClear: true,
 				placeholder: true
 			});
-        },
+			// Go To Top Button
+			$("#back-top").hide();
+			
+			// fade in #back-top
+			$(window).scroll(function () {
+				if ($(this).scrollTop() > 100) {
+					$('#back-top').fadeIn();
+				} else {
+					$('#back-top').fadeOut();
+				}
+			});
 
-        /**
-         *  Code related to homepage
-         */
+			// scroll body to 0px on click
+			$('#back-top a.default').click(function () {
+				$('body,html').animate({
+					scrollTop: 0
+				}, 800);
+				return false;
+			});
+			$('#back-top a.totop').click(function () {
+				$('body,html').animate({
+					scrollTop: 0
+				}, 800);
+				return false;
+			});
+			$(".chat-box h4").click(function(){
+				$(this).closest(".chat-box").find(".chat-friends-wrap").toggle();
+			});
+			/**
+			 *  Code related to homepage
+			 */
+        },
         homepage: function() {
 
         }
