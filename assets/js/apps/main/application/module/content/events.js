@@ -6,7 +6,9 @@ define([ '$', 'App', 'jquery/select2.min' ], function($, App , select2) {
             'selectTopic.content',
             'loadMostTopic.content',
             'newTopic.content',
-            'tagUser.content'
+            'tagUser.content',
+            'loadBestTopic.content'
+
         ];
 
         var handlers = {
@@ -19,16 +21,17 @@ define([ '$', 'App', 'jquery/select2.min' ], function($, App , select2) {
             promote: function(el, type, id) {
 
             },
-            selectTopic: function(el, type, id) {
-
-
-
+            loadBestTopic: function() {
+                $(".best_topic").load(SITE.BASE_URL+'/category/besttopic', function (data)
+                {
+                    $(this).html(data);
+                });
             },
-            loadMostTopic: function(el, type, id) {
+            loadMostTopic: function() {
                 $(".mCSB_container").load(SITE.BASE_URL+'/category/getmosttopic', function (data)
                 {
                     $('.ulti .tags-list .list ul').html(jQuery.parseJSON(data).html) ;
-                })
+                });
             },
             // handler event newTopic.      
             newTopic: function() {
