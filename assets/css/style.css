@@ -3140,12 +3140,23 @@ ulti .post .post-text .post-photo .buttons {
 	height: 30px;
 	background: url('../img/sprites.png') -60px -270px no-repeat;
 }
-.chat-boxed {
+.chat-boxed-wrap {
 	position: fixed;
 	right: 256px;
 	bottom: 0;
 	z-index: 100;
+	font-size: 0;
+	word-spacing: 0;
+	letter-spacing: 0;
+}
+.chat-boxed {
 	width: 296px;
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	vertical-align: bottom;
+	font-size: 12px;
+	margin-right: 6px;
 }
 .chat-boxed .chat-friends-wrap .date {
 	background: #ccc;
@@ -3161,7 +3172,6 @@ ulti .post .post-text .post-photo .buttons {
 	background: #e5e5e5;
 	height: 6px;
 }
-
 .chat-boxed .chat-chatted {
 	min-height: 130px;
 	max-height: 320px;

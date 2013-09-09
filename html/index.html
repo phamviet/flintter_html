@@ -871,102 +871,336 @@
 	<!-- wrap -->
 </div>
 <!-- Friend list to chat -->
-<div class="chat-box chat-boxed">
-	<div class="title">
-		<h4>Brian Tracy</h4>
-		<div class="buttons">
-			<a href="#" class="btn-setting"><i class="ismall ismall-setting-white"></i></a>
-			<a href="#" class="btn-close"><i class="ismall ismall-close-white"></i></a>
-		</div>
-	</div>
-	<!-- Title bar -->
-	<div class="chat-friends-wrap">
-		<div class="date">
-			<p>December 21, 2011 2:01 pm</p>
-			<span class="line"></span>
-		</div>
-		<div class="chat-friends chat-chatted">
-			<ul>
-				<li>
-					<div class="chat-item clearfix">
-						<div class="ava">
-							<img src="../assets/demo/img-avatar-002.jpg" />
-						</div>
-						<div class="info">
-							<p>Et harum quidem rerum facilis est et expedita distinctio</p>
-						</div>
-					</a>
-					<span class="line"></span>
-				</li>
-				<li>
-					<div class="chat-item clearfix">
-						<div class="ava">
-							<img src="../assets/demo/img-avatar-002.jpg" />
-						</div>
-						<div class="info">
-							<p>Et harum quidem rerum facilis est et expedita distinctio</p>
-							<p>Et harum quidem rerum facilis est et expedita distinctio</p>
-						</div>
-					</a>
-					<span class="line"></span>
-				</li>
-			</ul>
-		</div>
-		<!-- friend list -->
-		<div class="chat-input">
-			<div class="input-wrap">
-				<form method="">
-					<textarea rows="1"></textarea>
-					<div class="buttons">
-						<a role="button" tabindex="0" class="btn-photo">
-							<i class="imed imed-photo-gray"></i>
-							<input type="file" accept="image/*" multiple="1" name="attachment[]" class="input-file">
-						</a>
-						<div class="smiley-board">
-						  <a class="btn-smiley" data-toggle="dropdown" href="javascript:void(0)"><i class="imed imed-smiley-gray"></i></a>
-						  <div class="smiley-board-wrap">
-							<span class="arrow"><i></i></span>
-							<div class="smiley-list">
-								<div class="smiley-tab clearfix">
-									<a href="#smiley-0" data-toggle="tab"><i>1</i></a>
-									<a href="#smiley-1" data-toggle="tab"><i>2</i></a>
-									<a href="#smiley-2" data-toggle="tab"><i>3</i></a>
-								</div>
-								<!-- smiley tab -->
-								<div id="smiley-0" class="smiley-wrap active" data-toggle="pill">
-									<ul>
-										<li>
-											<a href="#"></a>
-										</li>
-									</ul>
-								</div>
-								<!-- smiley display -->
-								<div id="smiley-1" class="smiley-wrap" data-toggle="pill">
-									<ul>
-										<li>
-											<a href="#"></a>
-										</li>
-									</ul>
-								</div>
-								<!-- smiley display -->
-								<div id="smiley-2" class="smiley-wrap" data-toggle="pill">
-									<ul>
-										<li>
-											<a href="#"></a>
-										</li>
-									</ul>
-								</div>
-								<!-- smiley display -->
-							</div>
-						  </div>
-						</div>
-					</div>
-				</form>
+<div class="chat-boxed-wrap">
+	<div class="chat-box chat-boxed">
+		<div class="title">
+			<h4>Brian Tracy</h4>
+			<div class="buttons">
+				<a href="#" class="btn-setting"><i class="ismall ismall-setting-white"></i></a>
+				<a href="#" class="btn-close"><i class="ismall ismall-close-white"></i></a>
 			</div>
 		</div>
-		<!-- chat input -->
+		<!-- Title bar -->
+		<div class="chat-friends-wrap">
+			<div class="date">
+				<p>December 21, 2011 2:01 pm</p>
+				<span class="line"></span>
+			</div>
+			<div class="chat-friends chat-chatted">
+				<ul>
+					<li>
+						<div class="chat-item clearfix">
+							<div class="ava">
+								<img src="../assets/demo/img-avatar-002.jpg" />
+							</div>
+							<div class="info">
+								<p>Et harum quidem rerum facilis est et expedita distinctio</p>
+							</div>
+						</a>
+						<span class="line"></span>
+					</li>
+					<li>
+						<div class="chat-item clearfix">
+							<div class="ava">
+								<img src="../assets/demo/img-avatar-002.jpg" />
+							</div>
+							<div class="info">
+								<p>Et harum quidem rerum facilis est et expedita distinctio</p>
+								<p>Et harum quidem rerum facilis est et expedita distinctio</p>
+							</div>
+						</a>
+						<span class="line"></span>
+					</li>
+				</ul>
+			</div>
+			<!-- friend list -->
+			<div class="chat-input">
+				<div class="input-wrap">
+					<form method="">
+						<textarea rows="1"></textarea>
+						<div class="buttons">
+							<a role="button" tabindex="0" class="btn-photo">
+								<i class="imed imed-photo-gray"></i>
+								<input type="file" accept="image/*" multiple="1" name="attachment[]" class="input-file">
+							</a>
+							<div class="smiley-board">
+							  <a class="btn-smiley" data-toggle="dropdown" href="javascript:void(0)"><i class="imed imed-smiley-gray"></i></a>
+							  <div class="smiley-board-wrap">
+								<span class="arrow"><i></i></span>
+								<div class="smiley-list">
+									<div class="smiley-tab clearfix">
+										<a href="#smiley-0" data-toggle="tab"><i>1</i></a>
+										<a href="#smiley-1" data-toggle="tab"><i>2</i></a>
+										<a href="#smiley-2" data-toggle="tab"><i>3</i></a>
+									</div>
+									<!-- smiley tab -->
+									<div id="smiley-0" class="smiley-wrap active" data-toggle="pill">
+										<ul>
+											<li>
+												<a href="#"></a>
+											</li>
+										</ul>
+									</div>
+									<!-- smiley display -->
+									<div id="smiley-1" class="smiley-wrap" data-toggle="pill">
+										<ul>
+											<li>
+												<a href="#"></a>
+											</li>
+										</ul>
+									</div>
+									<!-- smiley display -->
+									<div id="smiley-2" class="smiley-wrap" data-toggle="pill">
+										<ul>
+											<li>
+												<a href="#"></a>
+											</li>
+										</ul>
+									</div>
+									<!-- smiley display -->
+								</div>
+							  </div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<!-- chat input -->
+		</div>
+		<!-- wrap -->
 	</div>
-	<!-- wrap -->
+	<div class="chat-box chat-boxed">
+		<div class="title">
+			<h4>Brian Tracy</h4>
+			<div class="buttons">
+				<a href="#" class="btn-setting"><i class="ismall ismall-setting-white"></i></a>
+				<a href="#" class="btn-close"><i class="ismall ismall-close-white"></i></a>
+			</div>
+		</div>
+		<!-- Title bar -->
+		<div class="chat-friends-wrap">
+			<div class="date">
+				<p>December 21, 2011 2:01 pm</p>
+				<span class="line"></span>
+			</div>
+			<div class="chat-friends chat-chatted">
+				<ul>
+					<li>
+						<div class="chat-item clearfix">
+							<div class="ava">
+								<img src="../assets/demo/img-avatar-002.jpg" />
+							</div>
+							<div class="info">
+								<p>Et harum quidem rerum facilis est et expedita distinctio</p>
+							</div>
+						</a>
+						<span class="line"></span>
+					</li>
+					<li>
+						<div class="chat-item clearfix">
+							<div class="ava">
+								<img src="../assets/demo/img-avatar-002.jpg" />
+							</div>
+							<div class="info">
+								<p>Et harum quidem rerum facilis est et expedita distinctio</p>
+								<p>Et harum quidem rerum facilis est et expedita distinctio</p>
+							</div>
+						</a>
+						<span class="line"></span>
+					</li>
+				</ul>
+			</div>
+			<!-- friend list -->
+			<div class="chat-input">
+				<div class="input-wrap">
+					<form method="">
+						<textarea rows="1"></textarea>
+						<div class="buttons">
+							<a role="button" tabindex="0" class="btn-photo">
+								<i class="imed imed-photo-gray"></i>
+								<input type="file" accept="image/*" multiple="1" name="attachment[]" class="input-file">
+							</a>
+							<div class="smiley-board">
+							  <a class="btn-smiley" data-toggle="dropdown" href="javascript:void(0)"><i class="imed imed-smiley-gray"></i></a>
+							  <div class="smiley-board-wrap">
+								<span class="arrow"><i></i></span>
+								<div class="smiley-list">
+									<div class="smiley-tab clearfix">
+										<a href="#smiley-0" data-toggle="tab"><i>1</i></a>
+										<a href="#smiley-1" data-toggle="tab"><i>2</i></a>
+										<a href="#smiley-2" data-toggle="tab"><i>3</i></a>
+									</div>
+									<!-- smiley tab -->
+									<div id="smiley-0" class="smiley-wrap active" data-toggle="pill">
+										<ul>
+											<li>
+												<a href="#"></a>
+											</li>
+										</ul>
+									</div>
+									<!-- smiley display -->
+									<div id="smiley-1" class="smiley-wrap" data-toggle="pill">
+										<ul>
+											<li>
+												<a href="#"></a>
+											</li>
+										</ul>
+									</div>
+									<!-- smiley display -->
+									<div id="smiley-2" class="smiley-wrap" data-toggle="pill">
+										<ul>
+											<li>
+												<a href="#"></a>
+											</li>
+										</ul>
+									</div>
+									<!-- smiley display -->
+								</div>
+							  </div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<!-- chat input -->
+		</div>
+		<!-- wrap -->
+	</div>
+	<!-- chat boxed -->
+	<div class="chat-box chat-boxed">
+		<div class="title">
+			<h4>Brian Tracy</h4>
+			<div class="buttons">
+				<a href="#" class="btn-setting"><i class="ismall ismall-setting-white"></i></a>
+				<a href="#" class="btn-close"><i class="ismall ismall-close-white"></i></a>
+			</div>
+		</div>
+		<!-- Title bar -->
+		<div class="chat-friends-wrap">
+			<div class="date">
+				<p>December 21, 2011 2:01 pm</p>
+				<span class="line"></span>
+			</div>
+			<div class="chat-friends chat-chatted">
+				<ul>
+					<li>
+						<div class="chat-item clearfix">
+							<div class="ava">
+								<img src="../assets/demo/img-avatar-002.jpg" />
+							</div>
+							<div class="info">
+								<p>Et harum quidem rerum facilis est et expedita distinctio</p>
+							</div>
+						</a>
+						<span class="line"></span>
+					</li>
+					<li>
+						<div class="chat-item clearfix">
+							<div class="ava">
+								<img src="../assets/demo/img-avatar-002.jpg" />
+							</div>
+							<div class="info">
+								<p>Et harum quidem rerum facilis est et expedita distinctio</p>
+								<p>Et harum quidem rerum facilis est et expedita distinctio</p>
+							</div>
+						</a>
+						<span class="line"></span>
+					</li>
+					<li>
+						<div class="chat-item clearfix">
+							<div class="ava">
+								<img src="../assets/demo/img-avatar-002.jpg" />
+							</div>
+							<div class="info">
+								<p>Et harum quidem rerum facilis est et expedita distinctio</p>
+								<p>Et harum quidem rerum facilis est et expedita distinctio</p>
+							</div>
+						</a>
+						<span class="line"></span>
+					</li>
+					<li>
+						<div class="chat-item clearfix">
+							<div class="ava">
+								<img src="../assets/demo/img-avatar-002.jpg" />
+							</div>
+							<div class="info">
+								<p>Et harum quidem rerum facilis est et expedita distinctio</p>
+								<p>Et harum quidem rerum facilis est et expedita distinctio</p>
+							</div>
+						</a>
+						<span class="line"></span>
+					</li>
+					<li>
+						<div class="chat-item clearfix">
+							<div class="ava">
+								<img src="../assets/demo/img-avatar-002.jpg" />
+							</div>
+							<div class="info">
+								<p>Et harum quidem rerum facilis est et expedita distinctio</p>
+								<p>Et harum quidem rerum facilis est et expedita distinctio</p>
+							</div>
+						</a>
+						<span class="line"></span>
+					</li>
+				</ul>
+			</div>
+			<!-- friend list -->
+			<div class="chat-input">
+				<div class="input-wrap">
+					<form method="">
+						<textarea rows="1"></textarea>
+						<div class="buttons">
+							<a role="button" tabindex="0" class="btn-photo">
+								<i class="imed imed-photo-gray"></i>
+								<input type="file" accept="image/*" multiple="1" name="attachment[]" class="input-file">
+							</a>
+							<div class="smiley-board">
+							  <a class="btn-smiley" data-toggle="dropdown" href="javascript:void(0)"><i class="imed imed-smiley-gray"></i></a>
+							  <div class="smiley-board-wrap">
+								<span class="arrow"><i></i></span>
+								<div class="smiley-list">
+									<div class="smiley-tab clearfix">
+										<a href="#smiley-0" data-toggle="tab"><i>1</i></a>
+										<a href="#smiley-1" data-toggle="tab"><i>2</i></a>
+										<a href="#smiley-2" data-toggle="tab"><i>3</i></a>
+									</div>
+									<!-- smiley tab -->
+									<div id="smiley-0" class="smiley-wrap active" data-toggle="pill">
+										<ul>
+											<li>
+												<a href="#"></a>
+											</li>
+										</ul>
+									</div>
+									<!-- smiley display -->
+									<div id="smiley-1" class="smiley-wrap" data-toggle="pill">
+										<ul>
+											<li>
+												<a href="#"></a>
+											</li>
+										</ul>
+									</div>
+									<!-- smiley display -->
+									<div id="smiley-2" class="smiley-wrap" data-toggle="pill">
+										<ul>
+											<li>
+												<a href="#"></a>
+											</li>
+										</ul>
+									</div>
+									<!-- smiley display -->
+								</div>
+							  </div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<!-- chat input -->
+		</div>
+		<!-- wrap -->
+	</div>
+	<!-- chat boxed -->
 </div>
 <!-- Chat Box Displayed -->
 <div class="modal fade hide" id="pop-fighting" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
