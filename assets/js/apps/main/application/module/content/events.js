@@ -4,11 +4,11 @@ define([ '$', 'App', 'jquery/select2.min' ], function($, App , select2) {
         var events = [
             'newIdea.content',
             'selectTopic.content',
+            'loadBestTopic.content',
             'loadMostTopic.content',
+            'userfollowtopic.content',
             'newTopic.content',
-            'tagUser.content',
-            'loadBestTopic.content'
-
+            'tagUser.content'
         ];
 
         var handlers = {
@@ -20,6 +20,26 @@ define([ '$', 'App', 'jquery/select2.min' ], function($, App , select2) {
 
             promote: function(el, type, id) {
 
+            },
+            userfollowtopic: function() {
+                $(document).off().on('click', '.btn-follow', function(e){
+                    var self = $(this);
+                    var topicId = self.attr('data-id');
+                    $.ajax({
+                        url: SITE.BASE_URL+'/userfollowtopic/add',
+                        type: 'POST',
+                        dataType: 'json',
+                        data: {
+                            'topicId' :topicId
+                        },
+                        success: function(response){
+                            if(response.status){
+                                self.children('.text').html('followed');
+                            }else{
+                            }
+                        }
+                    });
+                })
             },
             loadBestTopic: function() {
                 $(".best_topic").load(SITE.BASE_URL+'/category/besttopic', function (data)
