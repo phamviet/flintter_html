@@ -7,6 +7,7 @@
         waitSeconds: 30,
         paths: {
             '$': 'jquery/jquery-1.9.1.min',
+            'jquery.ui.widget': 'jquery/jquery.ui.widget',
             tinyMCE: '//tinymce.cachefly.net/4.0/tinymce.min',
             underscore: 'underscore/underscore-min',
             backbone: 'backbone/backbone-min',
@@ -35,7 +36,8 @@
             },
             'jquery/jquery.mCustomScrollbar.min': { deps: ["$"] },
             'jquery/jquery.mousewheel.min': { deps: ["$"] },
-			'jquery/select2.min': { deps: ["$"] },
+            'jquery/jquery.fileupload': {deps: ["$", "jquery.ui.widget"]},
+            'jquery/select2.min': { deps: ["$"] },
             'rangy/rangy-core': {exports: 'rangy'}
         },
         urlArgs: "_=" +  window.SITE.VERSION || 'nocache'

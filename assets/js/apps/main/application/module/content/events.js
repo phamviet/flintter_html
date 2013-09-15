@@ -1,4 +1,4 @@
-define([ '$', 'App', 'jquery/select2.min' ], function($, App , select2) {
+define([ '$', 'App', 'jquery/select2.min', 'jquery/jquery.fileupload'], function($, App , select2, fileupload) {
 
     return function (){
         var events = [
@@ -13,10 +13,26 @@ define([ '$', 'App', 'jquery/select2.min' ], function($, App , select2) {
         ];
 
         var handlers = {
-            newIdea: function(el, type, id) {
-
-
-                alert('Post idea is triggered');
+            newIdea: function() {
+                var title = $('#post_title').val();
+                var content = $('#post_content').html();
+                // get all tags is selected.
+                var tags = $('#tags').val();
+                var mediaId = $('#media-id').val();
+                // get all topic is selected.
+                var categories = '';
+                // post data to create a idea via service.
+                $.post(SITE.BASE_URL+'/idea/create',{
+                        title: title,
+                        content: content,
+                        tags: tags,
+                        media_id: mediaId,
+                        categories: categories
+                    }
+                    ,
+                    function(data){
+                    console.log(data);
+                });
             },
 
             promote: function(el, type, id) {
@@ -145,7 +161,8 @@ define([ '$', 'App', 'jquery/select2.min' ], function($, App , select2) {
                     $('#upload').trigger('click');
                 });
                 var fileInput = $('#upload');
-                fileInput.change(function(e) {
+                fileInput.off('change').on('change',function(e) {
+                    e.preventDefault();
                     //console.log('choose from computer button is trigger');
                     // get file resource.
                     var file = $(this)[0].files[0];
@@ -166,24 +183,30 @@ define([ '$', 'App', 'jquery/select2.min' ], function($, App , select2) {
                         alert('Max file is 10MB');
                         return false;
                     }
+                    var userId = window.USER.id;
+                    // get media id to check in case new or edit action.
+                    var mediaId = $('#media-id').val();
+                    if(!mediaId) {
+                        mediaId = 0;
+                    }
+                    var mediaType = 'topic';
+                    console.log('file change is trigger');
                     // handler event submit the post photo form.
-                    $(document).off('submit').on('submit', '#form-upload', function(e){
-                        e.preventDefault();
-                        var _this = $(this);
-                        // post data to create topic action.
-                        $.post(SITE.BASE_URL + '/service/upload',_this.serialize(),function(data){
-                            // parse JSON.
-                            var dt = $.parseJSON(data);
-                            // check if the file has error.
-                            if(dt.hasOwnProperty('error')) {
-                                console.log('file upload is error');
-                            } else {
-                                _this.find('input[name=media_id]').val(dt.id);
-                                console.log('file upload is successfull');
+                    $(this).fileupload({
+                        url: SITE.BASE_URL + '/service/upload',
+                        add: function (e, data) {
+                            data.formData = {user_id: userId, media_id: mediaId, media_type: mediaType};
+                            data.submit();
+                        },
+                        done: function (e, data) {
+                            var dt = $.parseJSON(data.result);
+                            // check if the file uploaded successfull.
+                            if(!dt.hasOwnProperty('errors')) {
+                                 var mediaId = dt.id;
+                                // set media id for hidden input.
+                                $('#media-id').val(mediaId);
                             }
-                            console.log(data);
-                        });
-                        return false;
+                        }
                     });
                 });
                 // find "cancel" button.
