@@ -2,6 +2,7 @@ define([ '$', 'App', 'jquery/select2.min', 'jquery/jquery.fileupload'], function
 
     return function (){
         var events = [
+            'validIdea.content',
             'newIdea.content',
             'selectTopic.content',
             'loadMostTopic.content',
@@ -13,26 +14,52 @@ define([ '$', 'App', 'jquery/select2.min', 'jquery/jquery.fileupload'], function
         ];
 
         var handlers = {
+            validIdea: function() {
+                // check valid title.
+                var postTitle = $('#post_title').val();
+                if(!postTitle) {
+                    alert('Please input title');
+                    return false;
+                }
+                // check valid content.
+                var postContent = $('#post_content').html();
+                if(!postContent) {
+                    alert('Please input content');
+                    return false;
+                }
+                // check valid topic.
+                var postCategories = $('#post_categories').val('test');
+                if(!postCategories) {
+                    alert('Please select a topic');
+                    return false;
+                }
+                
+                return true;
+            },
             newIdea: function() {
-                var title = $('#post_title').val();
-                var content = $('#post_content').html();
+                // get tile.
+                var postTitle = $('#post_title').val();
+                // get content.
+                var postContent = $('#post_content').html();
                 // get all tags is selected.
-                var tags = $('#tags').val();
+                var postTags = $('#tags').val();
                 var mediaId = $('#media-id').val();
                 // get all topic is selected.
                 var categories = '';
-                // post data to create a idea via service.
-                $.post(SITE.BASE_URL+'/idea/create',{
-                        title: title,
-                        content: content,
-                        tags: tags,
-                        media_id: mediaId,
-                        categories: categories
-                    }
-                    ,
-                    function(data){
-                    console.log(data);
-                });
+                // check if idea is valid.
+                if(this.validIdea()) {
+                    // post data to create a idea via service.
+                    $.post(SITE.BASE_URL+'/service/idea/create',{
+                            title: postTitle,
+                            content: postContent,
+                            tags: postTags,
+                            media_id: mediaId,
+                            categories: categories
+                        },
+                        function(data){
+                            console.log(data);
+                    });
+                }
             },
 
             promote: function(el, type, id) {
