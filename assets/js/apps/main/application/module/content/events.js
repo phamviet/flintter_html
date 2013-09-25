@@ -14,6 +14,38 @@ define([ '$', 'App', 'jquery/select2.min', 'jquery/jquery.fileupload'], function
         ];
 
         var handlers = {
+            selectTopic: function() {
+                // handler event when click toipc.
+                $(document).on('click','ul.tags-tags li',function(e) {
+                    e.preventDefault();
+                    // get topic id.
+                    var id = $(this).data('id');
+                    // get all topic is selected.
+                    var postTopics = $('#post_topics').val();
+                    // check if the topic is empty.
+                    if(!postTopics) {
+                        // init array.
+                        postTopics = [];
+                    } else {
+                        var selected = $(this).find('.selected').length;
+                        // split string to array by comma.
+                        postTopics = postTopics.split(',');
+                        // check if topic id not exist.
+                        if(postTopics.indexOf(id) === -1 && !selected) {
+                            // push value intro array.
+                            postTopics.push(id);
+                            $(this).removeClass('selected').addClass('selected');
+                        } else {
+                            // remove value of array.
+                            postTopics.splice(postTopics.indexOf(id),1);
+                            $(this).removeClass('selected');
+                        }
+                         // join to string.
+                        $('#post_topics').val(postTopics.join(','));
+                    }
+                    
+                });
+            },
             validIdea: function() {
                 // check valid title.
                 var postTitle = $('#post_title').val();
@@ -27,40 +59,51 @@ define([ '$', 'App', 'jquery/select2.min', 'jquery/jquery.fileupload'], function
                     alert('Please input content');
                     return false;
                 }
-                // check valid topic.
-                var postCategories = $('#post_categories').val('test');
-                if(!postCategories) {
+                var postTags = $('#post_tags').val();
+                // convert tags tring to array.
+                postTags = postTags.split(',');
+                var postTopics = $('#post_topics').val();
+                // convert topics tring to array.
+                postTopics = postTopics.split(',');
+                // get all the topic of content.
+                var postTopicsExtra = postContent.match(/data-topic-id="(\d+)"/g);
+                // join two array.
+                postTopics = postTopics.concat(postTopicsExtra);
+                postTopics = postTopics.filter(function (v, i, a) { 
+                    return a.indexOf (v) === i;
+                });
+                if(!postTopics) {
                     alert('Please select a topic');
                     return false;
                 }
+                var data = [];
+                data['postTitle'] = postTitle;
+                data['postContent'] = postContent;
+                data['postTopics'] = postTopics;
+                data['postTags'] = postTags;
                 
-                return true;
+                return data;
             },
             newIdea: function() {
-                // get tile.
-                var postTitle = $('#post_title').val();
-                // get content.
-                var postContent = $('#post_content').html();
-                // get all tags is selected.
-                var postTags = $('#tags').val();
-                var medias = $('#medias').val();
-                // get all topic is selected.
-                var categories = '';
+                var data = this.validIdea();
                 // check if idea is valid.
-                if(this.validIdea()) {
+                if(data) {
                     // post data to create a idea via service.
                     $.post(SITE.BASE_URL+'/service/idea/create',{
-                            form: {
-                                title: postTitle,
-                                content: postContent,
-                                tags: postTags,
-                                medias: medias,
-                                categories: categories
-                            },
-                            user_id: window.USER.id
+                            idea: {
+                                title: data['postTitle'],
+                                content: data['postTitle'],
+                                topics: data['postTopics'],
+                                tags: data['postTags']
+                            }
                         },
                         function(data){
-                            console.log(data);
+                            var dt = $.parseJSON(data);
+                            if(dt.status===true && dt.id>0) {
+                                alert('Idea is created successfull');
+                            } else {
+                                alert(data.error);
+                            }
                     });
                 }
             },
@@ -79,6 +122,8 @@ define([ '$', 'App', 'jquery/select2.min', 'jquery/jquery.fileupload'], function
                 {
                     $('.ulti .tags-list .list ul').html(jQuery.parseJSON(data).html) ;
                 });
+                // trigger to select topics.
+                $(document).trigger('selectTopic.content');
             },
             // handler process the new topic.      
             newTopic: function() {
@@ -133,7 +178,7 @@ define([ '$', 'App', 'jquery/select2.min', 'jquery/jquery.fileupload'], function
                     multiple: true,
                     //containerCssClass: 'tags',
                     id: function(data) { 
-                        return data.value+":"+data.label; 
+                        return data.value; 
                     },
                     ajax: { // instead of writing the function to execute the request we use Select2's convenient helper
                         url: SITE.BASE_URL + '/service/suggest/friend',
