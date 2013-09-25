@@ -43,18 +43,22 @@ define([ '$', 'App', 'jquery/select2.min', 'jquery/jquery.fileupload'], function
                 var postContent = $('#post_content').html();
                 // get all tags is selected.
                 var postTags = $('#tags').val();
-                var mediaId = $('#media-id').val();
+                var medias = $('#medias').val();
                 // get all topic is selected.
                 var categories = '';
                 // check if idea is valid.
                 if(this.validIdea()) {
                     // post data to create a idea via service.
                     $.post(SITE.BASE_URL+'/service/idea/create',{
-                            title: postTitle,
-                            content: postContent,
-                            tags: postTags,
-                            media_id: mediaId,
-                            categories: categories
+                            form: {
+                                title: postTitle,
+                                content: postContent,
+                                tags: postTags,
+                                medias: medias,
+                                categories: categories
+                            },
+                            user_id: window.USER.id
+                            
                         },
                         function(data){
                             console.log(data);
