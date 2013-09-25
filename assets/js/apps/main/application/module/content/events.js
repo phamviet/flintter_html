@@ -94,7 +94,7 @@ define([ '$', 'App', 'jquery/select2.min', 'jquery/jquery.fileupload'], function
 			$(data).modal('show');
 		});
                 // handler event the post topic.
-                $(document).off('submit').on('submit', '#form-newtopic', function(e){
+                $(document).on('submit', '#form-newtopic', function(e){
                     e.preventDefault();
                     // post data to create topic action.
                     $.post(SITE.BASE_URL+'/category/create',$(this).serialize(),function(data){
@@ -108,7 +108,7 @@ define([ '$', 'App', 'jquery/select2.min', 'jquery/jquery.fileupload'], function
                     return false;
                 });
                 // handler event close the topic.
-                $(document).off('click').on('click', '#form-newtopic .btn-cancel', function(e){
+                $(document).on('click', '#form-newtopic .btn-cancel', function(e){
                     e.preventDefault();
                     $('#modal-newtopic').modal('hide').remove();
                 });
@@ -118,7 +118,7 @@ define([ '$', 'App', 'jquery/select2.min', 'jquery/jquery.fileupload'], function
                 // show editor area when trigger this event.
                 $('.post .post-tags').removeClass('active').addClass('active');
                 // add class active when trigger this event.
-                $('.post #tabs').removeClass('active').find('.imed-tag').parent().addClass('active');
+                $('.post #post_tags').removeClass('active').find('.imed-tag').parent().addClass('active');
                 // hide div tag friend.
                 $('.post .post-tags .post-alt').hide();
                 // handler event on click icon imed-tag.
@@ -128,7 +128,7 @@ define([ '$', 'App', 'jquery/select2.min', 'jquery/jquery.fileupload'], function
                     $('.post #tabs').removeClass('active').find('.imed-tag').parent().addClass('active');
                 });
                 // implement select2 plugin.
-                $("#tags").select2({
+                $("#post_tags").select2({
                     minimumInputLength: 1, // more 1 character to suggest friends.
                     multiple: true,
                     //containerCssClass: 'tags',
