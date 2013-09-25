@@ -54,18 +54,10 @@ define([ '$', 'App', 'jquery/select2.min', 'jquery/jquery.fileupload'], function
                                 title: postTitle,
                                 content: postContent,
                                 tags: postTags,
-<<<<<<< HEAD
                                 medias: medias,
                                 categories: categories
                             },
                             user_id: window.USER.id
-                            
-=======
-                                categories: categories,
-                                user_id: window.USER.id
-                            },
-                            media_id: mediaId
->>>>>>> branch 'master' of https://github.com/phamviet/flintter_html.git
                         },
                         function(data){
                             console.log(data);
