@@ -54,11 +54,18 @@ define([ '$', 'App', 'jquery/select2.min', 'jquery/jquery.fileupload'], function
                                 title: postTitle,
                                 content: postContent,
                                 tags: postTags,
+<<<<<<< HEAD
                                 medias: medias,
                                 categories: categories
                             },
                             user_id: window.USER.id
                             
+=======
+                                categories: categories,
+                                user_id: window.USER.id
+                            },
+                            media_id: mediaId
+>>>>>>> branch 'master' of https://github.com/phamviet/flintter_html.git
                         },
                         function(data){
                             console.log(data);
@@ -224,7 +231,7 @@ define([ '$', 'App', 'jquery/select2.min', 'jquery/jquery.fileupload'], function
                     console.log('file change is trigger');
                     // handler event submit the post photo form.
                     $(this).fileupload({
-                        url: SITE.BASE_URL + '/service/upload',
+                        url: SITE.BASE_URL + '/service/upload-file/upload',
                         add: function (e, data) {
                             data.formData = {user_id: userId, media_id: mediaId, media_type: mediaType};
                             data.submit();
@@ -232,7 +239,7 @@ define([ '$', 'App', 'jquery/select2.min', 'jquery/jquery.fileupload'], function
                         done: function (e, data) {
                             var dt = $.parseJSON(data.result);
                             // check if the file uploaded successfull.
-                            if(!dt.hasOwnProperty('errors')) {
+                            if(!dt.hasOwnProperty('error')) {
                                  var mediaId = dt.id;
                                 // set media id for hidden input.
                                 $('#media-id').val(mediaId);
