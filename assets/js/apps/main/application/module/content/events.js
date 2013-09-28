@@ -19,7 +19,7 @@ define([ '$', 'App', 'jquery/select2.min', 'jquery/jquery.fileupload'], function
                 $(document).on('click','ul.tags-tags li',function(e) {
                     e.preventDefault();
                     // get topic id.
-                    var id = $(this).data('id');
+                    var id = $(this).data('id').toString();
                     // get all topic is selected.
                     var postTopics = $('#post_topics').val();
                     // check if the topic is empty.
@@ -27,23 +27,22 @@ define([ '$', 'App', 'jquery/select2.min', 'jquery/jquery.fileupload'], function
                         // init array.
                         postTopics = [];
                     } else {
-                        var selected = $(this).find('.selected').length;
                         // split string to array by comma.
                         postTopics = postTopics.split(',');
-                        // check if topic id not exist.
-                        if(postTopics.indexOf(id) === -1 && !selected) {
-                            // push value intro array.
-                            postTopics.push(id);
-                            $(this).removeClass('selected').addClass('selected');
-                        } else {
-                            // remove value of array.
-                            postTopics.splice(postTopics.indexOf(id),1);
-                            $(this).removeClass('selected');
-                        }
-                         // join to string.
-                        $('#post_topics').val(postTopics.join(','));
                     }
-                    
+                    var selected = $(this).find('.selected').length;
+                    // check if topic id not exist.
+                    if(postTopics.indexOf(id) === -1 && !selected) {
+                        // push value intro array.
+                        postTopics.push(id);
+                        $(this).removeClass('selected').addClass('selected');
+                    } else {
+                        // remove value of array.
+                        postTopics.splice(postTopics.indexOf(id),1);
+                        $(this).removeClass('selected');
+                    }
+                     // join to string.
+                    $('#post_topics').val(postTopics.join(','));
                 });
             },
             validIdea: function() {
@@ -63,10 +62,21 @@ define([ '$', 'App', 'jquery/select2.min', 'jquery/jquery.fileupload'], function
                 // convert tags tring to array.
                 postTags = postTags.split(',');
                 var postTopics = $('#post_topics').val();
-                // convert topics tring to array.
-                postTopics = postTopics.split(',');
+                if(!postTopics) {
+                    postTopics = [];
+                } else {
+                    // convert topics tring to array.
+                    postTopics = postTopics.split(',');
+                }
                 // get all the topic of content.
-                var postTopicsExtra = postContent.match(/data-topic-id="(\d+)"/g);
+                var postTopicsExtra = [];
+                var elTopic = $('#post_content').find('.topic-mention');
+                if(elTopic.length>0){
+                    $.each(elTopic,function(){
+                        var topicId = $(this).data('topic-id').toString();
+                        postTopicsExtra.push(topicId);
+                    });
+                }
                 // join two array.
                 postTopics = postTopics.concat(postTopicsExtra);
                 postTopics = postTopics.filter(function (v, i, a) { 
