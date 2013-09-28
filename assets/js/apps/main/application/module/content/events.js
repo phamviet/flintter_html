@@ -45,6 +45,23 @@ define([ '$', 'App', 'jquery/select2.min', 'jquery/jquery.fileupload'], function
                     $('#post_topics').val(postTopics.join(','));
                 });
             },
+            resetIdea:function() {
+                // clear input.
+                $.clearFormFields = function(area) {
+                    $(area).find('input[type="text"],input[type="hidden"],textarea,select').val('');
+                };
+                // clear input.
+                $.clearFormFields('.post');
+                // clear editor.
+                $('.post #post_content').html('');
+                // clear topic is selected.
+                $('.ulti ul.tags-tags').find('.selected').removeClass('selected');
+                // clear tags.
+                $('.post .select2-search-choice').remove();
+                $('.post .post-alt').hide(0);
+                // clear tabs active.
+                $('.post #tabs').find('.active').removeClass('active');
+            },        
             validIdea: function() {
                 // check valid title.
                 var postTitle = $('#post_title').val();
@@ -82,7 +99,7 @@ define([ '$', 'App', 'jquery/select2.min', 'jquery/jquery.fileupload'], function
                 postTopics = postTopics.filter(function (v, i, a) { 
                     return a.indexOf (v) === i;
                 });
-                if(!postTopics) {
+                if(!postTopics.length) {
                     alert('Please select a topic');
                     return false;
                 }
@@ -95,22 +112,24 @@ define([ '$', 'App', 'jquery/select2.min', 'jquery/jquery.fileupload'], function
                 return data;
             },
             newIdea: function() {
-                var data = this.validIdea();
+                var _this = this;
+                var data = _this.validIdea();
                 // check if idea is valid.
                 if(data) {
                     // post data to create a idea via service.
                     $.post(SITE.BASE_URL+'/service/idea/create',{
                             idea: {
                                 title: data['postTitle'],
-                                content: data['postTitle'],
+                                content: data['postContent'],
                                 topics: data['postTopics'],
                                 tags: data['postTags']
                             }
                         },
                         function(data){
-                            var dt = $.parseJSON(data);
-                            if(dt.status===true && dt.id>0) {
+                            if(data.status===true && data.id>0) {
                                 alert('Idea is created successfull');
+                                // reset form idea
+                                _this.resetIdea();
                             } else {
                                 alert(data.error);
                             }
