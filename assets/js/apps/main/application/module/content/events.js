@@ -76,8 +76,12 @@ define([ '$', 'App', 'jquery/select2.min', 'jquery/jquery.fileupload'], function
                     return false;
                 }
                 var postTags = $('#post_tags').val();
-                // convert tags tring to array.
-                postTags = postTags.split(',');
+                if(postTags) {
+                    // convert tags tring to array.
+                    postTags = postTags.split(',');
+                } else {
+                    postTags = null;
+                }
                 var postTopics = $('#post_topics').val();
                 if(!postTopics) {
                     postTopics = [];
@@ -127,7 +131,7 @@ define([ '$', 'App', 'jquery/select2.min', 'jquery/jquery.fileupload'], function
                         },
                         function(data){
                             if(data.status===true && data.id>0) {
-                                alert('Idea is created successfull');
+                                alert('Idea is created successfully');
                                 // reset form idea
                                 _this.resetIdea();
                             } else {
