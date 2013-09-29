@@ -259,17 +259,20 @@ define([ '$', 'App', 'jquery/select2.min', 'jquery/jquery.fileupload'], function
                     $('.post .post-photo').removeClass('active').addClass('active');
                     $('.post #tabs').removeClass('active').find('.imed-tag').parent().addClass('active');
                 });
+                /*
                 // find "choose from computer" button.
                 var uploadBtn = $('.post-photo').find('.big-button').eq(0);
                 // handler event when click.
-                uploadBtn.on('click',function(e) {
+                uploadBtn.off('click').on('click',function(e) {
                     e.preventDefault();
                     //console.log('choose from computer button is trigger');
                     // trigger file upload.
                     $('#upload').trigger('click');
                 });
+                */
+                //$('#upload').trigger('click');
                 var fileInput = $('#upload');
-                fileInput.off('change').on('change',function(e) {
+                fileInput.trigger('click').on('change',function(e) {
                     e.preventDefault();
                     //console.log('choose from computer button is trigger');
                     // get file resource.
@@ -293,26 +296,34 @@ define([ '$', 'App', 'jquery/select2.min', 'jquery/jquery.fileupload'], function
                     }
                     var userId = window.USER.id;
                     // get media id to check in case new or edit action.
-                    var mediaId = $('#media-id').val();
+                    var mediaId = $('#post_medias').val();
                     if(!mediaId) {
                         mediaId = 0;
                     }
                     var mediaType = 'topic';
                     console.log('file change is trigger');
                     // handler event submit the post photo form.
-                    $(this).fileupload({
+                    fileInput.fileupload({
                         url: SITE.BASE_URL + '/service/upload-file/upload',
                         add: function (e, data) {
                             data.formData = {user_id: userId, media_id: mediaId, media_type: mediaType};
                             data.submit();
                         },
                         done: function (e, data) {
-                            var dt = $.parseJSON(data.result);
+                            var dt = data.result;
                             // check if the file uploaded successfull.
-                            if(!dt.hasOwnProperty('error')) {
-                                 var mediaId = dt.id;
+                            if (dt.status===true) {
+                                var entity = dt.entity;
+                                var mediaId = entity.id;
+                                var mediaThumb = entity.small_icon;
+                                $('#media_thumb ul').append($('<li  style="float:left;margin:2px;"><img data-media_id="'+ mediaId +'" src="/'+ mediaThumb +'"/></li>'));
                                 // set media id for hidden input.
-                                $('#media-id').val(mediaId);
+                                //$('#media-id').val(mediaId);
+                                if ($('#media_thumb ul li').length > 0) {
+                                    $('#media_thumb').show();
+                                } else {
+                                    $('#media_thumb').hide();
+                                }
                             }
                         }
                     });
