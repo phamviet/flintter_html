@@ -135,7 +135,7 @@ define(['$', 'rangy/rangy-core', 'App'], function($, rangy, App) {
             .on('picked.topic-mentions', function(e) {
                 var $link = $('<a></a>')
                     .text(e.topic.label)
-                    .attr('rel', 'person')
+                    .attr('rel', 'topic')
                     .attr('data-topic-id', e.topic.value)
                     .attr('href', e.topic.href)
                     .addClass('topic-mention')

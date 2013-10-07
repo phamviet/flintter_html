@@ -14,6 +14,54 @@ define([ '$', 'App', 'jquery/select2.min', 'jquery/jquery.fileupload'], function
         ];
 
         var handlers = {
+            selectTopic: function() {
+                // handler event when click toipc.
+                $(document).on('click','ul.tags-tags li',function(e) {
+                    e.preventDefault();
+                    // get topic id.
+                    var id = $(this).data('id').toString();
+                    // get all topic is selected.
+                    var postTopics = $('#post_topics').val();
+                    // check if the topic is empty.
+                    if(!postTopics) {
+                        // init array.
+                        postTopics = [];
+                    } else {
+                        // split string to array by comma.
+                        postTopics = postTopics.split(',');
+                    }
+                    var selected = $(this).find('.selected').length;
+                    // check if topic id not exist.
+                    if(postTopics.indexOf(id) === -1 && !selected) {
+                        // push value intro array.
+                        postTopics.push(id);
+                        $(this).removeClass('selected').addClass('selected');
+                    } else {
+                        // remove value of array.
+                        postTopics.splice(postTopics.indexOf(id),1);
+                        $(this).removeClass('selected');
+                    }
+                     // join to string.
+                    $('#post_topics').val(postTopics.join(','));
+                });
+            },
+            resetIdea:function() {
+                // clear input.
+                $.clearFormFields = function(area) {
+                    $(area).find('input[type="text"],input[type="hidden"],textarea,select').val('');
+                };
+                // clear input.
+                $.clearFormFields('.post');
+                // clear editor.
+                $('.post #post_content').html('');
+                // clear topic is selected.
+                $('.ulti ul.tags-tags').find('.selected').removeClass('selected');
+                // clear tags.
+                $('.post .select2-search-choice').remove();
+                $('.post .post-alt').hide(0);
+                // clear tabs active.
+                $('.post #tabs').find('.active').removeClass('active');
+            },        
             validIdea: function() {
                 // check valid title.
                 var postTitle = $('#post_title').val();
@@ -27,40 +75,68 @@ define([ '$', 'App', 'jquery/select2.min', 'jquery/jquery.fileupload'], function
                     alert('Please input content');
                     return false;
                 }
-                // check valid topic.
-                var postCategories = $('#post_categories').val('test');
-                if(!postCategories) {
+                var postTags = $('#post_tags').val();
+                if(postTags) {
+                    // convert tags tring to array.
+                    postTags = postTags.split(',');
+                } else {
+                    postTags = null;
+                }
+                var postTopics = $('#post_topics').val();
+                if(!postTopics) {
+                    postTopics = [];
+                } else {
+                    // convert topics tring to array.
+                    postTopics = postTopics.split(',');
+                }
+                // get all the topic of content.
+                var postTopicsExtra = [];
+                var elTopic = $('#post_content').find('.topic-mention');
+                if(elTopic.length>0){
+                    $.each(elTopic,function(){
+                        var topicId = $(this).data('topic-id').toString();
+                        postTopicsExtra.push(topicId);
+                    });
+                }
+                // join two array.
+                postTopics = postTopics.concat(postTopicsExtra);
+                postTopics = postTopics.filter(function (v, i, a) { 
+                    return a.indexOf (v) === i;
+                });
+                if(!postTopics.length) {
                     alert('Please select a topic');
                     return false;
                 }
+                var data = [];
+                data['postTitle'] = postTitle;
+                data['postContent'] = postContent;
+                data['postTopics'] = postTopics;
+                data['postTags'] = postTags;
                 
-                return true;
+                return data;
             },
             newIdea: function() {
-                // get tile.
-                var postTitle = $('#post_title').val();
-                // get content.
-                var postContent = $('#post_content').html();
-                // get all tags is selected.
-                var postTags = $('#tags').val();
-                var medias = $('#medias').val();
-                // get all topic is selected.
-                var categories = '';
+                var _this = this;
+                var data = _this.validIdea();
                 // check if idea is valid.
-                if(this.validIdea()) {
+                if(data) {
                     // post data to create a idea via service.
                     $.post(SITE.BASE_URL+'/service/idea/create',{
-                            form: {
-                                title: postTitle,
-                                content: postContent,
-                                tags: postTags,
-                                medias: medias,
-                                categories: categories
-                            },
-                            user_id: window.USER.id
+                            idea: {
+                                title: data['postTitle'],
+                                content: data['postContent'],
+                                topics: data['postTopics'],
+                                tags: data['postTags']
+                            }
                         },
                         function(data){
-                            console.log(data);
+                            if(data.status===true && data.id>0) {
+                                alert('Idea is created successfully');
+                                // reset form idea
+                                _this.resetIdea();
+                            } else {
+                                alert(data.error);
+                            }
                     });
                 }
             },
@@ -79,6 +155,8 @@ define([ '$', 'App', 'jquery/select2.min', 'jquery/jquery.fileupload'], function
                 {
                     $('.ulti .tags-list .list ul').html(jQuery.parseJSON(data).html) ;
                 });
+                // trigger to select topics.
+                $(document).trigger('selectTopic.content');
             },
             // handler process the new topic.      
             newTopic: function() {
@@ -133,7 +211,7 @@ define([ '$', 'App', 'jquery/select2.min', 'jquery/jquery.fileupload'], function
                     multiple: true,
                     //containerCssClass: 'tags',
                     id: function(data) { 
-                        return data.value+":"+data.label; 
+                        return data.value; 
                     },
                     ajax: { // instead of writing the function to execute the request we use Select2's convenient helper
                         url: SITE.BASE_URL + '/service/suggest/friend',
@@ -181,17 +259,20 @@ define([ '$', 'App', 'jquery/select2.min', 'jquery/jquery.fileupload'], function
                     $('.post .post-photo').removeClass('active').addClass('active');
                     $('.post #tabs').removeClass('active').find('.imed-tag').parent().addClass('active');
                 });
+                /*
                 // find "choose from computer" button.
                 var uploadBtn = $('.post-photo').find('.big-button').eq(0);
                 // handler event when click.
-                uploadBtn.on('click',function(e) {
+                uploadBtn.off('click').on('click',function(e) {
                     e.preventDefault();
                     //console.log('choose from computer button is trigger');
                     // trigger file upload.
                     $('#upload').trigger('click');
                 });
+                */
+                //$('#upload').trigger('click');
                 var fileInput = $('#upload');
-                fileInput.off('change').on('change',function(e) {
+                fileInput.trigger('click').on('change',function(e) {
                     e.preventDefault();
                     //console.log('choose from computer button is trigger');
                     // get file resource.
@@ -215,26 +296,34 @@ define([ '$', 'App', 'jquery/select2.min', 'jquery/jquery.fileupload'], function
                     }
                     var userId = window.USER.id;
                     // get media id to check in case new or edit action.
-                    var mediaId = $('#media-id').val();
+                    var mediaId = $('#post_medias').val();
                     if(!mediaId) {
                         mediaId = 0;
                     }
                     var mediaType = 'topic';
                     console.log('file change is trigger');
                     // handler event submit the post photo form.
-                    $(this).fileupload({
+                    fileInput.fileupload({
                         url: SITE.BASE_URL + '/service/upload-file/upload',
                         add: function (e, data) {
                             data.formData = {user_id: userId, media_id: mediaId, media_type: mediaType};
                             data.submit();
                         },
                         done: function (e, data) {
-                            var dt = $.parseJSON(data.result);
+                            var dt = data.result;
                             // check if the file uploaded successfull.
-                            if(!dt.hasOwnProperty('error')) {
-                                 var mediaId = dt.id;
+                            if (dt.status===true) {
+                                var entity = dt.entity;
+                                var mediaId = entity.id;
+                                var mediaThumb = entity.small_icon;
+                                $('#media_thumb ul').append($('<li  style="float:left;margin:2px;"><img data-media_id="'+ mediaId +'" src="/'+ mediaThumb +'"/></li>'));
                                 // set media id for hidden input.
-                                $('#media-id').val(mediaId);
+                                //$('#media-id').val(mediaId);
+                                if ($('#media_thumb ul li').length > 0) {
+                                    $('#media_thumb').show();
+                                } else {
+                                    $('#media_thumb').hide();
+                                }
                             }
                         }
                     });
