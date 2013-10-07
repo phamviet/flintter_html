@@ -1,4 +1,4 @@
-define(['$', 'bootstrap'], function($) {
+define(['$', 'bootstrap', 'components/facebooksdk'], function($) {
 
     //login
     var $formLogin = $('#frmLogin');

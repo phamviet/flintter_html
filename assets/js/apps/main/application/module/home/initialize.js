@@ -1,0 +1,8 @@
+define(['$', 'bootstrap'], function($) {
+
+
+
+
+
+    return {};
+});
