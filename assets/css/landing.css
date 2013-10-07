@@ -206,6 +206,15 @@ input:-moz-placeholder { color: #9d9d9c; }
 	padding-top: 6px;
 	float: left;
 }
+
+.landing .header .buttons .board-signin .sign-in-error {
+    color: #9d9d9c;
+    text-align: left;
+    font-size: 12px;
+    margin-bottom: -20px;
+    margin-top: 15px;
+}
+
 .landing .header .buttons .board-signin .sign-in-openid {
 	border-top: #fff solid 1px;
 	padding-top: 8px;

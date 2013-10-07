@@ -2,6 +2,17 @@
     var app = window.app || {deps: [], init: function(){}};
     var requirejsBaseUrl = window.requirejsBaseUrl || '../assets/js/vendor';
 
+    var SITE = window.SITE || {
+        FACEBOOK_APP_ID: '',
+        FACEBOOK_SCOPE: '',
+        BASE_URL: '',
+        BASE_PATH: '',
+        ENV : '',
+        VERSION: '',
+        deps: [],
+        beforeInit: function(){}
+    };
+
     require.config({
         baseUrl: requirejsBaseUrl,
         waitSeconds: 30,
@@ -40,7 +51,7 @@
             'jquery/select2.min': { deps: ["$"] },
             'rangy/rangy-core': {exports: 'rangy'}
         },
-        urlArgs: "_=" +  window.SITE.VERSION || 'nocache'
+        urlArgs: "_=" +  SITE.VERSION || 'nocache'
     });
 
     // IMPORTANT!
@@ -51,14 +62,20 @@
     requirejs.config({
         paths: {
             Application: '../apps/main/application',
-            binding: '../apps/main/application/binding'
+            binding: '../apps/main/application/binding',
+            components: '../apps/main/application/components',
+            module: '../apps/main/application/module'
             // Application path prefixes/modules (relative to baseUrl):
             // note: when adding to this hash - also add the same entry to build.js
         }
     });
 
     // Setup and run:
-    require(['$', 'App'], function($, MainApp) {
+    /*require(['app'].concat(SITE.deps), function() {
+
+    });*/
+
+    require(['$', 'App', 'components/autosubmit'].concat(SITE.deps), function($, MainApp) {
         if (app.beforeInit) {
             app.beforeInit($);
         }

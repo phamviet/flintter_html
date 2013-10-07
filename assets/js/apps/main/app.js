@@ -1,7 +1,8 @@
 define([
     '$',
     'Spirit',
-    'Application/components/overlay'
+    'Application/components/overlay',
+    'components/make-alert'
 ], function($, Spirit){
     var App;
     var global = window.SITE || {
@@ -48,11 +49,13 @@ define([
 
         hashUrl: function (path) {
             var url = SITE.BASE_URL + '#' + ((path[0] || '') == '/' ? path : '/' + path);
-            return url.replace(/\/\//g,'/');
+            return url.replace(/\/\//g, '/');
         }
     };
 
     $.extend(App, global);
+
+
 
     return App;
 });
