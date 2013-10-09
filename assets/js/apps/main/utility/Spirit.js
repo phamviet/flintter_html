@@ -35,9 +35,8 @@ define([
 //                }
 //            });
 			$(".tag-input").select2({
-                tags:["red", "green", "blue"],
-                maximumInputLength: 10
-            });
+                tags:["red", "green", "blue"]
+			});
 			sprslimScroll('.tags-list .list ul','right','1px');
 			sprslimScroll('#chat-list .chat-friends .wrap','right','3px');
 			$('.sub-menu a').click(function(){
@@ -99,7 +98,8 @@ function sprslimScroll(cls,pos,dis){
 		size: '4px',
 		position: pos,
 		color: '#ec3246',
-		alwaysVisible: true,
+		opacity: 1,
+		alwaysVisible: false,
 		distance: dis,
 		railVisible: true,
 		railColor: '#cccccc',

@@ -1106,7 +1106,7 @@ ulti .post .post-text .post-photo .buttons {
 	margin: 10px 6px 10px 10px;
 }
 .tags-list .list .tags-tags {
-	height: 170px;
+	height: 189px;
 	letter-spacing: 0;
 	word-spacing: 0;
 	font-size: 0;
@@ -1150,6 +1150,7 @@ ulti .post .post-text .post-photo .buttons {
 	zoom: 1;
 	font-size: 12px;
 	margin-right: 6px;
+	margin-bottom: 6px;
 }
 .ulti .post .post-alt label {
 	float: left;
@@ -3270,7 +3271,7 @@ ulti .post .post-text .post-photo .buttons {
 	height: 0;
 }
 .slimScrollBar {
-	opacity: 1 !important;
+	opacity: 0;
 }
 .post-alt .select2-container-multi .select2-choices {
 	border: 0;
@@ -3288,12 +3289,22 @@ ulti .post .post-text .post-photo .buttons {
 	border-top: 1px solid #5897fb;
 }
 .post-alt .select2-container-multi .select2-choices .select2-search-field input {
-	padding: 0;
+	padding: 2px 6px;
+	width: auto !important;
+	border: #bebebe solid 1px;
 }
 .post-alt .select2-container-multi .select2-choices {
 	min-height: 0;
 }
-.post-alt  .select2-container-multi .select2-choices .select2-search-choice {
+.post-alt .select2-container-multi .select2-choices .select2-search-choice {
 	margin-top: 0;
 	margin-bottom: 0;
+}
+.post-alt .select2-container-multi .select2-choices .select2-search-choice {
+	margin-right: 6px;
+	line-height: 20px;
+}
+.post-alt  .select2-search-choice-close {
+	top: 50%;
+	margin-top: -6px;
 }
