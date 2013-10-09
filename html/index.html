@@ -10,7 +10,7 @@
 
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../assets/css/bootstrap-responsive.min.css" rel="stylesheet" />
-	<link href="../assets/css/jquery.mCustomScrollbar.css" rel="stylesheet" />
+	<link href="../assets/css/select2.css" rel="stylesheet" />
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
 
     <!--page specific plugin styles-->
@@ -178,6 +178,22 @@
 							<img src="../assets/demo/img-avatar-001.jpg" alt="" border="" />
 							<i></i>
 						</a>
+						<div class="sub-wrap ava-drop">
+							<div class="sub">
+								<span class="arrow"></span>
+								<ul>
+									<li>
+										<a href="javascript:void(0);" class="clearfix">Profile</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);" class="clearfix">Setting</a>
+									</li>
+								</ul>
+								<div class="more">
+									<a href="javascript:void(0);" class="btn-more">Logout</a>
+								</div>							
+							</div>
+						</div>
 					</li>
 				</ul>
 			</div>
@@ -235,17 +251,15 @@
 				<div class="post-text">
 					<div id="tabs-1" class="post-tab post-tags active" data-toggle="pill">
 						<div class="post-tab-wrap">
-							<textarea rows="5"></textarea>
+							<div class="content-editable" contenteditable="true">
+								123 123 13 123
+							</div>
 						</div>
 						<div class="post-alt">	
 							<div class="tags">
 								<label>Tags</label>
-								<ul>
-									<li>123123</li>
-									<li>321</li>
-									<li>456</li>
-									<li>654</li>
-								</ul>
+								<div class="tag-input">
+								</div>
 							</div>
 						</div>
 					</div>
@@ -305,25 +319,26 @@
 					<a href="javascript:void(0);" title="" class="btn-more">View all</a>
 				</div>
 				<div class="list">
-					<ul class="tags-tags">
-						<li><a href="javascript:void(0);" title=""><i></i><span class="text">Incidunt</span></a></li>
-						<li><a href="javascript:void(0);" title=""><i></i><span class="text">Commodi</span></a></li>
-						<li><a href="javascript:void(0);" title=""><i></i><span class="text">Quaerat</span></a></li>
-						<li><a href="javascript:void(0);" title=""><i></i><span class="text">Labore</span></a></li>
-						<li><a href="javascript:void(0);" title=""><i></i><span class="text">Aperiam</span></a></li>
-						<li><a href="javascript:void(0);" title=""><i></i><span class="text">Incidunt</span></a></li>
-						<li><a href="javascript:void(0);" title=""><i></i><span class="text">Commodi  quaerat  aperiam</span></a></li>
-						<li><a href="javascript:void(0);" title=""><i></i><span class="text">Labore</span></a></li>
-						<li><a href="javascript:void(0);" title=""><i></i><span class="text">Aperiam minus id quod maxi</span></a></li>
-						<li><a href="javascript:void(0);" title=""><i></i><span class="text">Placeat facere possimus</span></a></li>
-						<li><a href="javascript:void(0);" title=""><i></i><span class="text">Incidunt</span></a></li>
-						<li><a href="javascript:void(0);" title=""><i></i><span class="text">Commodi</span></a></li>
-						<li><a href="javascript:void(0);" title=""><i></i><span class="text">Quaerat</span></a></li>
-						<li><a href="javascript:void(0);" title=""><i></i><span class="text">Labore</span></a></li>
-						<li><a href="javascript:void(0);" title=""><i></i><span class="text">Aperiam</span></a></li>
-						<li><a href="javascript:void(0);" title=""><i></i><span class="text">Incidunt</span></a></li>
-
-					</ul>
+					<div class="wrap">
+						<ul class="tags-tags">
+							<li><a href="javascript:void(0);" title=""><i></i><span class="text">Incidunt</span></a></li>
+							<li><a href="javascript:void(0);" title=""><i></i><span class="text">Commodi</span></a></li>
+							<li><a href="javascript:void(0);" title=""><i></i><span class="text">Quaerat</span></a></li>
+							<li><a href="javascript:void(0);" title=""><i></i><span class="text">Labore</span></a></li>
+							<li><a href="javascript:void(0);" title=""><i></i><span class="text">Aperiam</span></a></li>
+							<li><a href="javascript:void(0);" title=""><i></i><span class="text">Incidunt</span></a></li>
+							<li><a href="javascript:void(0);" title=""><i></i><span class="text">Commodi  quaerat  aperiam</span></a></li>
+							<li><a href="javascript:void(0);" title=""><i></i><span class="text">Labore</span></a></li>
+							<li><a href="javascript:void(0);" title=""><i></i><span class="text">Aperiam minus id quod maxi</span></a></li>
+							<li><a href="javascript:void(0);" title=""><i></i><span class="text">Placeat facere possimus</span></a></li>
+							<li><a href="javascript:void(0);" title=""><i></i><span class="text">Incidunt</span></a></li>
+							<li><a href="javascript:void(0);" title=""><i></i><span class="text">Commodi</span></a></li>
+							<li><a href="javascript:void(0);" title=""><i></i><span class="text">Quaerat</span></a></li>
+							<li><a href="javascript:void(0);" title=""><i></i><span class="text">Labore</span></a></li>
+							<li><a href="javascript:void(0);" title=""><i></i><span class="text">Aperiam</span></a></li>
+							<li><a href="javascript:void(0);" title=""><i></i><span class="text">Incidunt</span></a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
 			<!-- tags list -->
@@ -668,7 +683,7 @@
 	</div>
 	<!-- Go to top button -->
 </div>
-<div class="chat-box chat-list">
+<div id="chat-list" class="chat-box chat-list">
 	<div class="title">
 		<h4>Chat</h4>
 		<div class="buttons">
@@ -678,6 +693,7 @@
 	<!-- Title bar -->
 	<div class="chat-friends-wrap">
 		<div class="chat-friends">
+			<div class="wrap">
 			<ul>
 				<li>
 					<a href="#" class="clearfix">
@@ -856,6 +872,7 @@
 					<span class="line"></span>
 				</li>
 			</ul>
+			</div>
 		</div>
 		<!-- friend list -->
 		<div class="chat-search">
@@ -887,6 +904,7 @@
 				<span class="line"></span>
 			</div>
 			<div class="chat-friends chat-chatted">
+				<div class="wrap">
 				<ul>
 					<li>
 						<div class="chat-item clearfix">
@@ -912,6 +930,7 @@
 						<span class="line"></span>
 					</li>
 				</ul>
+				</div>
 			</div>
 			<!-- friend list -->
 			<div class="chat-input">
@@ -984,6 +1003,7 @@
 				<span class="line"></span>
 			</div>
 			<div class="chat-friends chat-chatted">
+				<div class="wrap">
 				<ul>
 					<li>
 						<div class="chat-item clearfix">
@@ -1009,6 +1029,7 @@
 						<span class="line"></span>
 					</li>
 				</ul>
+				</div>
 			</div>
 			<!-- friend list -->
 			<div class="chat-input">
@@ -1082,6 +1103,7 @@
 				<span class="line"></span>
 			</div>
 			<div class="chat-friends chat-chatted">
+				<div class="wrap">
 				<ul>
 					<li>
 						<div class="chat-item clearfix">
@@ -1143,6 +1165,7 @@
 						<span class="line"></span>
 					</li>
 				</ul>
+				</div>
 			</div>
 			<!-- friend list -->
 			<div class="chat-input">

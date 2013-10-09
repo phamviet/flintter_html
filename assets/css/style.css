@@ -652,6 +652,13 @@ input:-moz-placeholder { color:#000;
 	background: #e9e9e9 url('../img/bg-sub-newpost.jpg') bottom left repeat-x;
 	padding: 5px 10px;
 }
+.header .navigation .level-f .ava-drop {
+	right: -29px;
+	top: 30px;
+}
+.header .navigation .level-f .ava-drop .sub {
+	width: 80px;
+}
 .header .navigation .level-f .sub li {
 	*margin-top: -3px;
 }
@@ -665,7 +672,8 @@ input:-moz-placeholder { color:#000;
 .header .navigation .level-f .warning-board .sub li a {
 	padding: 10px 0 22px 0;
 }
-.header .navigation .level-f .newpost-board .sub li a {
+.header .navigation .level-f .newpost-board .sub li a,
+.header .navigation .level-f .ava-drop .sub li a {
 	padding: 6px 0;
 }
 .header .navigation .level-f .sub li:first-child a {
@@ -705,6 +713,10 @@ input:-moz-placeholder { color:#000;
 }
 .header .navigation .level-f .sub .more .btn-more {
 	color: #ea2b4a;
+}
+.header .navigation .level-f .ava-drop .more {
+	padding: 6px 0;
+	text-align: left;
 }
 .header .navigation .level-f .sub .arrow {
 	width: 0;
@@ -924,6 +936,10 @@ input:-moz-placeholder { color:#000;
 .ulti .post .post-text .post-tab .post-tab-wrap {
 	padding: 12px 15px 13px 15px;
 }
+.ulti .post .post-text .post-tab .post-tab-wrap .content-editable {
+	height: 90px;
+	overflow: auto;
+}
 .ulti .post .post-text .active {
 	display: block;
 }
@@ -1086,13 +1102,16 @@ ulti .post .post-text .post-photo .buttons {
 	-moz-border-radius: 3px;
 	border-radius: 3px;
 }
+.tags-list .list .wrap {
+	margin: 10px 6px 10px 10px;
+}
 .tags-list .list .tags-tags {
 	height: 170px;
 	letter-spacing: 0;
 	word-spacing: 0;
 	font-size: 0;
 	overflow: auto;
-	padding: 10px;
+	padding: 0px;
 }
 .tags-list .list .tags-tags li {
 	float: left;
@@ -3249,4 +3268,32 @@ ulti .post .post-text .post-photo .buttons {
 	display: block;
 	width: 0;
 	height: 0;
+}
+.slimScrollBar {
+	opacity: 1 !important;
+}
+.post-alt .select2-container-multi .select2-choices {
+	border: 0;
+	background: #fff;
+}
+.post-alt .select2-container {
+	width: 94%;
+}
+.post-alt .select2-container-multi.select2-container-active .select2-choices {
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+.select2-drop-active {
+	border-top: 1px solid #5897fb;
+}
+.post-alt .select2-container-multi .select2-choices .select2-search-field input {
+	padding: 0;
+}
+.post-alt .select2-container-multi .select2-choices {
+	min-height: 0;
+}
+.post-alt  .select2-container-multi .select2-choices .select2-search-choice {
+	margin-top: 0;
+	margin-bottom: 0;
 }

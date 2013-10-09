@@ -1,7 +1,7 @@
 define([
     '$',
     'bootstrap',
-    'jquery/jquery.mCustomScrollbar.min',
+    'jquery/jquery.slimscroll.min',
     'jquery/jquery.mousewheel.min',
 	'jquery/select2.min'
 ], function($) {
@@ -34,7 +34,12 @@ define([
 //                    $('.post').addClass("active-tags");
 //                }
 //            });
-            $('.tags-list .list ul').mCustomScrollbar();
+			$(".tag-input").select2({
+                tags:["red", "green", "blue"],
+                maximumInputLength: 10
+            });
+			sprslimScroll('.tags-list .list ul','right','1px');
+			sprslimScroll('#chat-list .chat-friends .wrap','right','3px');
 			$('.sub-menu a').click(function(){
 				$('.sub-menu li').removeClass("current");
 				$(this).closest("li").addClass("current");
@@ -88,3 +93,19 @@ define([
 
     return Spirit;
 });
+function sprslimScroll(cls,pos,dis){
+	$(cls).slimScroll({
+		height: 'auto',
+		size: '4px',
+		position: pos,
+		color: '#ec3246',
+		alwaysVisible: true,
+		distance: dis,
+		railVisible: true,
+		railColor: '#cccccc',
+		railOpacity: 1,
+		wheelStep: 10,
+		allowPageScroll: false,
+		disableFadeOut: false	
+	});
+};

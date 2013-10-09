@@ -45,7 +45,7 @@
             'bootstrap': {
                 deps: ['$']
             },
-            'jquery/jquery.mCustomScrollbar.min': { deps: ["$"] },
+            'jquery/jquery.slimscroll.min': { deps: ["$"] },
             'jquery/jquery.mousewheel.min': { deps: ["$"] },
             'jquery/jquery.fileupload': {deps: ["$", "jquery.ui.widget"]},
             'jquery/select2.min': { deps: ["$"] },
