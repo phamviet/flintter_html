@@ -5,29 +5,12 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
 li {list-style-type: none;}
 a {text-decoration: none;}
 *:focus {outline: none;}
-input[type="color"], input[type="email"], input[type="number"], input[type="password"], input[type="tel"], input[type="url"], input[type="text"], input[type="submit"] {
-	margin: 0;
-	padding: 0;
-	font-family: Arial, Calibri, Geneva,sans-serif;
-}
+
 img {
 	page-break-inside: auto;
 }
-textarea {
-	background: transparent;
-	border: 0;
-	width: auto;
-}
-textarea, input[type="text"], input[type="text"]:focus, textarea:focus {
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
-}
-input::-moz-focus-inner, 
-button::-moz-focus-inner { 
-	border:0;
-	padding:0
-}
+
+
 .font-family {
 	font-family:'Open Sans Condensed', Arial, Calibri, Geneva,sans-serif;
 }
@@ -63,11 +46,7 @@ button::-moz-focus-inner {
 ::-moz-placeholder { color:#000; } /* firefox 19+ */
 :-ms-input-placeholder { color:#000; } /* ie */
 input:-moz-placeholder { color:#000; }
-textarea {
-	resize: none;
-	overflow: hidden;
-	padding: 0;
-}
+
 .big-button {
 	background: #229fd9;
 	-webkit-border-radius: 2px;
@@ -2085,32 +2064,8 @@ ulti .post .post-text .post-photo .buttons {
 	background-position: -338px -350px;
 }
 /* modify modal */
-.modal {
-	width: 950px;
-	margin-left: -475px;
-	padding: 0;
-	position: absolute;
-	border: 0;
-	background: transparent;
-	moz-box-shadow: none;
-	-webkit-box-shadow: none;
-	box-shadow: none;
-}
-.modal-body {
-	max-height: none;
-	padding: 0;
-	overflow: visible;
-}
-.modal .close {
-	background: url('../img/sprites.png') -200px -18px;
-	width: 18px;
-	height: 18px;
-	position: absolute;
-	display: block;
-	top: 4px;
-	right: 4px;
-	z-index: 10;
-}
+
+
 .pop-fighting {
 	background: #e3e3e3;
 	-moz-border-radius: 6px;

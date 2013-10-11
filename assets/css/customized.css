@@ -1,0 +1,13 @@
+.modal.fade.in {
+    top: 30%;
+}
+
+.full-width {
+    width: 100%;
+}
+
+/**/
+
+#ajax-modal .modal-body{
+    padding-right: 25px;
+}
