@@ -47,6 +47,7 @@
             'bootstrap': {
                 deps: ['$']
             },
+            'select2': { deps: ["$"] },
             'bootstrap-modalmanager': { deps: ["$"] },
             'bootstrap-modal': { deps: ["bootstrap-modalmanager"] },
             'jquery/jquery.slimscroll.min': { deps: ["$"] },
