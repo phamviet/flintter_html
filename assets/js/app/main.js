@@ -1,6 +1,6 @@
 (function() {
     var app = window.app || {deps: [], init: function(){}};
-    var requirejsBaseUrl = window.requirejsBaseUrl || '../assets/js/vendor';
+//    var requirejsBaseUrl = window.requirejsBaseUrl || '../assets/js/vendor';
 
     var SITE = window.SITE || {
         FACEBOOK_APP_ID: '',
@@ -14,21 +14,21 @@
     };
 
     require.config({
-        baseUrl: requirejsBaseUrl,
+//        baseUrl: requirejsBaseUrl,
         waitSeconds: 30,
         paths: {
-            '$': 'jquery/jquery-1.9.1.min',
-            'jquery.ui.widget': 'jquery/jquery.ui.widget',
-            tinyMCE: '//tinymce.cachefly.net/4.0/tinymce.min',
-            underscore: 'underscore/underscore-min',
-            backbone: 'backbone/backbone-min',
-            bootstrap: 'bootstrap/bootstrap.min',
-            text : 'requirejs/plugins/text',
-            async : 'requirejs/plugins/async',
+            '$': '../vendor/jquery/jquery.min',
+//            'jquery.ui.widget': 'jquery/jquery.ui.widget',
+//            tinyMCE: '//tinymce.cachefly.net/4.0/tinymce.min',
+            underscore: '../vendor/underscore-amd/underscore-min',
+            backbone: '../vendor/backbone-amd/backbone-min',
+            bootstrap: "../vendor/bootstrap/docs/assets/js/bootstrap.min",
+            select2: "../vendor/select2/select2.min",
+            'rangy/rangy-core': "../vendor/rangy/rangy-core",
+//            text : 'requirejs/plugins/text',
+//            async : 'requirejs/plugins/async',
             facebook: '//connect.facebook.net/en_US/all',
-            Spirit: '../apps/main/utility/Spirit',
-            'jquery.flintter': '../jquery.flintter',
-            App: '../apps/main/app'
+            Spirit: 'utility/Spirit'
         },
         shim: {
             '$': { exports: '$' },
@@ -47,8 +47,7 @@
             },
             'jquery/jquery.slimscroll.min': { deps: ["$"] },
             'jquery/jquery.mousewheel.min': { deps: ["$"] },
-            'jquery/jquery.fileupload': {deps: ["$", "jquery.ui.widget"]},
-            'jquery/select2.min': { deps: ["$"] },
+//            'jquery/jquery.fileupload': {deps: ["$", "jquery.ui.widget"]},
             'rangy/rangy-core': {exports: 'rangy'}
         },
         urlArgs: "_=" +  SITE.VERSION || 'nocache'
@@ -61,26 +60,18 @@
     // See https://github.com/jrburke/r.js/issues/270
     requirejs.config({
         paths: {
-            Application: '../apps/main/application',
-            binding: '../apps/main/application/binding',
-            components: '../apps/main/application/components',
-            module: '../apps/main/application/module'
+            vendor: '../vendor/'
             // Application path prefixes/modules (relative to baseUrl):
             // note: when adding to this hash - also add the same entry to build.js
         }
     });
 
-    // Setup and run:
-    /*require(['app'].concat(SITE.deps), function() {
+    require(['$', 'app', 'components/autosubmit'].concat(SITE.deps), function($, MainApp) {
+//        if (app.beforeInit) {
+//            app.beforeInit($);
+//        }
 
-    });*/
-
-    require(['$', 'App', 'components/autosubmit'].concat(SITE.deps), function($, MainApp) {
-        if (app.beforeInit) {
-            app.beforeInit($);
-        }
-
-        MainApp.initialize();
-        require(app.deps, app.init);
+//        MainApp.initialize();
+//        require(app.deps, app.init);
     });
 })();

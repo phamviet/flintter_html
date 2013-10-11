@@ -1,7 +1,7 @@
 define([
     '$',
     'Spirit',
-    'Application/components/overlay',
+    'components/overlay',
     'components/make-alert'
 ], function($, Spirit){
     var App;
@@ -35,8 +35,6 @@ define([
 
     App = {
         initialize: function() {
-
-            Spirit.initialize();
 
             //raise event
             $(document).on('click', '[data-event]', _raiseEvent);

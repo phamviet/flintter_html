@@ -1,6 +1,6 @@
 define([
     '$',
-    'App',
+    'app',
     'facebook'
 ], function($, App) {
 

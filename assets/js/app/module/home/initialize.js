@@ -1,4 +1,4 @@
-define(['$', 'bootstrap', 'jquery/select2.min'], function($) {
+define(['$', 'select2'], function($) {
 
     $('select#idea_tags').removeClass('hidden').select2({
         allowClear: true,
