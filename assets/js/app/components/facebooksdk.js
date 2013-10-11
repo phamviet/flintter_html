@@ -1,12 +1,11 @@
 define([
     '$',
-    'app',
     'facebook'
-], function($, App) {
+], function($) {
 
     window.fbAsyncInit = function() {
         FB.init({
-            appId      : App.FACEBOOK_APP_ID,
+            appId      : SITE.FACEBOOK_APP_ID,
             channelUrl : '/facebook/channel',
             status     : true,
             cookie     : true,
@@ -17,11 +16,11 @@ define([
             FB.login(
                 function (response) {
                     if (response.authResponse) {
-                        window.location.href = App.url("security/facebook/check");
+                        window.location.href = SITE.url("security/facebook/check");
                     }
                 },
                 {
-                    scope: App.FACEBOOK_SCOPE
+                    scope: SITE.FACEBOOK_SCOPE
                 }
             );
             e.preventDefault();

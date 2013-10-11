@@ -21,6 +21,7 @@ define(['$'], function($) {
                 cache: false,
                 dataType: 'json',
                 beforeSend: function(jqXHR, settings) {
+                    $(this).find('button[type="submit"]').attr('disabled', true);
                     event = new $.Event('autosubmit.beforesend');
                     $el.trigger(event);
                     if (event.isDefaultPrevented()) {
@@ -56,6 +57,7 @@ define(['$'], function($) {
                 complete: function(jqXHR, textStatus) {
                     event = new $.Event('autosubmit.complete');
                     $el.trigger(event, [$.parseJSON(jqXHR.responseText), textStatus]);
+                    $(this).find('button[type="submit"]').attr('disabled', false);
                 }
             });
 

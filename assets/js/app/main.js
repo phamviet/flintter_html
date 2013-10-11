@@ -23,6 +23,8 @@
             underscore: '../vendor/underscore-amd/underscore-min',
             backbone: '../vendor/backbone-amd/backbone-min',
             bootstrap: "../vendor/bootstrap/docs/assets/js/bootstrap.min",
+            'bootstrap-modal': "../vendor/bootstrap-modal/js/bootstrap-modal",
+            'bootstrap-modalmanager': "../vendor/bootstrap-modal/js/bootstrap-modalmanager",
             select2: "../vendor/select2/select2.min",
             'rangy/rangy-core': "../vendor/rangy/rangy-core",
 //            text : 'requirejs/plugins/text',
@@ -45,6 +47,7 @@
             'bootstrap': {
                 deps: ['$']
             },
+            'bootstrap-modal': { deps: ["$", "bootstrap-modalmanager"] },
             'jquery/jquery.slimscroll.min': { deps: ["$"] },
             'jquery/jquery.mousewheel.min': { deps: ["$"] },
 //            'jquery/jquery.fileupload': {deps: ["$", "jquery.ui.widget"]},
