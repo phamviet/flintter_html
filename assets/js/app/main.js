@@ -47,7 +47,8 @@
             'bootstrap': {
                 deps: ['$']
             },
-            'bootstrap-modal': { deps: ["$", "bootstrap-modalmanager"] },
+            'bootstrap-modalmanager': { deps: ["$"] },
+            'bootstrap-modal': { deps: ["bootstrap-modalmanager"] },
             'jquery/jquery.slimscroll.min': { deps: ["$"] },
             'jquery/jquery.mousewheel.min': { deps: ["$"] },
 //            'jquery/jquery.fileupload': {deps: ["$", "jquery.ui.widget"]},
@@ -63,7 +64,7 @@
     // See https://github.com/jrburke/r.js/issues/270
     requirejs.config({
         paths: {
-            vendor: '../vendor/'
+//            vendor: '../vendor/'
             // Application path prefixes/modules (relative to baseUrl):
             // note: when adding to this hash - also add the same entry to build.js
         }
