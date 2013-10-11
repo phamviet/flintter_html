@@ -11,6 +11,9 @@ define(['$'], function($) {
                 return ;
             }
 
+            event = new $.Event('autosubmit.initdata');
+            $el.trigger(event);
+
             $.ajax({
                 type: $el.attr('method').toUpperCase(),
                 url: $el.attr('action'),

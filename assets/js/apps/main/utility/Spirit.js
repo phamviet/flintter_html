@@ -49,10 +49,8 @@ define([
 			$('.modal').on('hidden', function () {
 			  $(this).removeData('modal');
 			});
-			$('select').select2({
-				allowClear: true,
-				placeholder: true
-			});
+
+
 			// Go To Top Button
 			$("#back-top").hide();
 			

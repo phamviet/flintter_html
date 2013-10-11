@@ -1153,6 +1153,8 @@ ulti .post .post-text .post-photo .buttons {
 	margin-bottom: 6px;
 }
 .ulti .post .post-alt label {
+    position: relative;
+    top: 5px;
 	float: left;
 	color: #999;
 	margin-right: 5px;
@@ -3278,7 +3280,6 @@ ulti .post .post-text .post-photo .buttons {
 	background: #fff;
 }
 .post-alt .select2-container {
-	width: 94%;
 }
 .post-alt .select2-container-multi.select2-container-active .select2-choices {
 	-moz-box-shadow: none;
