@@ -81,6 +81,8 @@ define(['$'], function($) {
                 if ($.type(option) === 'string') {
                     data[option]();
                 }
+
+                return $this;
             });
         }
     });
