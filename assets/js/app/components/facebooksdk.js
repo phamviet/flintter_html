@@ -3,7 +3,7 @@ define([
     'facebook'
 ], function($) {
 
-    window.fbAsyncInit = function() {
+    window.fbAsyncInit = (function() {
         FB.init({
             appId      : SITE.FACEBOOK_APP_ID,
             channelUrl : '/facebook/channel',
@@ -25,5 +25,5 @@ define([
             );
             e.preventDefault();
         });
-    };
+    }());
 });
