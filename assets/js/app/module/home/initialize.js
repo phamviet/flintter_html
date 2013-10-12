@@ -1,4 +1,4 @@
-define(['$', 'select2'], function($) {
+define(['$', 'application/bootstrap'], function($) {
 
     $('select#idea_tags').removeClass('hidden').select2({
         allowClear: true,

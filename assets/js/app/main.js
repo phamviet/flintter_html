@@ -19,7 +19,8 @@
         paths: {
             '$': '../vendor/jquery/jquery.min',
 //            'jquery.ui.widget': 'jquery/jquery.ui.widget',
-//            tinyMCE: '//tinymce.cachefly.net/4.0/tinymce.min',
+            tinymce: '//tinymce.cachefly.net/4.0/tinymce.min',
+//            tinymce: 'jquery/tinymce/tinymce.min',
             underscore: '../vendor/underscore-amd/underscore-min',
             backbone: '../vendor/backbone-amd/backbone-min',
             bootstrap: "../vendor/bootstrap/docs/assets/js/bootstrap.min",

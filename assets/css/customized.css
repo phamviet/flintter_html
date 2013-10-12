@@ -11,3 +11,4 @@
 #ajax-modal .modal-body{
     padding-right: 25px;
 }
+*[class*='mce-'] { -webkit-border-radius: 0 !important; -moz-border-radius: 0 !important; border-radius: 0 !important; }
