@@ -5,12 +5,9 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
 li {list-style-type: none;}
 a {text-decoration: none;}
 *:focus {outline: none;}
-
 img {
 	page-break-inside: auto;
 }
-
-
 .font-family {
 	font-family:'Open Sans Condensed', Arial, Calibri, Geneva,sans-serif;
 }
@@ -46,7 +43,20 @@ img {
 ::-moz-placeholder { color:#000; } /* firefox 19+ */
 :-ms-input-placeholder { color:#000; } /* ie */
 input:-moz-placeholder { color:#000; }
-
+/* Reset bootstrap manually */
+input[type="text"].spr-input,
+input[type="email"].spr-input,
+input[type="password"].spr-input {
+	margin: 0;
+	padding: 0;
+}
+textarea.spr-textarea {
+	overflow: hidden;
+	resize: none;
+	padding: 0;
+	margin: 0;
+}
+/* Reset bootstrap manually */
 .big-button {
 	background: #229fd9;
 	-webkit-border-radius: 2px;
@@ -1133,7 +1143,6 @@ ulti .post .post-text .post-photo .buttons {
 }
 .ulti .post .post-alt label {
     position: relative;
-    top: 5px;
 	float: left;
 	color: #999;
 	margin-right: 5px;
