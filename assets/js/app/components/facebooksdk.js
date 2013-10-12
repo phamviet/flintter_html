@@ -2,7 +2,6 @@ define([
     '$',
     'facebook'
 ], function($) {
-
     window.fbAsyncInit = (function() {
         FB.init({
             appId      : SITE.FACEBOOK_APP_ID,
