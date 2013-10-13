@@ -1,4 +1,4 @@
-define(['$', 'rangy/rangy-core', 'App'], function($, rangy, App) {
+define(['$', 'rangy/rangy-core'], function($, rangy, App) {
 
     rangy.createMissingNativeApi();
 
