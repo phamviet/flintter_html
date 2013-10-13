@@ -1,15 +1,34 @@
-define([ '$', 'select2'], function($) {
+define([ '$', 'underscore', 'components/content/editable', 'select2'], function($, _) {
+
 
     var QuickPost = function($el, $option) {
-
+        var topics = [];
         $el.find('.default-hide').removeClass('hidden');
 
         $('select[name="idea[tags][]"]', $el).removeClass('hidden').select2({
             allowClear: true,
-            placeholder: 'friend',
+            placeholder: 'Friend\'s name',
             maximumSelectionSize: 3
         });
-        $('.body-editor', $el).css('minHeight', '89px');
+        $('.body-editor', $el).css('minHeight', '91px');
+
+        $('.body-editor', $el)
+            .on('picked.user-mentions', function(e){
+                var beforeVal = $('select[name="idea[tags][]"]', $el).val() || [];
+                var restVal = _.union(beforeVal, [e.user.value]);
+                $('select[name="idea[tags][]"]', $el).val(restVal).trigger("change");
+            })
+            .on('picked.topic-mentions', function(e){
+                var val = e.topic.value;
+                if(_.indexOf(topics, val) < 0) {
+                    topics.push(val);
+                    $('<input/>')
+                        .attr('type', 'hidden')
+                        .attr('name', 'idea[topics][]')
+                        .attr('value', val)
+                        .appendTo($el);
+                }
+            });
 
         $el.autosubmit()
             .on('autosubmit.beforesend', function(e) {

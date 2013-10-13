@@ -87,9 +87,8 @@ define(['$', 'rangy/rangy-core', 'App'], function($, rangy, App) {
                     .text(e.user.label)
                     .attr('rel', 'person')
                     .attr('data-user-id', e.user.value)
-                    .attr('href', e.user.href)
-                    .addClass('user-mention')
-                    .addClass('wo-c-a');
+                    .attr('href', '#')
+                    .addClass('user-mention');
 
                 $(this).focus();
                 var range = new Selection();
@@ -134,12 +133,11 @@ define(['$', 'rangy/rangy-core', 'App'], function($, rangy, App) {
             })
             .on('picked.topic-mentions', function(e) {
                 var $link = $('<a></a>')
-                    .text(e.topic.label)
+                    .text('#' + e.topic.label)
                     .attr('rel', 'topic')
                     .attr('data-topic-id', e.topic.value)
-                    .attr('href', e.topic.href)
-                    .addClass('topic-mention')
-                    .addClass('topic-wo-c-a');
+                    .attr('href', '#')
+                    .addClass('topic-mention');
 
                 $(this).focus();
                 var range = new Selection();
@@ -236,7 +234,7 @@ define(['$', 'rangy/rangy-core', 'App'], function($, rangy, App) {
 
             // Bind suggestion selection by enter key
             // (have to bind separately to keypress to supress editor's default enter keypress)
-            this.$editor.keyup(function(e)
+            this.$editor.on('keypress.suggestions', function(e)
             {
                 // For some reason which is 0 for tab but the keyCode is correct
                 var key = e.which || e.keyCode;
@@ -296,8 +294,7 @@ define(['$', 'rangy/rangy-core', 'App'], function($, rangy, App) {
             }
             if (this.lastText !== text) {
                 this.lastText = text;
-                $.get(App.url('/service/suggest/user'), {q: text, user_id: window.USER.id})
-                    .done($.proxy(this, 'suggest'));
+                $.getJSON(SITE.url('/service/suggest/user'), {q: text}).done($.proxy(this, 'suggest'));
             }
         },
         buildList: function(items) {
@@ -330,11 +327,10 @@ define(['$', 'rangy/rangy-core', 'App'], function($, rangy, App) {
         },
         suggest: function(users) {
             var items;
-            var t = $.parseJSON(users);
-            if (!t.length) {
+            if (!users.length) {
                 items = $('<li class="message">No&nbsp;Matches...</li>');
             } else {
-                items = $.map(t, function(user) {
+                items = $.map(users, function(user) {
                     return $('<li class="suggestion"><a data-user-id="' + user.value + '">' + user.label + '</a></li>')
                         .data('user', user).get(0);
                 });
@@ -401,7 +397,7 @@ define(['$', 'rangy/rangy-core', 'App'], function($, rangy, App) {
 
             // Bind suggestion selection by enter key
             // (have to bind separately to keypress to supress editor's default enter keypress)
-            this.$editor.keyup(function(e)
+            this.$editor.on('keypress.suggestions', function(e)
             {
                 // For some reason which is 0 for tab but the keyCode is correct
                 var key = e.which || e.keyCode;
@@ -467,8 +463,7 @@ define(['$', 'rangy/rangy-core', 'App'], function($, rangy, App) {
             }
             if (this.lastText !== text) {
                 this.lastText = text;
-                $.get(App.url('/service/suggest/topic'), {q: text, user_id: window.USER.id})
-                    .done($.proxy(this, 'suggest'));
+                $.getJSON(SITE.url('/service/suggest/topic'), {q: text}).done($.proxy(this, 'suggest'));
             }
         },
         buildList: function(items) {
@@ -477,7 +472,7 @@ define(['$', 'rangy/rangy-core', 'App'], function($, rangy, App) {
 
                 this.$dropdown.find('.dropdown-menu').append([
                     '<li class="divider"></li>',
-                    '<li class="newtopic"><a>&#43;&nbsp;New topic</a></li>',
+//                    '<li class="newtopic"><a>&#43;&nbsp;New topic</a></li>',
                     '<li class="cancel"><a>&times;&nbsp;Cancel</a></li>'
                 ]);
 
@@ -502,15 +497,15 @@ define(['$', 'rangy/rangy-core', 'App'], function($, rangy, App) {
         },
         suggest: function(topics) {
             var items;
-            var t = $.parseJSON(topics);
-            if (!t.length) {
+            if (!topics.length) {
                 items = $('<li class="message">No&nbsp;Matches...</li>');
             } else {
-                items = $.map(t, function(topic) {
+                items = $.map(topics, function(topic) {
                     return $('<li class="suggestion"><a data-topic-id="' + topic.value + '">' + topic.label + '</a></li>')
                         .data('topic', topic).get(0);
                 });
             }
+
             this.buildList(items);
         },
         pick: function(topic) {
@@ -520,6 +515,7 @@ define(['$', 'rangy/rangy-core', 'App'], function($, rangy, App) {
             this.$editor.trigger({type: 'picked.topic-mentions', topic: topic});
         }
     };
+
     // Supporting functions:
     function getComputedStyle(element) {
         var style = "getComputedStyle" in window ? window.getComputedStyle(element, null) : element.currentStyle;
