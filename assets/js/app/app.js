@@ -1,6 +1,7 @@
 define([
     '$',
     'Spirit',
+    'bootstrap',
     'bootstrap-modal',
     'module/topic/topic',
     'components/overlay',

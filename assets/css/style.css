@@ -1622,6 +1622,7 @@ ulti .post .post-text .post-photo .buttons {
 .profile-info-detail .info-name h3 {
 	color: #333333;
 	font-size: 18px;
+    line-height: 20px;
 }
 .profile-info-detail .info-name .job {
 	font-size: 14px;

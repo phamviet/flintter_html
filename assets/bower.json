@@ -9,6 +9,7 @@
         "bootstrap": "2.3.2",
         "select2": "3.4.3",
         "rangy": null,
+        "plupload": null,
         "requirejs": null
     }
 }

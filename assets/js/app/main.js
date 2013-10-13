@@ -27,6 +27,7 @@
             'bootstrap-modal': "../vendor/bootstrap-modal/js/bootstrap-modal",
             'bootstrap-modalmanager': "../vendor/bootstrap-modal/js/bootstrap-modalmanager",
             select2: "../vendor/select2/select2.min",
+            plupload: "../vendor/plupload/js/plupload.full.min",
             'rangy/rangy-core': "../vendor/rangy/rangy-core",
 //            text : 'requirejs/plugins/text',
 //            async : 'requirejs/plugins/async',
@@ -35,6 +36,7 @@
         },
         shim: {
             '$': { exports: '$' },
+            'plupload': { exports: 'plupload' },
             underscore: {
                 exports: '_'
             },

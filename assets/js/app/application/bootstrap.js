@@ -1,4 +1,4 @@
-define([ '$', 'select2', 'bootstrap', 'components/facebooksdk', 'module/content/post' ], function($) {
+define([ '$', 'select2', 'components/facebooksdk', 'module/content/post' ], function($) {
 
 
     return {};
