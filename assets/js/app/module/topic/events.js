@@ -25,7 +25,7 @@ define([ '$', 'bootstrap-modal', 'plupload'], function($) {
 
                 var uploader = new plupload.Uploader({
                     runtimes : 'gears,html5,flash,silverlight,browserplus',
-                    browse_button : 'pickfiles',
+                    browse_button : 'topic-pickfiles',
                     max_file_size : '10mb',
                     url : SITE.url('upload/topic'),
                     flash_swf_url : '/public/assets/js/vendor/plupload/js/Moxie.swf',
