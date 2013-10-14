@@ -6,7 +6,8 @@ define([
     'module/content/post',
     'module/topic/events',
     'module/topic/topic',
-    'utility/uploader',
+    'module/user/relationship',
+    'utility/uploader'
 ], function($) {
 
 

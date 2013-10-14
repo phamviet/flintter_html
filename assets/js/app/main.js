@@ -1,16 +1,6 @@
 // r.js -o build.js paths.facebook=empty:
 
-var app = window.app || {deps: [], init: function(){}};
-var SITE = window.SITE || {
-    FACEBOOK_APP_ID: '',
-    FACEBOOK_SCOPE: '',
-    BASE_URL: '',
-    BASE_PATH: '',
-    ENV : '',
-    VERSION: '',
-    deps: [],
-    beforeInit: function(){}
-};
+var SITE = SITE || { deps: [] };
 
 (function() {
     require.config({
