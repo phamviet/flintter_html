@@ -2,8 +2,8 @@ define(['$'], function($) {
 
     var events = [
         'newTopic.topic',
-        'followTopic.topic',
-        'unFollowTopic.topic'
+        'follow.topic',
+        'unfollow.topic'
     ];
 
     var handlers = {
@@ -73,23 +73,27 @@ define(['$'], function($) {
             });
         },
 
-        followTopic: function ($el) {
-            var id = $el.data('topic-id');
-            $.post(SITE.url('service/topic/follow'), {id: id}, function(res){
+        follow: function ($el) {
+            this._follow($el.data('topic-id'), 1, function(res){
                 if(res.status) {
-                    $el.data('event', 'unFollowTopic.topic');
+                    $el.data('event', 'unfollow.topic');
+//                    $el.addClass('big-red');
                     $el.find('span.text').text('FOLLOWED');
                 }
-            }, 'json');
+            });
         },
-
-        unFollowTopic: function ($el) {
-            var id = $el.data('topic-id');
-            $.post(SITE.url('service/topic/unfollow'), {id: id}, function(res){
+        unfollow: function ($el) {
+            this._follow($el.data('topic-id'), 0, function(res){
                 if(res.status) {
-                    $el.data('event', 'followTopic.topic');
+                    $el.data('event', 'follow.topic');
+//                    $el.removeClass('big-red');
                     $el.find('span.text').text('FOLLOW');
                 }
+            });
+        },
+        _follow: function(id, type, callback) {
+            $.post(SITE.url('service/topic/follow'), {id: id, type: type}, function(res){
+                callback(res);
             }, 'json');
         }
     };
