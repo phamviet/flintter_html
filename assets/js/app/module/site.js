@@ -5,7 +5,8 @@ define([
     'components/content/editable',
     'module/content/post',
     'module/topic/events',
-    'module/topic/topic'
+    'module/topic/topic',
+    'utility/uploader',
 ], function($) {
 
 

@@ -43,6 +43,7 @@
                 "module/site"
             ],
             include: [
+                'plupload'
             ]
         }
     ]

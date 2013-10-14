@@ -1,4 +1,4 @@
-define(['$', 'module/site', 'utility/uploader'], function($) {
+define(['$', 'module/site'], function($) {
 
 
     $('.avatar a').tooltip('hide');
