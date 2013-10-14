@@ -1,11 +1,16 @@
 define([
     '$',
-    'Spirit',
-    'bootstrap',
-    'bootstrap-modal',
-    'module/topic/topic',
-    'components/overlay',
-    'components/make-alert'
+    "bootstrap",
+    "bootstrap-modalmanager",
+    "bootstrap-modal",
+    "underscore",
+    "jquery/jquery.slimscroll.min",
+    'jquery/jquery.mousewheel.min',
+    'select2',
+    'components/autosubmit',
+    'components/make-alert',
+    "app",
+    "Spirit"
 ], function($){
 
     $.fn.modalmanager.defaults.resize = true;

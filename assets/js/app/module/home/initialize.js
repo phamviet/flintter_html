@@ -1,4 +1,4 @@
-define(['$', 'application/bootstrap'], function($) {
+define(['$', 'module/site'], function($) {
 
 
 

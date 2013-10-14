@@ -1,4 +1,9 @@
-define([ '$', 'select2', 'components/facebooksdk', 'module/content/post' ], function($) {
+define([
+    '$',
+    'components/autosubmit',
+    'select2',
+    'module/content/post'
+], function($) {
 
 
     return {};
