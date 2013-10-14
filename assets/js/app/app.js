@@ -9,7 +9,6 @@ define([
     'select2',
     'components/autosubmit',
     'components/make-alert',
-    "app",
     "Spirit"
 ], function($){
 

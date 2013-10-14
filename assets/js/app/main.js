@@ -14,12 +14,10 @@ var SITE = window.SITE || {
 
 (function() {
     require.config({
-        waitSeconds: 30,
+        waitSeconds: 45,
         paths: {
             '$': '../vendor/jquery/jquery.min',
-//            'jquery.ui.widget': 'jquery/jquery.ui.widget',
 //            tinymce: '//tinymce.cachefly.net/4.0/tinymce.min',
-//            tinymce: 'jquery/tinymce/tinymce.min',
             underscore: '../vendor/underscore-amd/underscore-min',
             backbone: '../vendor/backbone-amd/backbone-min',
             bootstrap: "../vendor/bootstrap/docs/assets/js/bootstrap.min",
@@ -30,7 +28,6 @@ var SITE = window.SITE || {
             'rangy/rangy-core': "../vendor/rangy/rangy-core",
 //            text : 'requirejs/plugins/text',
 //            async : 'requirejs/plugins/async',
-//            facebook: '//connect.facebook.net/en_US/all',
             facebook: '//connect.facebook.net/en_US/all',
             Spirit: 'utility/Spirit'
         },
