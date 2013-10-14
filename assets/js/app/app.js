@@ -33,9 +33,9 @@ define([
             }
 
             el.trigger(el.data('event'), [e, params]);
-        } else {
-            e.preventDefault();
         }
+
+        e.preventDefault();
     }
 
     return {};

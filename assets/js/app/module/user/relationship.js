@@ -1,6 +1,4 @@
 define(['$'], function($) {
-
-
     var events = [
         'requestFriend.relationship'
     ];
@@ -12,6 +10,9 @@ define(['$'], function($) {
             $.post(SITE.url('service/relationship/friend/request'), {id: friendId}, function(res){
                 if(res.status) {
                     $el.hide();
+                    $('#people-may-know-' + friendId).slideUp(1000, function(){
+                        $(this).remove();
+                    });
                 }
             }, 'json');
         }
@@ -20,6 +21,7 @@ define(['$'], function($) {
     $(document).on(events.join(' '), function(e) {
         handlers[e.type]($(e.target));
         e.preventDefault();
+        return false;
     });
 
     return handlers;
