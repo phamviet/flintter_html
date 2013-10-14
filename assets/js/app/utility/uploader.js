@@ -8,7 +8,7 @@ define([
         browse_button : 'pickfiles',
         max_file_size : '10mb',
 //        resize : {width : 320, height : 240, quality : 90},
-        url : SITE.url('upload'),
+        url : SITE.url('upload/profile'),
         flash_swf_url : '/public/assets/js/vendor/plupload/js/Moxie.swf',
         silverlight_xap_url : '/public/assets/js/vendor/plupload/js/Moxie.xap',
         filters : [

@@ -7,6 +7,9 @@
 }
 
 /**/
+a.link-default{
+    color: #0072bc;
+}
 
 #ajax-modal .modal-body{
     padding-right: 25px;
