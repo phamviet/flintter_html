@@ -56,12 +56,8 @@ var SITE = window.SITE || {
         }
     });
 
-    require(['$', 'app'], function($) {
-        if(SITE.deps.length) {
-            require(SITE.deps, function($) {
+    require(['$', 'app'].concat(SITE.deps), function($) {
 
-            });
-        }
     });
 })();
 
