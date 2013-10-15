@@ -87,7 +87,7 @@ define(['$'], function($) {
         }
     });
 
-    $(document).on('focus.autosubmit.data-api', '[data-provide="autosubmit"]', function(e) {
+    $(document).on('focus.autosubmit.data-api', 'mousedown.autosubmit.data-api', 'touchstart.autosubmit.data-api', '[data-provide="autosubmit"]', function(e) {
         var $this = $(this);
         if ($this.data('autosubmit')) { return; }
         $this.autosubmit($this.data());
