@@ -20,6 +20,7 @@ define(['$'], function($) {
                 $form
                     .on('autosubmit.success', function(e, res){
                         $modal.modal('hide');
+                        window.location.reload();
                     })
                     .on('autosubmit.failure', function(e, res, code){
 
