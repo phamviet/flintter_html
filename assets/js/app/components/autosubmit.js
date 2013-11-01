@@ -13,6 +13,7 @@ define(['$'], function($) {
 
             event = new $.Event('autosubmit.initdata');
             $el.trigger(event);
+            $('button, input[type="submit"]', $el).prop('disabled', true);
 
             $.ajax({
                 type: $el.attr('method').toUpperCase(),
@@ -60,7 +61,6 @@ define(['$'], function($) {
                     $(this).find('button[type="submit"]').attr('disabled', false);
                 }
             });
-
         });
     };
 
