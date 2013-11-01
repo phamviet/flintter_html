@@ -4,7 +4,7 @@ define(['$'], function($) {
         var event;
         $el.submit(function(e){
             e.preventDefault();
-            console.log('autosubmit is initialized');
+
             event = new $.Event('autosubmit.validate');
             $el.trigger(event);
             if (event.isDefaultPrevented()) {
