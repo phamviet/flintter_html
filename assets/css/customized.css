@@ -1,0 +1,41 @@
+.modal.fade.in {
+    top: 30%;
+}
+
+.full-width {
+    width: 100%;
+}
+
+/**/
+a.link-default{
+    color: #0072bc;
+}
+
+#ajax-modal .modal-body{
+    padding-right: 25px;
+}
+
+.body-editor{
+    min-height: 140px;
+    max-height: 350px;
+    overflow: scroll
+}
+
+.body-editor a {
+    color: #0072bc;
+}
+
+
+.post-alt .select2-container-multi .select2-choices .select2-search-field input {
+    border: #bebebe solid 0px;
+}
+
+.select2-tag-wrap{
+    border: solid #999999 0px;
+    float: left;
+    width: 560px;
+    border-radius: 3px;
+}
+ul.dropdown-menu li.message {
+    padding-left: 7px;
+}

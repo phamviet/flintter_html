@@ -76,8 +76,8 @@ input:-moz-placeholder { color: #9d9d9c; }
 .landing-main {
 	text-align: center;
 	width: 660px;
-	margin: 100px auto 0 auto;
-	padding-bottom: 120px;
+	margin: 80px auto 0 auto;
+	padding-bottom: 100px;
 }
 .landing-main .landing-reg {
 	width: 422px;
@@ -206,6 +206,15 @@ input:-moz-placeholder { color: #9d9d9c; }
 	padding-top: 6px;
 	float: left;
 }
+
+.landing .header .buttons .board-signin .sign-in-error {
+    color: #9d9d9c;
+    text-align: left;
+    font-size: 12px;
+    margin-bottom: -20px;
+    margin-top: 15px;
+}
+
 .landing .header .buttons .board-signin .sign-in-openid {
 	border-top: #fff solid 1px;
 	padding-top: 8px;
