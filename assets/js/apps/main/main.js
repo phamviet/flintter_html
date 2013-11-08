@@ -4,7 +4,7 @@
 
     require.config({
         baseUrl: requirejsBaseUrl,
-        waitSeconds: 30,
+        waitSeconds: 15,
         paths: {
             '$': 'jquery/jquery-1.9.1.min',
             'jquery.ui.widget': 'jquery/jquery.ui.widget',
